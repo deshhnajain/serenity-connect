@@ -21,7 +21,7 @@
 
 .team-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(60, 255, 0, 0.527);
+  box-shadow: 0 0 20px rgb(255, 0, 0);
 }
 
 .team-card-image {

@@ -1,5 +1,5 @@
 .about-container {
-  padding: 20px;
+  /* padding: 20px; */
   max-width: 100%; 
 }
 
@@ -7,6 +7,10 @@
   padding: 20px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+}
+
+.footer{
+  width: 100%;
 }
 
 .about-section:hover {

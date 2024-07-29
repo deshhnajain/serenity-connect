@@ -8,9 +8,11 @@ import OurMission from '../Component/aboutus/ourmission';
 import OurVision from '../Component/aboutus/Ourvision';
 import WhatWeDo from '../Component/aboutus/Whatwedo';
 import Aboutusheader from '../Component/aboutus/aboutusheader';
+import Footer from '../Component/footer/footer';
 
 const AboutUs = () => {
   return (
+    <>
     <Container fluid className="about-container">
       <Row className="text-center mb-4">
         {/* <Col>
@@ -82,14 +84,17 @@ const AboutUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Contact Us</h2>
+            {/* <h2>Contact Us</h2>
             <p>
               If you have any questions or would like to get in touch, please reach out to us at <a href="mailto:contact@serenityconnect.com">contact@serenityconnect.com</a>. We would love to hear from you!
-            </p>
+            </p> */}
+            
           </motion.div>
         </Col>
       </Row>
     </Container>
+    <Footer />
+    </>
   );
 };
 

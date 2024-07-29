@@ -1,0 +1,65 @@
+/* Navbar.css */
+
+.custom-navbar {
+    margin-bottom: 20px;
+    background: rgba(14, 253, 213, 0.352); /* Transparent background */
+    border-radius: 0.25rem;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .custom-brand {
+    font-size: 1.75em;
+    font-weight: bold;
+    color: #ffc107; /* Highlight color */
+  }
+  
+  .custom-nav .nav-link {
+    font-size: 1.2em;
+    color: #ffffff; /* White text */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .custom-nav .nav-link:hover {
+    color: #ffc107; /* Highlight on hover */
+    text-decoration: underline;
+  }
+  
+  .custom-form .form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ffc107; /* Highlight border */
+    background-color: rgba(73, 80, 87, 0.8); /* Transparent input background */
+    color: #ffffff;
+  }
+  
+  .custom-form .form-control::placeholder {
+    color: #ced4da;
+  }
+  
+  .custom-form .btn-outline-light {
+    border: 1px solid #ffc107; /* Highlight border */
+    color: #ffc107; /* Highlight text */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .custom-form .btn-outline-light:hover {
+    background-color: #ffc107; /* Highlight background on hover */
+    color: #53a6f8; /* Dark text on hover */
+  }
+  
+  .navbar .dropdown-menu {
+    background-color: rgba(52, 58, 64, 0.8); /* Transparent background for dropdown */
+  }
+  
+  .navbar .dropdown-item {
+    color: #ffffff; /* White text */
+  }
+  
+  .navbar .dropdown-item:hover {
+    background-color: rgba(73, 80, 87, 0.8); /* Darker background on hover */
+    color: #ffc107; /* Highlight text on hover */
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  }
+  
