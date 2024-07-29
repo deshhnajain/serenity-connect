@@ -2,12 +2,12 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import './Aboutus.css';
-import Ourteam from '../aboutus/ourteam';
-import OurMission from '../aboutus/ourmission';
+import Ourteam from '../Component/aboutus/ourteam';
+import OurMission from '../Component/aboutus/ourmission';
 // import Aboutuscarousel from '../Components/aboutuscarousel';
-import OurVision from '../aboutus/Ourvision';
-import WhatWeDo from '../aboutus/Whatwedo';
-import Aboutusheader from '../aboutus/aboutusheader';
+import OurVision from '../Component/aboutus/Ourvision';
+import WhatWeDo from '../Component/aboutus/Whatwedo';
+import Aboutusheader from '../Component/aboutus/aboutusheader';
 
 const AboutUs = () => {
   return (

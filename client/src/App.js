@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AboutUs from './Component/pages/Aboutus';
+import AboutUs from './pages/Aboutus';
 function App() {
   return (
 <Router>
