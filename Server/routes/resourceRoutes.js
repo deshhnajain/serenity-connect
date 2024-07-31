@@ -1,28 +1,48 @@
-// Server/routes/resourceRoutes.js
 const express = require('express');
 const router = express.Router();
-const Resource = require('../models/resources');
+const Resource = require('../models/Resource');
+
+// Get all resources
+router.get('/resources', async (req, res) => {
+  try {
+    const resources = await Resource.find();
+    res.json(resources);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 // Add a new resource
-router.post('/', async (req, res) => {
-  const { tag, title, description, videoUrl } = req.body;
+router.post('/resources', async (req, res) => {
+  const resource = new Resource({
+    tag: req.body.tag,
+    title: req.body.title,
+    description: req.body.description,
+    link: req.body.link,
+    category: req.body.category
+  });
+
   try {
-    const newResource = new Resource({ tag, title, description, videoUrl });
-    const savedResource = await newResource.save();
-    res.json(savedResource);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+    const newResource = await resource.save();
+    res.status(201).json(newResource);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
   }
 });
 
-// Get resources by tag
-router.get('/:tag', async (req, res) => {
+// Delete a resource
+router.delete('/resources/:id', async (req, res) => {
   try {
-    const resources = await Resource.find({ tag: req.params.tag });
-    res.json(resources);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+    const resource = await Resource.findById(req.params.id);
+    if (resource == null) {
+      return res.status(404).json({ message: 'Resource not found' });
+    }
+
+    await resource.remove();
+    res.json({ message: 'Resource deleted' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 });
 
-module.exports = router;
+module.exports = router;
