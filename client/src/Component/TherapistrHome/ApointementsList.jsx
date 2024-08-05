@@ -26,7 +26,7 @@ export default function AppointmentsPage() {
       }
 
       try {
-        const response = await axios.get(`http://localhost:3388/api/appointments?therapistId=${therapistId}`);
+        const response = await axios.get(`http://localhost:5000/api/appointments?therapistId=${therapistId}`);
         setAppointments(response.data);
       } catch (error) {
         console.error('Error fetching appointments:', error);

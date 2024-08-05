@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/user', user);
+app.use('/api', user);
 app.use('/api/auth', therapistauthRoutes);
 app.use('/api/therapists', therapistRoutes);
 app.use('/api/appointments', appointmentRoutes);

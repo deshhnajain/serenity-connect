@@ -7,18 +7,36 @@ import './Navbar.css'; // Import the custom CSS
 
 const MyNavbar = () => {
   // State to manage login status
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const [isTherapistLoggedIn, setIsTherapistLoggedIn] = useState(false);
+  const [loggedInName, setLoggedInName] = useState('');
 
   useEffect(() => {
-    // Check if user is logged in (replace with your actual authentication check)
-    const loggedInStatus = !!localStorage.getItem('therapistId'); // Example check
-    setIsLoggedIn(loggedInStatus);
+    // Check if user or therapist is logged in (replace with your actual authentication check)
+    const userLoggedInStatus = !!localStorage.getItem('userId'); // Example check
+    const therapistLoggedInStatus = !!localStorage.getItem('therapistId'); // Example check
+    const userName = localStorage.getItem('loggedInUser');
+    const therapistName = localStorage.getItem('loggedInTherapist');
+
+    setIsUserLoggedIn(userLoggedInStatus);
+    setIsTherapistLoggedIn(therapistLoggedInStatus);
+
+    if (userLoggedInStatus) {
+      setLoggedInName(userName);
+    } else if (therapistLoggedInStatus) {
+      setLoggedInName(therapistName);
+    }
   }, []);
 
   const handleLogout = () => {
     // Clear user session and update login status
+    localStorage.removeItem('userId');
     localStorage.removeItem('therapistId');
-    setIsLoggedIn(false);
+    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem('loggedInTherapist');
+    setIsUserLoggedIn(false);
+    setIsTherapistLoggedIn(false);
+    setLoggedInName('');
   };
 
   return (
@@ -47,15 +65,23 @@ const MyNavbar = () => {
             />
             <Button variant="outline-light"><FontAwesomeIcon icon={faSearch} /></Button>
           </Form>
-          <Nav> 
-            {isLoggedIn ? (
+          <Nav>
+            {isUserLoggedIn ? (
               <>
-                <Nav.Link as={Link} to="/therapist-dashboard"><FontAwesomeIcon icon={faUser} /> View Profile</Nav.Link>
+                <Nav.Link as={Link} to="/user-dashboard"><FontAwesomeIcon icon={faUser} /> {loggedInName}</Nav.Link>
+                <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+              </>
+            ) : isTherapistLoggedIn ? (
+              <>
+                <Nav.Link as={Link} to="/therapist-dashboard"><FontAwesomeIcon icon={faUser} /> {loggedInName}</Nav.Link>
                 <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
               </>
             ) : (
               <>
-                <Nav.Link as={Link} to="/therapist-login"><FontAwesomeIcon icon={faUser} /> Login as a therapist</Nav.Link>
+                <Nav.Link as={Link} to="/user-login"><FontAwesomeIcon icon={faUser} /> Login as User</Nav.Link>
+                <Nav.Link as={Link} to="/user-signup"><FontAwesomeIcon icon={faUser} /> Signup as User</Nav.Link>
+                <Nav.Link as={Link} to="/therapist-login"><FontAwesomeIcon icon={faUser} /> Login as Therapist</Nav.Link>
+                <Nav.Link as={Link} to="/therapist-signup"><FontAwesomeIcon icon={faUser} /> Signup as Therapist</Nav.Link>
               </>
             )}
           </Nav>

@@ -16,7 +16,7 @@ const TherapistsList = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
-    axios.get('http://localhost:3388/api/therapists')
+    axios.get('http://localhost:5000/api/therapists')
       .then(response => {
         setTherapists(response.data);
         setFilteredTherapists(response.data);

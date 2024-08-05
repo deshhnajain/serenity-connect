@@ -40,7 +40,7 @@ export default function TherapistDashboard() {
       }
 
       try {
-        const response = await axios.get(`http://localhost:3388/api/therapists/${therapistId}`);
+        const response = await axios.get(`http://localhost:5000/api/therapists/${therapistId}`);
         setTherapist(response.data);
         setFormData(response.data); // Initialize formData with fetched data
       } catch (error) {

@@ -10,17 +10,21 @@ import TherapistDetails from '../../pages/therapistdetails/therapistDetails';
 import AppointmentsList from '../TherapistrHome/ApointementsList';
 import AboutUs from '../../pages/Aboutus/Aboutus';
 import Footer from '../footer/footer';
+import Login from '../../pages/Userauth/Login';
+import Signup from '../../pages/Userauth/Signup';
 import './Navigation.css';
 function MainLayout() {
   const location = useLocation();
   const isDashboardPath = location.pathname.startsWith('/therapist-dashboard') || location.pathname.startsWith('/appointments');
-  const isLoginPage = location.pathname === '/therapist-login';
+  const isLoginPage = location.pathname === '/therapist-login'|| location.pathname === '/user-login' || location.pathname === '/user-signup';
 
   return (
     <>
       {isLoginPage ? (
         <Routes>
           <Route path="/therapist-login" element={<TherapistLogin />} />
+          <Route path="/user-login" element={<Login />} />
+          <Route path="/user-signup" element={<Signup />} />
         </Routes>
       ) : isDashboardPath ? (
         <div className="dashboard-layout">

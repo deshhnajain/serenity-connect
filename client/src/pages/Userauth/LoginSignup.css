@@ -1,0 +1,77 @@
+.login-signup-container {
+    background-color: #FFF;
+    padding: 32px 48px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    margin: 0 auto; /* Center the container */
+}
+
+.login-signup-container > h1 {
+    margin-bottom: 20px;
+}
+
+.login-signup-container > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-signup-container div {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-signup-container input {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.login-signup-container input::placeholder {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.login-signup-container button {
+    background-color: purple;
+    border: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.login-signup-container label {
+    font-size: 20px;
+}
+
+.login-signup-container span {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.login-signup-container span a {
+    color: purple;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Specific styles for centering and removing global impacts */
+.login-signup-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f2f5; /* Adjust background as needed */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    box-sizing: border-box; /* Ensure box-sizing */
+}
