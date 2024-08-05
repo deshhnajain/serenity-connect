@@ -68,7 +68,7 @@ const TherapistDetails = () => {
     }
 
     try {
-      const response = await axios.post(`http://localhost:3388/api/appointments`, {
+      const response = await axios.post(`http://localhost:5000/api/appointments`, {
         therapistId: id,
         date: date.toISOString().split('T')[0], // Ensure the format matches the backend expectation
         time: '', // Optional field
