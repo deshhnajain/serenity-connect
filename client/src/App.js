@@ -1,20 +1,13 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AboutUs from './pages/Aboutus';
-import { Nav } from 'react-bootstrap';
-import MyNavbar from './Component/navbar/navbar';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navigation from './Component/Navigation/Navigations';
+
 function App() {
   return (
-<Router>
-  
-  {/* <AboutUs/>Testing aboutus page */}
-  {/* <AboutUs/> */}
-  <MyNavbar />
-  <Routes>
-  <Route path="/about" element={<AboutUs />} />
-  </Routes>
-  </Router>
-  )
+    <Router>
+      <Navigation />
+    </Router>
+  );
 }
 
-export default App
+export default App;

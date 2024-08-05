@@ -1,0 +1,23 @@
+.dashboard-layout {
+    margin-left: 150px; /* Default margin for larger screens */
+    transition: margin-left 0.3s ease;
+  }
+  
+  @media (max-width: 1024px) { /* Adjust the breakpoint as needed */
+    .dashboard-layout {
+      margin-left: 200px; /* Smaller margin for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .dashboard-layout {
+      margin-left: 150px; /* Even smaller margin for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) { /* Adjust the breakpoint as needed */
+    .dashboard-layout {
+      margin-left: 50px; /* Minimal margin for very small screens */
+    }
+  }
+  

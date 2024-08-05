@@ -1,0 +1,130 @@
+.therapists-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.therapist-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 350px; /* Fixed width */
+  height: auto; /* Auto height to fit content */
+  display: flex;
+  flex-direction: column;
+}
+
+.therapist-card img {
+  width: 100%;
+  height: 200px; /* Adjust height for image */
+  object-fit: cover;
+}
+
+.therapist-card .MuiCardContent-root {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.therapist-card .MuiCardContent-root .buttons-container {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.book-appointment-btn, .info-btn {
+  flex: 1; /* Make buttons equal width */
+  font-size: 14px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.book-appointment-btn {
+  background-color: #00796b;
+  color: #fff;
+  &:hover {
+    background-color: #004d40;
+  }
+}
+
+.info-btn {
+  border-color: #00796b;
+  color: #00796b;
+  &:hover {
+    background-color: rgba(0, 121, 107, 0.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .therapist-card {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .therapist-card img {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .therapist-card .buttons-container {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .book-appointment-btn, .info-btn {
+    width: 100%; /* Full width buttons on small screens */
+  }
+}
+.dialog-container {
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px;
+}
+
+.dialog-container  .dialog-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00796b;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.dialog-container  .dialog-content {
+  font-size: 1rem;
+  color: #333;
+}
+
+.dialog-container  .dialog-content .MuiTypography-root {
+  margin-bottom: 10px;
+}
+
+.dialog-container  .dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.dialog-container  .dialog-actions .MuiButton-root {
+  margin-left: 10px;
+}
+
+.dialog-container  .dialog-actions .MuiButton-contained {
+  background-color: #00796b;
+  color: #fff;
+  &:hover {
+    background-color: #004d40;
+  }
+}
+
+.dialog-actions .MuiButton-outlined {
+  border-color: #00796b;
+  color: #00796b;
+  &:hover {
+    background-color: rgba(0, 121, 107, 0.1);
+  }
+}

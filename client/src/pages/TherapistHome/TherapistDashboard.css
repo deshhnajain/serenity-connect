@@ -1,0 +1,38 @@
+.DashBoardContainer {
+    background-color: #ffffff;
+    /* margin-left: 250px; Ensure this matches the sidebar width */
+  }
+  
+  .DashBoardContainer.card-body-text-center {
+    text-align: center;
+  }
+
+  .DashBoardContainer .card-body-d-flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .DashBoardContainer .list-group-item-icon {
+    align-items: center;
+  }
+  
+  .DashBoardContainer .list-group-item-text {
+    margin-left: 1rem;
+  }
+  .DashBoardContainer .progress-bar-rounded {
+    border-radius: 20px;
+  }
+  
+  .DashBoardContainer .progress-bar-margin {
+    margin-top: 1rem;
+  }
+  
+  .DashBoardContainer .edit-form input {
+    margin-bottom: 1rem;
+  }
+.DashboardProfile-imgs{
+    width: 10vw;
+    height: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.436);
+}

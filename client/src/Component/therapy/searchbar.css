@@ -1,0 +1,18 @@
+.header-container {
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #dbf5fc3d;
+    border-radius: 8px;
+    display:flex;
+    text-align: center;
+    width: auto;
+    height: 150px;
+  } 
+.headergrid{
+  justify-content: center;
+}
+
+.gridcontent{
+    margin: 2%; 
+}

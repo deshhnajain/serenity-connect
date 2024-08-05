@@ -1,44 +1,25 @@
-
-
-const express= require("express")
-const chalk= require("chalk")
-const port=3388;
+const express = require('express');
 const cors = require('cors');
-const app=express();//app is object
-const User = require('./config/user.js')
+const connectDB = require('./config/config');
+const therapistRoutes = require('./routes/therapistRoutes');
+const appointmentRoutes = require('./route/appointmentRoutes');
+const therapistauthRoutes = require('./route/therapistauthRoutes');
+const app = express();
 
+// Connect to database
+connectDB();
+
+// Middleware
 app.use(cors());
+app.use(express.json());
 
-require('./config/dbConn');
-const user = require('./config/user.js');
-// const finddata = new user({
-//     "name" : "xyzHjjH",
-//     "price" : 500
-// })
-// finddata.save().then(()=>{
-//     console.log(chalk.inverse.green("data saved"))
-// })
+// Routes
+app.use('/api/auth', therapistauthRoutes);
+app.use('/api/therapists', therapistRoutes);
+app.use('/api/appointments', appointmentRoutes);
 
-app.get('/', async (req, res) => {  
-    const getData = await User.find();
-    if(getData.length > 0) {   //browser can only get data
-        res.send(getData);
-    } else {
-        res.send("no data found");
-    }
+// Start server
+const PORT = process.env.PORT || 3388;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
-app.post(`/postData`, (res) => {
-    res.send("Hello hunny bunny")
-})
-
-app.post(`/deleteData`, (res) => {
-    res.send("Hello hunny bunny")
-})
-app.listen(port,(err)=>{     //for running the server
-
-    if(err){
-        console.log(chalk.inverse.red("something went wrong"))}
-    else{
-    console.log(chalk.inverse.green(`server is running ${port}`));
-        }
-})

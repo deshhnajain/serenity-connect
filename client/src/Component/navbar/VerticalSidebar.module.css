@@ -1,0 +1,78 @@
+.sidebarWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: width 0.3s ease;
+  background: rgba(0, 0, 0, 0.63); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blurred effect */
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: color 0.3s ease;
+
+}
+
+.toggleButton:hover {
+  color: #ffc107; /* Highlight color on hover */
+}
+
+.sidebar {
+
+  padding: auto;
+  transition: width 0.3s ease;
+  overflow-y: auto;
+  height: auto;
+  margin-top: 30%;
+}
+
+.collapsedSidebar {
+  width: 80px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #00fbff;
+  margin: 1rem 0;
+  text-decoration: none;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffc107;
+}
+
+.collapsed .navLink .linkText {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px; /* Adjust width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 50px; /* Adjust width for very small screens */
+  }
+}
