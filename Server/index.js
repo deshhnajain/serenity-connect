@@ -1,11 +1,12 @@
-import express from 'express';
-import cors from 'cors';
-import connectDB from './config/config.js';
-import therapistRoutes from './routes/therapistRoutes.js';
-import appointmentRoutes from './routes/appointmentRoutes.js';
-import therapistauthRoutes from './routes/therapistauthRoutes.js';
-
+const express = require('express');
+const cors = require('cors');
+const connectDB = require('./config/config');
+const therapistRoutes = require('./route/therapistRoutes');
+const appointmentRoutes = require('./route/appointmentRoutes');
+const therapistauthRoutes = require('./route/therapistauthRoutes');
+const user=require('./route/userRoutes');
 const app = express();
+
 
 // Connect to database
 connectDB();
@@ -15,12 +16,13 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use('/api/user', user);
 app.use('/api/auth', therapistauthRoutes);
 app.use('/api/therapists', therapistRoutes);
 app.use('/api/appointments', appointmentRoutes);
 
 // Start server
-const PORT = process.env.PORT || 3388;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
