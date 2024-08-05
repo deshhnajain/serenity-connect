@@ -1,20 +1,29 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AboutUs from './pages/Aboutus';
-import { Nav } from 'react-bootstrap';
-import MyNavbar from './Component/navbar/navbar';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Login from './pages/Userauth/Login';
+import Signup from './pages/Userauth/Signup';
+import Home from './pages/Home';
+import { useState } from 'react';
+import RefrshHandler from './RefrshHandler';
+
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const PrivateRoute = ({ element }) => {
+    return isAuthenticated ? element : <Navigate to="/login" />
+  }
+
   return (
-<Router>
-  
-  {/* <AboutUs/>Testing aboutus page */}
-  {/* <AboutUs/> */}
-  <MyNavbar />
-  <Routes>
-  <Route path="/about" element={<AboutUs />} />
-  </Routes>
-  </Router>
-  )
+    <div className="App">
+      <RefrshHandler setIsAuthenticated={setIsAuthenticated} />
+      <Routes>
+        <Route path='/' element={<Navigate to="/login" />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/home' element={<PrivateRoute element={<Home />} />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
