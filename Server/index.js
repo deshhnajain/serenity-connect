@@ -1,9 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-const connectDB = require('./config/config');
-const therapistRoutes = require('./routes/therapistRoutes');
-const appointmentRoutes = require('./route/appointmentRoutes');
-const therapistauthRoutes = require('./route/therapistauthRoutes');
+import express from 'express';
+import cors from 'cors';
+import connectDB from './config/config.js';
+import therapistRoutes from './routes/therapistRoutes.js';
+import appointmentRoutes from './routes/appointmentRoutes.js';
+import therapistauthRoutes from './routes/therapistauthRoutes.js';
+
 const app = express();
 
 // Connect to database
