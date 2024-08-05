@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './pages/Userauth/Login';
 import Signup from './pages/Userauth/Signup';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import { useState } from 'react';
 import RefrshHandler from './RefrshHandler';
 
