@@ -23,7 +23,7 @@ const TherapistDetails = () => {
   const [formError, setFormError] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:3388/api/therapists/${id}`)
+    axios.get(`http://localhost:5000/api/therapists/${id}`)
       .then(response => {
         setTherapist(response.data);
         setLoading(false);
