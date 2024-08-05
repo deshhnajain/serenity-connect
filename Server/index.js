@@ -1,27 +1,26 @@
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import userRoutes from './route/userRoutes.js';
-
-dotenv.config();
+import connectDB from './config/config.js';
+import therapistRoutes from './routes/therapistRoutes.js';
+import appointmentRoutes from './routes/appointmentRoutes.js';
+import therapistauthRoutes from './routes/therapistauthRoutes.js';
 
 const app = express();
+
+// Connect to database
+connectDB();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/users', userRoutes);
+app.use('/api/auth', therapistauthRoutes);
+app.use('/api/therapists', therapistRoutes);
+app.use('/api/appointments', appointmentRoutes);
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log('MongoDB connection error:', err));
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Start server
+const PORT = process.env.PORT || 3388;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

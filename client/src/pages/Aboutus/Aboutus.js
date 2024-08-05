@@ -2,23 +2,20 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import './Aboutus.css';
-import Ourteam from '../Component/aboutus/ourteam';
-import OurMission from '../Component/aboutus/ourmission';
-// import Aboutuscarousel from '../Components/aboutuscarousel';
-import OurVision from '../Component/aboutus/Ourvision';
-import WhatWeDo from '../Component/aboutus/Whatwedo';
-import Aboutusheader from '../Component/aboutus/aboutusheader';
-import Footer from '../Component/footer/footer';
+import Ourteam from '../../Component/aboutus/ourteam';
+import OurMission from '../../Component/aboutus/ourmission';
+import OurVision from '../../Component/aboutus/Ourvision';
+import WhatWeDo from '../../Component/aboutus/Whatwedo';
+import Aboutusheader from '../../Component/aboutus/aboutusheader';
+// import Footer from '../../Component/footer/footer';
+// import Aboutuscarousel from '../Component/aboutus/aboutuscarousel';
 
 const AboutUs = () => {
   return (
     <>
+    {/* <Aboutuscarousel/> */}
     <Container fluid className="about-container">
       <Row className="text-center mb-4">
-        {/* <Col>
-        <Aboutuscarousel />
-        </Col> */}
-
         <Col>
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
@@ -76,7 +73,7 @@ const AboutUs = () => {
         </Col>
       </Row>
 
-      <Row className="mb-4">
+      {/* <Row className="mb-4">
         <Col>
           <motion.div
             className="about-section"
@@ -84,16 +81,16 @@ const AboutUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* <h2>Contact Us</h2>
+            <h2>Contact Us</h2>
             <p>
               If you have any questions or would like to get in touch, please reach out to us at <a href="mailto:contact@serenityconnect.com">contact@serenityconnect.com</a>. We would love to hear from you!
-            </p> */}
+            </p>
             
           </motion.div>
         </Col>
-      </Row>
+      </Row> */}
     </Container>
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 };

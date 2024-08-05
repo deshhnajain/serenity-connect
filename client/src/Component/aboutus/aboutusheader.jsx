@@ -28,9 +28,11 @@ const AboutUsHeader = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
+          
             <p>
               Serenity Connect is dedicated to providing a supportive and safe space for mental health support. We believe in fostering a community where everyone can find the resources they need to thrive.
             </p>
+            
           </motion.div>
         </Col>
         <Col md={5}>

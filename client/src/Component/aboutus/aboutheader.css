@@ -12,11 +12,12 @@
   }
   
   .about-details {
-    text-align: left;
-    font-size: 26px;
+    text-align: center;
+    font-size: 27px;
     color: #000000;
     line-height: 1.6;
     margin-right: 10px;
+    justify-content: center;
   }
   
   .about-image-container {

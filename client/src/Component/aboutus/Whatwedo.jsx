@@ -6,7 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import testimg from '../../imgs/aboutus/download.jpeg';
+
 
 const WhatWeDo = () => {
   return (
@@ -41,7 +41,7 @@ const WhatWeDo = () => {
               component="img"
               alt="green iguana"
               height="140"
-              image={testimg}
+              img src="https://i.pinimg.com/originals/8a/df/17/8adf17db3faaa19dfd010850afd0c0ae.gif"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -60,7 +60,7 @@ const WhatWeDo = () => {
               component="img"
               alt="green iguana"
               height="140"
-              image={testimg}
+              img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/115fff71503887.5bc7b7be5b066.gif"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -79,7 +79,7 @@ const WhatWeDo = () => {
               component="img"
               alt="green iguana"
               height="140"
-              image={testimg}
+              img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/115fff71503887.5bc7b7be5b066.gif"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
