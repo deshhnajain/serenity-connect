@@ -28,7 +28,7 @@ function Login() {
                 toast.success(message); // Show success message
                 localStorage.setItem('token', jwtToken);
                 localStorage.setItem('loggedInUser', name);
-                setTimeout(() => navigate('/home'), 1000);
+                setTimeout(() => navigate('/'), 1000);
             } else {
                 handleError(message); // Show error message
             }
@@ -66,6 +66,7 @@ function Login() {
                     <span>Doesn't have an account?
                         <Link to="/user-signup">Signup</Link>
                     </span>
+                    
                 </form>
                 <ToastContainer />
             </div>
