@@ -56,7 +56,7 @@ const MyNavbar = () => {
               <NavDropdown.Item as={Link} to="/services/more">More Services</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex mx-2 custom-form">
+          {/* <Form className="d-flex mx-2 custom-form">
             <FormControl
               type="search"
               placeholder="Search"
@@ -64,7 +64,7 @@ const MyNavbar = () => {
               aria-label="Search"
             />
             <Button variant="outline-light"><FontAwesomeIcon icon={faSearch} /></Button>
-          </Form>
+          </Form> */}
           <Nav>
             {isUserLoggedIn ? (
               <>

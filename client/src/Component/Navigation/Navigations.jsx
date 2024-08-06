@@ -12,6 +12,7 @@ import AboutUs from '../../pages/Aboutus/Aboutus';
 import Footer from '../footer/footer';
 import Login from '../../pages/Userauth/Login';
 import Signup from '../../pages/Userauth/Signup';
+import Home from '../../pages/Home/Home';
 import './Navigation.css';
 function MainLayout() {
   const location = useLocation();
@@ -40,6 +41,8 @@ function MainLayout() {
         <>
           <MyNavbar />
           <Routes>
+            <Route path="/" element={<Home />} />
+            <Route paht='/home' element={<Home />} />
             <Route path="/services/therapy" element={<TherapistsList />} />
             <Route path="/services/paidcounseling" element={<PaidConsult />} />
             <Route path="/therapists/:id" element={<TherapistDetails />} />

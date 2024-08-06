@@ -1,12 +1,12 @@
+// index.js
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/config');
 const therapistRoutes = require('./route/therapistRoutes');
 const appointmentRoutes = require('./route/appointmentRoutes');
 const therapistauthRoutes = require('./route/therapistauthRoutes');
-const user=require('./route/userRoutes');
+const userRoutes = require('./route/userRoutes');
 const app = express();
-
 
 // Connect to database
 connectDB();
@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api', user);
+app.use('/api', userRoutes);
 app.use('/api/auth', therapistauthRoutes);
 app.use('/api/therapists', therapistRoutes);
 app.use('/api/appointments', appointmentRoutes);

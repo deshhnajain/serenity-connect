@@ -38,7 +38,7 @@ const VerticalSidebar = () => {
         {isLoggedIn ? (
           
           <button className={styles.navLink} onClick={handleLogout}>
-            <NavLink to="/therapist-login" className={styles.navLink}>
+            <NavLink to="/home" className={styles.navLink}>
             <FontAwesomeIcon icon={faSignOutAlt} /> <span className={styles.linkText}>Logout</span></NavLink>
           </button>
         ) : (

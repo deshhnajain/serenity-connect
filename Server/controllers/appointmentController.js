@@ -33,8 +33,9 @@ exports.getAppointmentById = async (req, res) => {
 // Add a new appointment
 exports.createAppointment = async (req, res) => {
   const { therapistId, name, email, date, time, notes } = req.body;
-  const newAppointment = new Appointment({ therapistId, name, email, date, time, notes });
+  const userId = req.user.id; // Extract userId from authenticated user
 
+  const newAppointment = new Appointment({ therapistId, userId, name, email, date, time, notes });
   try {
     const savedAppointment = await newAppointment.save();
     res.status(201).json(savedAppointment);
@@ -42,7 +43,6 @@ exports.createAppointment = async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 };
-
 // Update an appointment
 exports.updateAppointment = async (req, res) => {
   const { id } = req.params;

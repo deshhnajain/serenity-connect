@@ -1,3 +1,4 @@
+// TherapistDetails.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -68,14 +69,23 @@ const TherapistDetails = () => {
     }
 
     try {
-      const response = await axios.post(`http://localhost:5000/api/appointments`, {
-        therapistId: id,
-        date: date.toISOString().split('T')[0], // Ensure the format matches the backend expectation
-        time: '', // Optional field
-        notes: appointmentDetails.notes,
-        name: appointmentDetails.name,
-        email: appointmentDetails.email
-      });
+      const token = localStorage.getItem('token'); // Get the token from local storage
+      const response = await axios.post(
+        `http://localhost:5000/api/appointments`,
+        {
+          therapistId: id,
+          date: date.toISOString().split('T')[0], // Ensure the format matches the backend expectation
+          time: '', // Optional field
+          notes: appointmentDetails.notes,
+          name: appointmentDetails.name,
+          email: appointmentDetails.email
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}` // Include the token in the Authorization header
+          }
+        }
+      );
       setSuccessMessage('Appointment booked successfully!');
       setFormError('');
       handleClose();

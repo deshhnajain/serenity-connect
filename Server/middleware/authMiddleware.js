@@ -1,22 +1,18 @@
-import jwt from 'jsonwebtoken'
-import dotenv from 'dotenv'
-dotenv.config()
+// middleware/authenticateUser.js
+const jwt = require('jsonwebtoken');
 
-const authenticate = (req, res, next) => {
-    const token = req.headers.authorization;
+const authenticateUser = (req, res, next) => {
+  const token = req.header('Authorization')?.split(' ')[1]; // Assuming token is sent as Bearer token
 
-    if (!token) {
-        return res.status(401).json({ message: 'No token provided' });
-    }
+  if (!token) return res.status(401).json({ message: 'Access denied. No token provided.' });
 
-    try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = decoded;
-        next();
-    } catch (err) {
-        res.status(401).json({ message: 'Invalid token' });
-    }
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET); // Ensure you have the secret key in your environment variables
+    req.user = decoded; // `decoded` should contain user details, including userId
+    next();
+  } catch (error) {
+    res.status(400).json({ message: 'Invalid token.' });
+  }
 };
 
-export default authenticate;
-
+module.exports = authenticateUser;
