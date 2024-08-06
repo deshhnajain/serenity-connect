@@ -1,0 +1,227 @@
+/* .mental-health-check {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #76c7c0;
+  transition: width 0.5s;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+.option-text {
+  font-size: 16px;
+}
+
+.next-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #76c7c0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.next-button:hover {
+  background-color: #64b2ac;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.result-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.result-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.report {
+  margin-top: 20px;
+}
+
+.report-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.report-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.report-item {
+  margin-bottom: 10px;
+}
+
+.report-question {
+  font-weight: bold;
+}
+
+.report-response {
+  margin-left: 10px;
+} */
+
+
+/* MentalHealthCheck.css */
+
+.mental-health-check {
+  font-family: Arial, sans-serif;
+  width:100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+.option-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.next-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.next-button:hover {
+  background-color: #45a049;
+}
+
+.results {
+  text-align: center;
+}
+
+.result-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.result-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.report {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.report-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.report-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.report-item {
+  margin-bottom: 10px;
+}
+
+.report-question {
+  font-size: 16px;
+  color: #555;
+}

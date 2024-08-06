@@ -6,8 +6,8 @@ const therapistRoutes = require('./route/therapistRoutes');
 const appointmentRoutes = require('./route/appointmentRoutes');
 const therapistauthRoutes = require('./route/therapistauthRoutes');
 const userRoutes = require('./route/userRoutes');
-const authRoutes = require('./route/auth'); // Add this line
-const passport = require('./config/passportConfig'); // Add this line
+// const authRoutes = require('./route/auth');
+// const passport = require('./config/passportConfig'); 
 
 const app = express();
 
@@ -17,13 +17,13 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(session({
-  secret: 'your_secret_key',
-  resave: false,
-  saveUninitialized: true
-}));
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(session({
+//   secret: 'your_secret_key',
+//   resave: false,
+//   saveUninitialized: true
+// }));
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Routes
 app.use('/api', userRoutes);

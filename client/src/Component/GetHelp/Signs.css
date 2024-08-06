@@ -1,0 +1,118 @@
+/* signs.css */
+
+.GetHelp {
+  width: 100%;
+  /* margin: 40px auto; */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Added rule */
+}
+
+.GetHelp h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left; /* Added rule */
+  
+}
+
+.GetHelp h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center; /* Added rule */
+}
+
+.container1 {
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: center; /* Updated rule */
+}
+
+.image {
+  width: 40%;
+  margin: 20px auto; /* Updated rule */
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.list {
+  width: 55%;
+  margin: 20px auto; /* Updated rule */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: center; /* Added rule */
+}
+
+.item img {
+  margin-right: 10px;
+}
+
+.item span {
+  font-size: 16px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list-right {
+  margin-left: 20px;
+}
+
+.list-left {
+  margin-right: 20px;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+  .container1 {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .list {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .GetHelp {
+    padding: 10px;
+  }
+
+  .GetHelp h1 {
+    font-size: 20px;
+  }
+
+  .GetHelp h3 {
+    font-size: 16px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+}

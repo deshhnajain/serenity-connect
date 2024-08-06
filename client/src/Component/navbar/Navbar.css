@@ -1,65 +1,116 @@
 /* Navbar.css */
 
 .custom-navbar {
-    margin-bottom: 20px;
-    background: rgba(14, 253, 213, 0.352); /* Transparent background */
-    border-radius: 0.25rem;
-    transition: background 0.3s ease-in-out;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-brand {
+  font-size: 1.75em;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.custom-nav .nav-link {
+  font-size: 1.1em;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  border-radius: 5px;
+}
+
+.custom-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.75rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.custom-form .form-control {
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.custom-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.custom-form .btn-outline-light {
+  border: none;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.custom-form .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.navbar .dropdown-menu {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.navbar .dropdown-item {
+  color: #333333;
+  transition: all 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #2193b0;
+}
+
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+.nav-icon {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .custom-navbar {
+      padding: 0.5rem;
   }
-  
-  .custom-brand {
-    font-size: 1.75em;
-    font-weight: bold;
-    color: #ffc107; /* Highlight color */
-  }
-  
+
   .custom-nav .nav-link {
-    font-size: 1.2em;
-    color: #ffffff; /* White text */
-    transition: color 0.3s ease-in-out;
+      padding: 0.75rem 1rem;
+      margin: 0.2rem 0;
   }
-  
+
+  .navbar-collapse {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 5px;
+      padding: 1rem;
+      margin-top: 0.5rem;
+  }
+
+  .custom-nav .nav-link {
+      color: #333333;
+  }
+
   .custom-nav .nav-link:hover {
-    color: #ffc107; /* Highlight on hover */
-    text-decoration: underline;
+      color: #2193b0;
+      background-color: #f8f9fa;
   }
-  
-  .custom-form .form-control {
-    border-radius: 0.25rem;
-    border: 1px solid #ffc107; /* Highlight border */
-    background-color: rgba(73, 80, 87, 0.8); /* Transparent input background */
-    color: #ffffff;
-  }
-  
-  .custom-form .form-control::placeholder {
-    color: #ced4da;
-  }
-  
-  .custom-form .btn-outline-light {
-    border: 1px solid #ffc107; /* Highlight border */
-    color: #ffc107; /* Highlight text */
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .custom-form .btn-outline-light:hover {
-    background-color: #ffc107; /* Highlight background on hover */
-    color: #53a6f8; /* Dark text on hover */
-  }
-  
-  .navbar .dropdown-menu {
-    background-color: rgba(52, 58, 64, 0.8); /* Transparent background for dropdown */
-  }
-  
-  .navbar .dropdown-item {
-    color: #ffffff; /* White text */
-  }
-  
-  .navbar .dropdown-item:hover {
-    background-color: rgba(73, 80, 87, 0.8); /* Darker background on hover */
-    color: #ffc107; /* Highlight text on hover */
-  }
-  
-  .shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
-  }
-  
+}

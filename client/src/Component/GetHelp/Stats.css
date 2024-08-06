@@ -1,0 +1,57 @@
+/* Stats.css */
+body {
+    background-color: #FFFFE0;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .stat {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .stat h2 {
+    font-size: 30px;
+    color: orange;
+    margin-bottom: 10px;
+  }
+  
+  .stat p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .img {
+    flex-direction: row;
+    display: flex;
+    justify-content: left;
+    align-items:flex-start;
+  }
+  
+  .img img {
+    max-width: 100%;
+    height: auto;
+  }
+  

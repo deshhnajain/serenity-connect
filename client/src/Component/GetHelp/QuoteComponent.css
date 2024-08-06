@@ -1,0 +1,35 @@
+.quote-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #34bfc9;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .quote-text {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    white-space: pre-wrap; /* Preserve spaces */
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace; /* Typing effect font */
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  /* Typing effect */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  /* Blinking caret */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+  

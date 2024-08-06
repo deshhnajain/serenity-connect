@@ -40,13 +40,14 @@ const MyNavbar = () => {
   };
 
   return (
-    <Navbar expand="lg" className="custom-navbar shadow-sm p-3 mb-5 rounded">
+    <Navbar expand="lg" className="custom-navbar shadow-sm p-3 rounded">
       <Container>
         <Navbar.Brand as={Link} to="/" className="custom-brand">Serenity Connect</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto custom-nav">
             <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/gethelp">Get Help</Nav.Link>
             <NavDropdown title="Services" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/services/therapy">Therapy</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/services/paidcounseling">Counseling</NavDropdown.Item>

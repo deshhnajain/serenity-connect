@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Card, CardContent, Typography, Button, Grid, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, CircularProgress } from '@mui/material';
+import { Card, CardContent, Typography, Button, Grid, Dialog, DialogActions, DialogContent, DialogTitle, CircularProgress, Snackbar, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import Header from '../../Component/therapy/searchbar';
 import TherapyHeader from '../../Component/therapy/Therapyheader';
@@ -13,6 +13,7 @@ const TherapistsList = () => {
   const [error, setError] = useState(null);
   const [open, setOpen] = useState(false);
   const [selectedTherapist, setSelectedTherapist] = useState(null);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
@@ -38,6 +39,14 @@ const TherapistsList = () => {
   };
 
   const handleBookAppointment = (therapistId) => {
+    const isAuthenticated = localStorage.getItem('authToken'); // Example authentication check
+
+    if (!isAuthenticated) {
+      setSnackbarOpen(true);
+      setTimeout(() => navigate('/user-login'), 2000); // Redirect to login page after 2 seconds
+      return;
+    }
+
     navigate(`/therapists/${therapistId}`);
   };
 
@@ -49,6 +58,10 @@ const TherapistsList = () => {
   const handleInfoClose = () => {
     setOpen(false);
     setSelectedTherapist(null);
+  };
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
   };
 
   const uniqueSpecializations = [...new Set(therapists.map(therapist => therapist.specialization))];
@@ -95,47 +108,55 @@ const TherapistsList = () => {
                   </div>
                 </CardContent>
               </Card>
-
-
             </Grid>
           ))}
         </Grid>
 
         {selectedTherapist && (
           <Dialog
-          open={open}
-          onClose={handleInfoClose}
-          PaperProps={{ className: 'dialog-paper dialog-container' }}
-          aria-labelledby="therapist-info-dialog"
-        >
-          <DialogTitle id="therapist-info-dialog" className="dialog-title">
-            {selectedTherapist.name}
-          </DialogTitle>
-          <DialogContent className="dialog-content">
-            <Typography variant="body1">
-              <strong>Specialization:</strong> {selectedTherapist.specialization}
-            </Typography>
-            <Typography variant="body1">
-              <strong>Availability:</strong> {selectedTherapist.availability.join(', ')}
-            </Typography>
-            <Typography variant="body1">
-              <strong>Location:</strong> {selectedTherapist.location}
-            </Typography>
-            <Typography variant="body1">
-              <strong>Rating:</strong> {selectedTherapist.rating}
-            </Typography>
-            <Typography variant="body1">
-              <strong>Description:</strong> {selectedTherapist.description || 'No description available.'}
-            </Typography>
-          </DialogContent>
-          <DialogActions className="dialog-actions">
-            <Button onClick={handleInfoClose} variant="outlined" color="secondary">
-              Close
-            </Button>
-          </DialogActions>
-        </Dialog>
+            open={open}
+            onClose={handleInfoClose}
+            PaperProps={{ className: 'dialog-paper dialog-container' }}
+            aria-labelledby="therapist-info-dialog"
+          >
+            <DialogTitle id="therapist-info-dialog" className="dialog-title">
+              {selectedTherapist.name}
+            </DialogTitle>
+            <DialogContent className="dialog-content">
+              <Typography variant="body1">
+                <strong>Specialization:</strong> {selectedTherapist.specialization}
+              </Typography>
+              <Typography variant="body1">
+                <strong>Availability:</strong> {selectedTherapist.availability.join(', ')}
+              </Typography>
+              <Typography variant="body1">
+                <strong>Location:</strong> {selectedTherapist.location}
+              </Typography>
+              <Typography variant="body1">
+                <strong>Rating:</strong> {selectedTherapist.rating}
+              </Typography>
+              <Typography variant="body1">
+                <strong>Description:</strong> {selectedTherapist.description || 'No description available.'}
+              </Typography>
+            </DialogContent>
+            <DialogActions className="dialog-actions">
+              <Button onClick={handleInfoClose} variant="outlined" color="secondary">
+                Close
+              </Button>
+            </DialogActions>
+          </Dialog>
         )}
       </div>
+
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={2000}
+        onClose={handleSnackbarClose}
+      >
+        <Alert onClose={handleSnackbarClose} severity="warning">
+          You need to log in before booking an appointment.
+        </Alert>
+      </Snackbar>
     </>
   );
 };
