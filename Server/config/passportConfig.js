@@ -1,3 +1,4 @@
+//Not used in the code
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/user'); // Make sure the path to the user model is correct

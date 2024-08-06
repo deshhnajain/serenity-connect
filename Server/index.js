@@ -30,6 +30,8 @@ app.use('/api', userRoutes);
 app.use('/api/auth', therapistauthRoutes);
 app.use('/api/therapists', therapistRoutes);
 app.use('/api/appointments', appointmentRoutes);
+//Not Used this is for the google auth It is workinig but not used in the code because of the appointement functionality will make this work later
+// app.use(authRoutes); 
 
 // Start server
 const PORT = process.env.PORT || 5000;

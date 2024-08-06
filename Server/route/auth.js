@@ -1,3 +1,4 @@
+//not used in the code
 const express = require('express');
 const passport = require('../config/passportConfig'); // Ensure this is the correct path to your passport config file
 

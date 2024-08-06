@@ -66,7 +66,10 @@ function Login() {
                     <span>Doesn't have an account?
                         <Link to="/user-signup">Signup</Link>
                     </span>
-                    
+                    {/* GOOGLE LOGIN NOT USED IN THE CODE YET */}
+                    {/* <a href="http://localhost:5000/auth/google">
+                        <button type="button">Login with Google</button>
+                    </a> */}
                 </form>
                 <ToastContainer />
             </div>
