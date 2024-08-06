@@ -1,5 +1,5 @@
 .dashboard-layout {
-    margin-left: 150px; /* Default margin for larger screens */
+    /* margin-left: 150px; */
     transition: margin-left 0.3s ease;
   }
   

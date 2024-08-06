@@ -70,7 +70,7 @@ export default function TherapistDashboard() {
         return;
       }
 
-      const response = await axios.put(`http://localhost:3388/api/therapists/${therapistId}`, formData);
+      const response = await axios.put(`http://localhost:5000/api/therapists/${therapistId}`, formData);
       setIsEditing(false);
       setTherapist(prevData => ({ ...prevData, ...formData })); // Update state with new data
     } catch (error) {
