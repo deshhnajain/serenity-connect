@@ -1,42 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, NavDropdown, Container, Form, FormControl, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import './Navbar.css'; // Import the custom CSS
+import { faSearch, faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router-dom';
+import './Navbar.css';
 
 const MyNavbar = () => {
-  // State to manage login status
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-  const [isTherapistLoggedIn, setIsTherapistLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userType, setUserType] = useState('');
   const [loggedInName, setLoggedInName] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if user or therapist is logged in (replace with your actual authentication check)
-    const userLoggedInStatus = !!localStorage.getItem('userId'); // Example check
-    const therapistLoggedInStatus = !!localStorage.getItem('therapistId'); // Example check
-    const userName = localStorage.getItem('loggedInUser');
-    const therapistName = localStorage.getItem('loggedInTherapist');
+    const checkLoginStatus = () => {
+      const userId = localStorage.getItem('userId');
+      const therapistId = localStorage.getItem('therapistId');
+      
+      if (userId) {
+        setIsLoggedIn(true);
+        setUserType('user');
+        setLoggedInName(localStorage.getItem('loggedInUser') || 'User');
+      } else if (therapistId) {
+        setIsLoggedIn(true);
+        setUserType('therapist');
+        setLoggedInName(localStorage.getItem('loggedInTherapist') || 'Therapist');
+      } else {
+        setIsLoggedIn(false);
+        setUserType('');
+        setLoggedInName('');
+      }
+    };
 
-    setIsUserLoggedIn(userLoggedInStatus);
-    setIsTherapistLoggedIn(therapistLoggedInStatus);
+    checkLoginStatus();
+    window.addEventListener('storage', checkLoginStatus);
 
-    if (userLoggedInStatus) {
-      setLoggedInName(userName);
-    } else if (therapistLoggedInStatus) {
-      setLoggedInName(therapistName);
-    }
+    return () => {
+      window.removeEventListener('storage', checkLoginStatus);
+    };
   }, []);
 
   const handleLogout = () => {
-    // Clear user session and update login status
     localStorage.removeItem('userId');
     localStorage.removeItem('therapistId');
     localStorage.removeItem('loggedInUser');
     localStorage.removeItem('loggedInTherapist');
-    setIsUserLoggedIn(false);
-    setIsTherapistLoggedIn(false);
+    setIsLoggedIn(false);
+    setUserType('');
     setLoggedInName('');
+    navigate('/');
   };
 
   return (
@@ -56,7 +67,7 @@ const MyNavbar = () => {
               <NavDropdown.Item as={Link} to="/services/more">More Services</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          {/* <Form className="d-flex mx-2 custom-form">
+          <Form className="d-flex mx-2 custom-form">
             <FormControl
               type="search"
               placeholder="Search"
@@ -64,24 +75,27 @@ const MyNavbar = () => {
               aria-label="Search"
             />
             <Button variant="outline-light"><FontAwesomeIcon icon={faSearch} /></Button>
-          </Form> */}
+          </Form>
           <Nav>
-            {isUserLoggedIn ? (
+            {isLoggedIn ? (
               <>
-                <Nav.Link as={Link} to="/user-dashboard"><FontAwesomeIcon icon={faUser} /> {loggedInName}</Nav.Link>
-                <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
-              </>
-            ) : isTherapistLoggedIn ? (
-              <>
-                <Nav.Link as={Link} to="/therapist-dashboard"><FontAwesomeIcon icon={faUser} /> {loggedInName}</Nav.Link>
-                <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                <Nav.Link as={Link} to={`/${userType}-dashboard`}>
+                  <FontAwesomeIcon icon={faUser} className="nav-icon" /> {loggedInName}
+                </Nav.Link>
+                <Nav.Link onClick={handleLogout}>
+                  <FontAwesomeIcon icon={faSignOutAlt} className="nav-icon" /> Logout
+                </Nav.Link>
               </>
             ) : (
               <>
-                <Nav.Link as={Link} to="/user-login"><FontAwesomeIcon icon={faUser} /> Login as User</Nav.Link>
-                <Nav.Link as={Link} to="/user-signup"><FontAwesomeIcon icon={faUser} /> Signup as User</Nav.Link>
-                <Nav.Link as={Link} to="/therapist-login"><FontAwesomeIcon icon={faUser} /> Login as Therapist</Nav.Link>
-                <Nav.Link as={Link} to="/therapist-signup"><FontAwesomeIcon icon={faUser} /> Signup as Therapist</Nav.Link>
+                <NavDropdown title={<><FontAwesomeIcon icon={faUser} className="nav-icon" /> Login</>} id="login-dropdown">
+                  <NavDropdown.Item as={Link} to="/user-login">Login as User</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/therapist-login">Login as Therapist</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title={<><FontAwesomeIcon icon={faUser} className="nav-icon" /> Signup</>} id="signup-dropdown">
+                  <NavDropdown.Item as={Link} to="/user-signup">Signup as User</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/therapist-signup">Signup as Therapist</NavDropdown.Item>
+                </NavDropdown>
               </>
             )}
           </Nav>

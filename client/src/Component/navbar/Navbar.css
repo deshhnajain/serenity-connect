@@ -2,17 +2,23 @@
 
 .custom-navbar {
   background: linear-gradient(135deg, #6dd5ed, #2193b0);
-  border-radius: 0;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .custom-brand {
-  font-size: 1.75em;
-  font-weight: bold;
+  font-size: 2em;
+  font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-brand:hover {
+  transform: scale(1.05);
 }
 
 .custom-nav .nav-link {
@@ -20,18 +26,25 @@
   color: #ffffff;
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
-  margin: 0 0.2rem;
-  border-radius: 5px;
+  margin: 0 0.3rem;
+  border-radius: 25px;
+  font-weight: 600;
 }
 
 .custom-nav .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-toggler {
   border: none;
   padding: 0.25rem 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  transform: rotate(90deg);
 }
 
 .navbar-toggler-icon {
@@ -39,11 +52,17 @@
 }
 
 .custom-form .form-control {
-  border-radius: 20px;
+  border-radius: 25px;
   border: none;
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.custom-form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .custom-form .form-control::placeholder {
@@ -53,31 +72,38 @@
 .custom-form .btn-outline-light {
   border: none;
   color: #ffffff;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
   transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .custom-form .btn-outline-light:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
   color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .dropdown-menu {
   background-color: #ffffff;
   border: none;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
 }
 
 .navbar .dropdown-item {
   color: #333333;
   transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
 }
 
 .navbar .dropdown-item:hover {
-  background-color: #f8f9fa;
+  background-color: #f0f8ff;
   color: #2193b0;
+  transform: translateX(5px);
 }
 
 .navbar .dropdown-toggle::after {
@@ -86,31 +112,37 @@
 
 .nav-icon {
   margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.2);
 }
 
 @media (max-width: 991.98px) {
   .custom-navbar {
-      padding: 0.5rem;
+    padding: 0.75rem;
   }
 
   .custom-nav .nav-link {
-      padding: 0.75rem 1rem;
-      margin: 0.2rem 0;
+    padding: 0.75rem 1rem;
+    margin: 0.3rem 0;
   }
 
   .navbar-collapse {
-      background-color: rgba(255, 255, 255, 0.95);
-      border-radius: 5px;
-      padding: 1rem;
-      margin-top: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
   .custom-nav .nav-link {
-      color: #333333;
+    color: #333333;
   }
 
   .custom-nav .nav-link:hover {
-      color: #2193b0;
-      background-color: #f8f9fa;
+    color: #2193b0;
+    background-color: #f0f8ff;
   }
 }
