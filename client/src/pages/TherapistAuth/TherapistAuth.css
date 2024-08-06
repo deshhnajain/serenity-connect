@@ -18,7 +18,7 @@
 }
 
 .LoginSignup-container .container {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
@@ -50,10 +50,10 @@
 
 .LoginSignup-container .container button {
     background-color: #512da8;
-    color: #fff;
+    color: #ffffff;
     font-size: 12px;
     padding: 10px 45px;
-    border: 1px solid transparent;
+    border: 1px solid transparent;  
     border-radius: 8px;
     font-weight: 600;
     letter-spacing: 0.5px;

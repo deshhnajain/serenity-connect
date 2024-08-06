@@ -1,40 +1,41 @@
 /* Navbar.css */
-
 .custom-navbar {
-  background: linear-gradient(135deg, #6dd5ed, #2193b0);
-  border-radius: 0 0 15px 15px;
+  background: linear-gradient(135deg, #ffffff, #4A00E0);
   padding: 0.75rem 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .custom-brand {
-  font-size: 2em;
-  font-weight: 800;
+  font-size: 1.8em;
+  font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
   transition: all 0.3s ease;
 }
 
 .custom-brand:hover {
-  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.custom-nav {
+  display: flex;
+  align-items: center;
 }
 
 .custom-nav .nav-link {
-  font-size: 1.1em;
-  color: #ffffff;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
-  margin: 0 0.3rem;
-  border-radius: 25px;
-  font-weight: 600;
+  margin: 0 0.2rem;
+  border-radius: 8px;
+  font-weight: 500;
 }
 
 .custom-nav .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .navbar-toggler {
@@ -43,67 +44,33 @@
   transition: all 0.3s ease;
 }
 
-.navbar-toggler:hover {
-  transform: rotate(90deg);
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.custom-form .form-control {
-  border-radius: 25px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  padding: 0.5rem 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.custom-form .form-control:focus {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-}
-
-.custom-form .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.custom-form .btn-outline-light {
-  border: none;
-  color: #ffffff;
-  border-radius: 25px;
-  padding: 0.5rem 1.5rem;
-  transition: all 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.custom-form .btn-outline-light:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 .navbar .dropdown-menu {
   background-color: #ffffff;
   border: none;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  padding: 1rem;
+  border-radius: 8px;
+  padding: 0.5rem;
 }
 
 .navbar .dropdown-item {
   color: #333333;
   transition: all 0.3s ease;
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 0.5rem 1rem;
 }
 
 .navbar .dropdown-item:hover {
-  background-color: #f0f8ff;
-  color: #2193b0;
-  transform: translateX(5px);
+  background-color: #f0f0f0;
+  color: #4A00E0;
 }
 
 .navbar .dropdown-toggle::after {
@@ -116,24 +83,24 @@
 }
 
 .nav-link:hover .nav-icon {
-  transform: scale(1.2);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 991.98px) {
   .custom-navbar {
-    padding: 0.75rem;
+    padding: 0.5rem 1rem;
   }
 
   .custom-nav .nav-link {
     padding: 0.75rem 1rem;
-    margin: 0.3rem 0;
+    margin: 0.2rem 0;
   }
 
   .navbar-collapse {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    padding: 1.5rem;
-    margin-top: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
@@ -142,7 +109,23 @@
   }
 
   .custom-nav .nav-link:hover {
-    color: #2193b0;
-    background-color: #f0f8ff;
+    color: #4A00E0;
+    background-color: #ffffff;
   }
+}
+
+/* Vertical alignment styles */
+.navbar-nav {
+  align-items: center;
+}
+
+.nav-item,
+.navbar-nav .dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .dropdown-toggle {
+  display: flex;
+  align-items: center;
 }

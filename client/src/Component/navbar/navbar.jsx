@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, NavDropdown, Container, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
@@ -51,7 +51,7 @@ const MyNavbar = () => {
   };
 
   return (
-    <Navbar expand="lg" className="custom-navbar shadow-sm p-3 rounded">
+<Navbar expand="lg" className="custom-navbar">
       <Container>
         <Navbar.Brand as={Link} to="/" className="custom-brand">Serenity Connect</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -67,15 +67,6 @@ const MyNavbar = () => {
               <NavDropdown.Item as={Link} to="/services/more">More Services</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex mx-2 custom-form">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-light"><FontAwesomeIcon icon={faSearch} /></Button>
-          </Form>
           <Nav>
             {isLoggedIn ? (
               <>
