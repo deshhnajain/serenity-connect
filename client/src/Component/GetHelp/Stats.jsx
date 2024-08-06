@@ -3,7 +3,7 @@ import './Stats.css'; // Import the CSS file
 
 const Stats = () => {
   return (
-    <div className="body">
+    <div className="stats">
       <h1>Prioritize your mental health</h1>
       <p>Take the first step. Call us to re-set, re-energize and re-build your life</p>
       <p>Live your life by getting the much-needed support from our experts when needed</p>
