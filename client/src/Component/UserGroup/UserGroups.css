@@ -1,0 +1,30 @@
+.user-groups-wrapper {
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 80vh;
+  }
+  
+  .user-groups-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .group-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .group-item h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .group-item p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    color: #555555;
+  }
+  

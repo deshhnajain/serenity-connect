@@ -7,18 +7,18 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://cdn.prod.website-files.com/62ab7d5ccc9f587bce83c183/62e0e1fc719db8d3506ff643_get-help-banner.jpg"
-          alt="First slide"
+          src="https://www.slideegg.com/image/catalog/86988-Mental-Health-PowerPoint-Slides.png"
+          alt="First slide" height={347}
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          {/* <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://cdn.prod.website-files.com/62ab7d5ccc9f587bce83c183/62e0e1fc719db8d3506ff643_get-help-banner.jpg"
+          src="https://www.slideegg.com/image/catalog/100263-Clinical-Case-Of-Mental-Health.png"
           alt="Second slide" width={1388}height={347}
         />
         <Carousel.Caption>
@@ -30,11 +30,11 @@ function UncontrolledExample() {
         <img
           className="d-block w-100"
           src="https://cdn.prod.website-files.com/62ab7d5ccc9f587bce83c183/62e0e1fc719db8d3506ff643_get-help-banner.jpg"
-          alt="Third slide"
+          alt="Third slide" 
         />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          {/* <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

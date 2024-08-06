@@ -1,32 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faSignOutAlt, faCog, faCalendar, faUsers, faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const MyNavbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userType, setUserType] = useState('');
   const [loggedInName, setLoggedInName] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
     const checkLoginStatus = () => {
-      const userId = localStorage.getItem('userId');
-      const therapistId = localStorage.getItem('therapistId');
+      const token = localStorage.getItem('token');
+      const name = localStorage.getItem('loggedInUser');
       
-      if (userId) {
+      if (token) {
         setIsLoggedIn(true);
-        setUserType('user');
-        setLoggedInName(localStorage.getItem('loggedInUser') || 'User');
-      } else if (therapistId) {
-        setIsLoggedIn(true);
-        setUserType('therapist');
-        setLoggedInName(localStorage.getItem('loggedInTherapist') || 'Therapist');
+        setLoggedInName(name || 'User');
       } else {
         setIsLoggedIn(false);
-        setUserType('');
         setLoggedInName('');
       }
     };
@@ -40,18 +33,15 @@ const MyNavbar = () => {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('userId');
-    localStorage.removeItem('therapistId');
+    localStorage.removeItem('token');
     localStorage.removeItem('loggedInUser');
-    localStorage.removeItem('loggedInTherapist');
     setIsLoggedIn(false);
-    setUserType('');
     setLoggedInName('');
     navigate('/');
   };
 
   return (
-<Navbar expand="lg" className="custom-navbar">
+    <Navbar expand="lg" className="custom-navbar">
       <Container>
         <Navbar.Brand as={Link} to="/" className="custom-brand">Serenity Connect</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -69,14 +59,24 @@ const MyNavbar = () => {
           </Nav>
           <Nav>
             {isLoggedIn ? (
-              <>
-                <Nav.Link as={Link} to={`/${userType}-dashboard`}>
-                  <FontAwesomeIcon icon={faUser} className="nav-icon" /> {loggedInName}
-                </Nav.Link>
-                <Nav.Link onClick={handleLogout}>
+              <NavDropdown title={<><FontAwesomeIcon icon={faUser} className="nav-icon" /> {loggedInName}</>} id="profile-dropdown">
+                <NavDropdown.Item as={Link} to="/profile">
+                  <FontAwesomeIcon icon={faCog} className="nav-icon" /> Profile
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/appointments">
+                  <FontAwesomeIcon icon={faCalendar} className="nav-icon" /> Appointments
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/user-groups">
+                  <FontAwesomeIcon icon={faUsers} className="nav-icon" /> User Groups
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/payment-history">
+                  <FontAwesomeIcon icon={faMoneyCheckAlt} className="nav-icon" /> Payment History
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item onClick={handleLogout}>
                   <FontAwesomeIcon icon={faSignOutAlt} className="nav-icon" /> Logout
-                </Nav.Link>
-              </>
+                </NavDropdown.Item>
+              </NavDropdown>
             ) : (
               <>
                 <NavDropdown title={<><FontAwesomeIcon icon={faUser} className="nav-icon" /> Login</>} id="login-dropdown">

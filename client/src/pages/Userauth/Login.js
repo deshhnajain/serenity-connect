@@ -1,10 +1,9 @@
-// Login.js
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import { handleError } from '../../utils'; // Ensure this handles error notifications
-import './LoginSignup.css'; // Import the new CSS file
+import './LoginSignup.css'; // Import the CSS file
 
 function Login() {
     const [loginInfo, setLoginInfo] = useState({ email: '', password: '' });
@@ -18,12 +17,15 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         const { email, password } = loginInfo;
+
         if (!email || !password) {
             return handleError('Email and password are required');
         }
+
         try {
             const response = await axios.post("http://localhost:5000/api/login", loginInfo);
             const { success, message, jwtToken, name } = response.data;
+
             if (success) {
                 toast.success(message); // Show success message
                 localStorage.setItem('token', jwtToken);
@@ -74,7 +76,7 @@ function Login() {
                 <ToastContainer />
             </div>
         </div>
-    )
+    );
 }
 
 export default Login;

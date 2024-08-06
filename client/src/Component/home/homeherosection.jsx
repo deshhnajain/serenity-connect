@@ -17,7 +17,7 @@ const HeroSection = () => {
       <Slider {...carouselSettings} style={styles.slider}>
         <div>
           <img
-            src="C:\Users\Chetna Chauhan\OneDrive\Desktop\images\slide1.png"
+            src="https://www.slideegg.com/image/catalog/86988-Mental-Health-PowerPoint-Slides.png"
             alt="Slide 1"
             style={styles.carouselImage}
           />
