@@ -1,0 +1,32 @@
+/* src/pages/MoreServices.css */
+.more-services-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .memory-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .memory-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-back {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+  }
+  
+  .congratulations-text {
+    margin-top: 20px;
+    color: green;
+  }
+  

@@ -39,7 +39,7 @@ const TherapistsList = () => {
   };
 
   const handleBookAppointment = (therapistId) => {
-    const isAuthenticated = localStorage.getItem('authToken'); // Example authentication check
+    const isAuthenticated = localStorage.getItem('token'); // Example authentication check
 
     if (!isAuthenticated) {
       setSnackbarOpen(true);
