@@ -1,14 +1,14 @@
-.appointments-listcontainer {
+.appointmentsuser-listcontainer {
   min-height: 100vh;
   padding: 3rem 1rem;
 }
 
 /* Container and card styling */
-.appointments-listcontainer .container {
+.appointmentsuser-listcontainer .container {
   max-width: 900px;
 }
 
-.appointments-listcontainer .card {
+.appointmentsuser-listcontainer .card {
   border: none;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -16,16 +16,16 @@
   transition: transform 0.3s ease;
 }
 
-.appointments-listcontainer .card:hover {
+.appointmentsuser-listcontainer .card:hover {
   transform: translateY(-5px);
 }
 
-.appointments-listcontainer .card-body {
+.appointmentsuser-listcontainer .card-body {
   padding: 2.5rem;
 }
 
 /* Header styling */
-.appointments-listcontainer .card-text.mb-4 {
+.appointmentsuser-listcontainer .card-text.mb-4 {
   font-size: 2rem;
   font-weight: 700;
   color: #2c3e50;
@@ -35,7 +35,7 @@
 }
 
 /* List group styling */
-.appointments-listcontainer .list-group-item {
+.appointmentsuser-listcontainer .list-group-item {
   border: none;
   background-color: #ffffff;
   margin-bottom: 1rem;
@@ -44,19 +44,19 @@
   transition: all 0.3s ease;
 }
 
-.appointments-listcontainer .list-group-item:hover {
+.appointmentsuser-listcontainer .list-group-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Appointment details styling */
-.appointments-listcontainer .list-group-item .card-text {
+.appointmentsuser-listcontainer .list-group-item .card-text {
   margin: 0.7rem 0;
   font-size: 1.1rem;
   color: #34495e;
 }
 
-.appointments-listcontainer .list-group-item .card-text strong {
+.appointmentsuser-listcontainer .list-group-item .card-text strong {
   color: #2980b9;
   font-weight: 600;
   margin-right: 0.5rem;
@@ -65,7 +65,7 @@
 }
 
 /* Back button styling */
-.appointments-listcontainer button {
+.appointmentsuser-listcontainer button {
   background-color: #3498db;
   color: white;
   border: none;
@@ -78,7 +78,7 @@
   box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
 }
 
-.appointments-listcontainer button:hover {
+.appointmentsuser-listcontainer button:hover {
   background-color: #2980b9;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(52, 152, 219, 0.4);
@@ -86,29 +86,29 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .appointments-listcontainer .card-body {
+  .appointmentsuser-listcontainer .card-body {
     padding: 2rem;
   }
 
-  .appointments-listcontainer .card-text.mb-4 {
+  .appointmentsuser-listcontainer .card-text.mb-4 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width: 576px) {
-  .appointments-listcontainer .card-body {
+  .appointmentsuser-listcontainer .card-body {
     padding: 1.5rem;
   }
 
-  .appointments-listcontainer .card-text.mb-4 {
+  .appointmentsuser-listcontainer .card-text.mb-4 {
     font-size: 1.5rem;
   }
 
-  .appointments-listcontainer .list-group-item .card-text {
+  .appointmentsuser-listcontainer .list-group-item .card-text {
     font-size: 1rem;
   }
 
-  .appointments-listcontainer button {
+  .appointmentsuser-listcontainer button {
     width: 100%;
   }
 }
@@ -125,13 +125,13 @@
   }
 }
 
-.appointments-listcontainer .list-group-item {
+.appointmentsuser-listcontainer .list-group-item {
   animation: fadeInUp 0.5s ease forwards;
   opacity: 0;
 }
 
-.appointments-listcontainer .list-group-item:nth-child(1) { animation-delay: 0.1s; }
-.appointments-listcontainer .list-group-item:nth-child(2) { animation-delay: 0.2s; }
-.appointments-listcontainer .list-group-item:nth-child(3) { animation-delay: 0.3s; }
-.appointments-listcontainer .list-group-item:nth-child(4) { animation-delay: 0.4s; }
-.appointments-listcontainer .list-group-item:nth-child(5) { animation-delay: 0.5s; }
+.appointmentsuser-listcontainer .list-group-item:nth-child(1) { animation-delay: 0.1s; }
+.appointmentsuser-listcontainer .list-group-item:nth-child(2) { animation-delay: 0.2s; }
+.appointmentsuser-listcontainer .list-group-item:nth-child(3) { animation-delay: 0.3s; }
+.appointmentsuser-listcontainer .list-group-item:nth-child(4) { animation-delay: 0.4s; }
+.appointmentsuser-listcontainer .list-group-item:nth-child(5) { animation-delay: 0.5s; }

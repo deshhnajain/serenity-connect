@@ -69,27 +69,27 @@ const TherapistDetails = () => {
     }
 
     try {
-      const token = localStorage.getItem('token'); // Get the token from local storage
+      const token = localStorage.getItem('token');
       const response = await axios.post(
         `http://localhost:5000/api/appointments`,
         {
           therapistId: id,
-          date: date.toISOString().split('T')[0], // Ensure the format matches the backend expectation
-          time: '', // Optional field
+          date: date.toISOString().split('T')[0],
+          time: '',
           notes: appointmentDetails.notes,
           name: appointmentDetails.name,
           email: appointmentDetails.email
         },
         {
           headers: {
-            Authorization: `Bearer ${token}` // Include the token in the Authorization header
+            Authorization: `Bearer ${token}`
           }
         }
       );
       setSuccessMessage('Appointment booked successfully!');
       setFormError('');
       handleClose();
-      navigate('/services/therapy'); // Redirect to TherapistList after successful booking
+      navigate('/services/therapy');
     } catch (err) {
       console.error(err);
       setError('Failed to book appointment. Please try again.');
@@ -102,18 +102,34 @@ const TherapistDetails = () => {
   return (
     <div className="therapist-details-container">
       <Card className="therapist-details-card">
-        <img
-          src={therapist.profilePicture}
-          alt={therapist.name}
-          className="therapist-image"
-        />
+        {therapist.profilePicture && (
+          <img
+            src={therapist.profilePicture}
+            alt={therapist.name || 'Therapist'}
+            className="therapist-image"
+          />
+        )}
         <CardContent>
-          <Typography variant="h4" component="div" className="therapist-name">{therapist.name}</Typography>
-          <Typography variant="subtitle1" color="textSecondary">Specialization: {therapist.specialization}</Typography>
-          <Typography variant="subtitle1" color="textSecondary">Availability: {therapist.availability.join(', ')}</Typography>
-          <Typography variant="subtitle1" color="textSecondary">Location: {therapist.location}</Typography>
-          <Typography variant="subtitle1" color="textSecondary">Rating: {therapist.rating}</Typography>
-          <Typography variant="body1" color="textSecondary">Description: {therapist.description || 'No description available.'}</Typography>
+          <Typography variant="h4" component="div" className="therapist-name">
+            {therapist.name || 'Name not available'}
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Specialization: {therapist.specialization || 'Not specified'}
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Availability: {therapist.availability && therapist.availability.length > 0
+              ? therapist.availability.join(', ')
+              : 'Not specified'}
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Location: {therapist.location || 'Not specified'}
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Rating: {therapist.rating || 'Not rated'}
+          </Typography>
+          <Typography variant="body1" color="textSecondary">
+            Description: {therapist.description || 'No description available.'}
+          </Typography>
           <div className="button-container">
             <Button
               variant="contained"

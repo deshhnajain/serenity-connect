@@ -1,10 +1,13 @@
 /* navbar.css */
+
+/* Styling for the main navbar container */
 .custom-navbar {
-  background: linear-gradient(135deg, #ffffff, #4A00E0);
-  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #b9f1f1, #ae21ff);
+  padding: 1rem 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Styling for the brand/logo text */
 .custom-brand {
   font-size: 1.8em;
   font-weight: 700;
@@ -14,93 +17,142 @@
   transition: all 0.3s ease;
 }
 
+/* Hover effect for the brand/logo */
 .custom-brand:hover {
   opacity: 0.8;
 }
 
+/* Styling for the navigation menu container */
 .custom-nav {
   display: flex;
   align-items: center;
 }
 
+/* Styling for individual navigation links */
 .custom-nav .nav-link {
   font-size: 1rem;
   color: rgb(255, 255, 255);
   transition: all 0.3s ease;
-  padding: 0.5rem 1rem;
-  margin: 0 0.2rem;
+  padding: 0.7rem 1.2rem;
+  margin: 0 0.3rem;
   border-radius: 8px;
   font-weight: 500;
+  border-bottom: 2px solid transparent;
 }
 
+/* Hover effect for navigation links */
 .custom-nav .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(59, 82, 255, 0.63);
   color: #ffffff;
+  border-bottom-color: #aa00ff;
 }
 
+/* Styling for the mobile menu toggle button */
 .navbar-toggler {
   border: none;
-  padding: 0.25rem 0.75rem;
+  padding: 0.4rem 0.8rem;
   transition: all 0.3s ease;
 }
 
+/* Removes default focus outline on toggle button */
 .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
 }
 
+/* Custom hamburger icon for mobile menu */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* Styling for dropdown menus */
 .navbar .dropdown-menu {
   background-color: #ffffff;
   border: none;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 
+/* Styling for dropdown menu items */
 .navbar .dropdown-item {
   color: #333333;
   transition: all 0.3s ease;
   border-radius: 6px;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
 }
 
+/* Hover effect for dropdown menu items */
 .navbar .dropdown-item:hover {
   background-color: #f0f0f0;
   color: #4A00E0;
 }
 
+/* Removes default dropdown arrow */
 .navbar .dropdown-toggle::after {
   display: none;
 }
 
+/* Styling for icons in the navbar */
 .nav-icon {
-  margin-right: 0.5rem;
+  margin-right: 0.6rem;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
+/* Hover effect for icons in the navbar */
 .nav-link:hover .nav-icon {
   transform: translateY(-2px);
 }
 
-@media (max-width: 991.98px) {
+/* Vertical alignment styles */
+.navbar-nav {
+  align-items: stretch;
+}
+
+.nav-item, .navbar-nav .dropdown {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-nav .dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
   .custom-navbar {
-    padding: 0.5rem 1rem;
+    padding: 0.9rem 1.8rem;
+  }
+
+  .custom-brand {
+    font-size: 1.6em;
   }
 
   .custom-nav .nav-link {
-    padding: 0.75rem 1rem;
-    margin: 0.2rem 0;
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .custom-navbar {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .custom-nav .nav-link {
+    padding: 0.9rem 1.4rem;
+    margin: 0.3rem 0;
   }
 
   .navbar-collapse {
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 1rem;
-    margin-top: 0.5rem;
+    padding: 1.4rem;
+    margin-top: 0.8rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
@@ -112,20 +164,4 @@
     color: #4A00E0;
     background-color: #f0f0f0;
   }
-}
-
-/* Vertical alignment styles */
-.navbar-nav {
-  align-items: center;
-}
-
-.nav-item,
-.navbar-nav .dropdown {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-nav .dropdown-toggle {
-  display: flex;
-  align-items: center;
 }

@@ -95,7 +95,7 @@ const TherapistsList = () => {
                 <CardContent>
                   <Typography variant="h6" component="div">{therapist.name}</Typography>
                   <Typography color="textSecondary" variant="body2">Specialization: {therapist.specialization}</Typography>
-                  <Typography color="textSecondary" variant="body2">Availability: {therapist.availability.join(', ')}</Typography>
+                  <Typography color="textSecondary" variant="body2">Availability: {therapist.availability}</Typography>
                   <Typography color="textSecondary" variant="body2">Location: {therapist.location}</Typography>
                   <Typography color="textSecondary" variant="body2">Rating: {therapist.rating}</Typography>
                   <div className="buttons-container">
@@ -141,7 +141,7 @@ const TherapistsList = () => {
           <span className="info-icon">📅</span>
           <div className="info-text">
             <div className="info-label">Availability</div>
-            <div className="info-value">{selectedTherapist.availability.join(', ')}</div>
+            <div className="info-value">{selectedTherapist.availability}</div>
           </div>
         </div>
         <div className="info-item">

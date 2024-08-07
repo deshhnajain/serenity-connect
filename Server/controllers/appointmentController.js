@@ -14,7 +14,20 @@ exports.getAllAppointments = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+exports.getAllAppointmentsByUser = async (req, res) => {
+  const userId = req.user.id; // Get userId from authenticated user
+  
+  if (!userId) {
+    return res.status(400).json({ message: 'User ID is required' });
+  }
 
+  try {
+    const appointments = await Appointment.find({ userId });
+    res.json(appointments);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 
 // Get an appointment by ID
 exports.getAppointmentById = async (req, res) => {
