@@ -7,7 +7,7 @@ import './aboutheader.css';
 
 const AboutUsHeader = () => {
   return (  
-    <Container fluid className="about-container">
+    <Container fluid className="about-container-header">
       {/* <Row className="justify-content-center mb-4">
         <Col md={8} className="text-center">
           <motion.h1

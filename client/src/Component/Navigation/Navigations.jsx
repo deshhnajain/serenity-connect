@@ -16,6 +16,7 @@ import Home from '../../pages/Home/Home';
 import './Navigation.css';
 import GetHelp from '../../pages/gethelp/GetHelp';
 import MoreServices from '../../pages/MoreServices/MoreServices';
+import AppointmentsUser from '../UserProfile/Appointmentuser';
 function MainLayout() {
   const location = useLocation();
   const isDashboardPath = location.pathname.startsWith('/therapist-dashboard') || location.pathname.startsWith('/appointments');
@@ -51,6 +52,7 @@ function MainLayout() {
             <Route path="/therapists/:id" element={<TherapistDetails />} />
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/services/more" element={<MoreServices />} />  
+            <Route path="/appointmentuser" element={<AppointmentsUser />} />
           </Routes>
           <Footer />
         </>

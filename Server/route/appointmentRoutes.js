@@ -5,6 +5,7 @@ const appointmentController = require('../controllers/appointmentController');
 const authenticateUser = require('../middleware/authMiddleware');
 
 router.get('/', appointmentController.getAllAppointments);
+router.get('/user', authenticateUser, appointmentController.getAllAppointmentsByUser);
 router.get('/:id', authenticateUser, appointmentController.getAppointmentById);
 router.post('/', authenticateUser, appointmentController.createAppointment);
 router.put('/:id', authenticateUser, appointmentController.updateAppointment);

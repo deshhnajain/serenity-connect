@@ -23,7 +23,9 @@ exports.registerTherapist = async (req, res) => {
       location, 
       rating, 
       profilePicture, 
-      description 
+      description,
+      address,
+      phonenumber
     });
 
     await newTherapist.save();

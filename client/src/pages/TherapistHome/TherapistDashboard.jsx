@@ -8,13 +8,13 @@ import {
   MDBCardText,
   MDBCardBody,
   MDBCardImage,
-  MDBBtn,
   MDBListGroup,
   MDBListGroupItem,
   MDBInput
 } from 'mdb-react-ui-kit';
 import './TherapistDashboard.css'; // Import the CSS file
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 export default function TherapistDashboard() {
   const [therapist, setTherapist] = useState(null);
@@ -24,10 +24,11 @@ export default function TherapistDashboard() {
     name: '',
     email: '',
     phonenumber: '',
-    mobile: '',
+    // mobile: '',
     address: '',
-    profilePicture: '' ,
-    location: '',// Add this field if needed
+    profilePicture: '',
+    location: '',
+    availability: '', // Add this field if needed
   });
 
   useEffect(() => {
@@ -49,6 +50,7 @@ export default function TherapistDashboard() {
           setError('Therapist not found');
         } else {
           setError('Error fetching therapist data');
+          console.error('Error fetching therapist data:',);
         }
       }
     };
@@ -138,6 +140,19 @@ export default function TherapistDashboard() {
                     </MDBRow>
                     <MDBRow className="mb-3">
                       <MDBCol sm="3">
+                        <MDBCardText>Location</MDBCardText>
+                      </MDBCol>
+                      <MDBCol sm="9">
+                        <MDBInput
+                          type="text"
+                          name="location"
+                          value={formData.location}
+                          onChange={handleInputChange}
+                        />
+                      </MDBCol>
+                    </MDBRow>
+                    <MDBRow className="mb-3">
+                      <MDBCol sm="3">
                         <MDBCardText>Profile Picture URL</MDBCardText>
                       </MDBCol>
                       <MDBCol sm="9">
@@ -151,18 +166,31 @@ export default function TherapistDashboard() {
                     </MDBRow>
                     <MDBRow className="mb-3">
                       <MDBCol sm="3">
-                        <MDBCardText>Phone</MDBCardText>
+                        <MDBCardText>Phone Number</MDBCardText>
                       </MDBCol>
                       <MDBCol sm="9">
                         <MDBInput
-                          type="text"
-                          name="phone"
+                          type="number"
+                          name="phonenumber"
                           value={formData.phonenumber}
                           onChange={handleInputChange}
                         />
                       </MDBCol>
                     </MDBRow>
-                      {/* <MDBRow className="mb-3">
+                    <MDBRow className="mb-3">
+                      <MDBCol sm="3">
+                        <MDBCardText>Availabily</MDBCardText>
+                      </MDBCol>
+                      <MDBCol sm="9">
+                        <MDBInput
+                          type="text"
+                          name="availability"
+                          value={formData.availability}
+                          onChange={handleInputChange}
+                        />
+                      </MDBCol>
+                    </MDBRow>
+                    {/* <MDBRow className="mb-3">
                         <MDBCol sm="3">
                           <MDBCardText>location</MDBCardText>
                         </MDBCol>
@@ -188,8 +216,8 @@ export default function TherapistDashboard() {
                         />
                       </MDBCol>
                     </MDBRow>
-                    <MDBBtn type="submit">Save</MDBBtn>
-                    <MDBBtn onClick={() => setIsEditing(false)} outline className="ms-1">Cancel</MDBBtn>
+                    <Button type="submit">Save</Button>
+                    <Button onClick={() => setIsEditing(false)} outline className="ms-1">Cancel</Button>
                   </form>
                 ) : (
                   <>
@@ -216,10 +244,28 @@ export default function TherapistDashboard() {
                         <MDBCardText>Phone</MDBCardText>
                       </MDBCol>
                       <MDBCol sm="9">
-                        <MDBCardText className="text-muted">{therapist.phone || "(097) 234-5678"}</MDBCardText>
+                        <MDBCardText className="text-muted">{therapist.phonenumber || "(097) 234-5678"}</MDBCardText>
                       </MDBCol>
                     </MDBRow>
                     <hr />
+                    <MDBRow>
+                      <MDBCol sm="3">
+                        <MDBCardText>Location</MDBCardText>
+                      </MDBCol>
+                      <MDBCol sm="9">
+                        <MDBCardText className="text-muted">{therapist.location || "please Enter your Address"}</MDBCardText>
+                      </MDBCol>
+                    </MDBRow>
+                    <hr></hr>
+                    <MDBRow>
+                      <MDBCol sm="3">
+                        <MDBCardText>Availability</MDBCardText>
+                      </MDBCol>
+                      <MDBCol sm="9">
+                        <MDBCardText className="text-muted">{therapist.availability || "please Enter your Address"}</MDBCardText>
+                      </MDBCol>
+                    </MDBRow>
+                    <hr></hr>
                     <MDBRow>
                       <MDBCol sm="3">
                         <MDBCardText>Address</MDBCardText>
@@ -228,7 +274,7 @@ export default function TherapistDashboard() {
                         <MDBCardText className="text-muted">{therapist.address || "please Enter your Address"}</MDBCardText>
                       </MDBCol>
                     </MDBRow>
-                    <MDBBtn onClick={() => setIsEditing(true)}>Edit</MDBBtn>
+                    <Button onClick={() => setIsEditing(true)}>Edit</Button>
                   </>
                 )}
               </MDBCardBody>
