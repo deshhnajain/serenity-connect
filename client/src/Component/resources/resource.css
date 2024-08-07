@@ -1,0 +1,127 @@
+.resources-wrapper {
+       padding: 20px;
+       
+       flex-direction: column;
+       align-items: center; /* Center align the content horizontally */
+     }
+     
+     .header-text {
+       margin-bottom: 20px;
+       text-align: center;
+       color: rgb(100, 61, 136); /* Matching the primary color theme */
+       font-size: 18px;
+     }
+     
+     .searchBox {
+       display: flex;
+       max-width: 500px; /* Increased the max-width for a longer search bar */
+       align-items: center;
+       justify-content: space-between;
+       gap: 8px;
+       background: rgb(100, 61, 136);
+       border-radius: 50px;
+       position: relative;
+       margin-bottom: 20px; /* Add some margin to separate from buttons */
+     }
+     
+     .searchButton {
+       color: white;
+       position: absolute;
+       right: 8px;
+       width: 50px;
+       height: 50px;
+       border-radius: 50%;
+       background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+       border: 0;
+       display: inline-block;
+       transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+     }
+     
+     .searchButton:hover {
+       color: #fff;
+       background-color: #1A1A1A;
+       box-shadow: rgba(32, 24, 24, 0.5) 0 10px 20px;
+       transform: translateY(-3px);
+     }
+     
+     .searchButton:active {
+       box-shadow: none;
+       transform: translateY(0);
+     }
+     
+     .searchInput {
+       border: none;
+       background: none;
+       outline: none;
+       color: white;
+       font-size: 15px;
+       padding: 24px 46px 24px 26px;
+     }
+     
+     .button-container {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 20px;
+       margin-bottom: 100px;
+     }
+     
+     .button-link {
+       text-decoration: none;
+     }
+     
+     .button {
+       --primary-color: linear-gradient(135deg, #3a6186, #89253e); /* Matching footer gradient */
+       --glow-color: rgb(217, 176, 255);
+       --glow-spread-color: rgba(191, 123, 255, 0.781);
+     
+       font-size: 15px;
+       font-weight: bold;
+       color: var(--glow-color);
+       background: var(--primary-color);
+       border: 0.25em solid var(--glow-color);
+       padding: 1em 3em;
+       border-radius: 1em;
+       outline: none;
+       cursor: pointer;
+       position: relative;
+       transition: all 0.3s;
+     }
+     
+     .button::before,
+     .button::after {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       opacity: 0.7;
+       filter: blur(1em);
+       transition: all 0.3s;
+     }
+     
+     .button::before {
+       background-color: var(--glow-spread-color);
+       z-index: -1;
+     }
+     
+     .button::after {
+       z-index: -2;
+       background-color: var(--glow-color);
+     }
+     
+     .button:hover,
+     .button:focus {
+       color: var(--primary-color);
+       background-color: var(--glow-color);
+       box-shadow: 0 0 1em 0.25em var(--glow-color),
+                   0 0 4em 2em var(--glow-spread-color),
+                   inset 0 0 0.75em 0.25em var(--glow-color);
+     }
+     
+     .button:active {
+       box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+                   0 0 2.5em 2em var(--glow-spread-color),
+                   inset 0 0 0.5em 0.25em var(--glow-color);
+     }
+     
