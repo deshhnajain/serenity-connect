@@ -4,7 +4,7 @@ const Therapist = require('../models/therapist');
 
 // Register Therapist
 exports.registerTherapist = async (req, res) => {
-  const { name, email, password, specialization, availability, location, rating, profilePicture, description } = req.body;
+  const { name, email, password, specialization, availability, location, rating, profilePicture, description, address, phonenumber } = req.body;
   
   try {
     const existingTherapist = await Therapist.findOne({ email });

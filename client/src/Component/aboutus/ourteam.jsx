@@ -3,32 +3,33 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ourteam.css';
 import arshpreetImg from '../../imgs/aboutus/profile-pic.jpeg';
-import placeholderImg from '../../imgs/aboutus/download.jpeg';
-import deshnajain from '../../imgs/aboutus/Snapchat for Web 2023-9-10 at 12_19_45 PM.jpeg';
+import yogesh from '../../imgs/aboutus/yogeshimg.jpg';
+import deshnajain from '../../imgs/aboutus/deshnaimg.jpeg';
+import priyamimg from '../../imgs/aboutus/priyamimg.jpeg';
 
 const teamMembers = [
   {
     name: 'Arshpreet Singh',
     role: 'Team Member',
-    description: 'Great and good',
+    description: 'Great, the best, the most amazing person ever',
     img: arshpreetImg,
   },
   {
     name: 'Priyam',
     role: 'Team Member',
-    description: "I don't know",
-    img: placeholderImg,
+    description: "frontend master",
+    img: priyamimg,
   },
   {
     name: 'Yogesh',
     role: 'Team Member',
-    description: 'He is a dedicated team member.',
-    img: placeholderImg,
+    description: 'Never understand anything',
+    img: yogesh,
   },
   {
     name: 'Deshna Jain',
     role: 'Team Member',
-    description: 'Lorem ipsum',
+    description: 'The slow poke',
     img: deshnajain,
   },
 ];

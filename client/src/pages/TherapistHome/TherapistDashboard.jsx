@@ -29,6 +29,7 @@ export default function TherapistDashboard() {
     profilePicture: '',
     location: '',
     availability: '', // Add this field if needed
+    description: '',
   });
 
   useEffect(() => {
@@ -216,6 +217,19 @@ export default function TherapistDashboard() {
                         />
                       </MDBCol>
                     </MDBRow>
+                    <MDBRow className="mb-3">
+                      <MDBCol sm="3">
+                        <MDBCardText>Description</MDBCardText>
+                      </MDBCol>
+                      <MDBCol sm="9">
+                        <MDBInput
+                          type="text"
+                          name="description"
+                          value={formData.description}
+                          onChange={handleInputChange}
+                        />
+                      </MDBCol>
+                    </MDBRow>
                     <Button type="submit">Save</Button>
                     <Button onClick={() => setIsEditing(false)} outline className="ms-1">Cancel</Button>
                   </form>
@@ -274,8 +288,17 @@ export default function TherapistDashboard() {
                         <MDBCardText className="text-muted">{therapist.address || "please Enter your Address"}</MDBCardText>
                       </MDBCol>
                     </MDBRow>
+                    <hr></hr>
+                    <MDBRow>
+                      <MDBCol sm="3">
+                        <MDBCardText>Description</MDBCardText>
+                      </MDBCol>
+                      <MDBCol sm="9">
+                        <MDBCardText className="text-muted">{therapist.description|| "Please enter you description"}</MDBCardText>
+                      </MDBCol>
+                      </MDBRow>
                     <Button onClick={() => setIsEditing(true)}>Edit</Button>
-                  </>
+                    </>
                 )}
               </MDBCardBody>
             </MDBCard>
