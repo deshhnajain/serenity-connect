@@ -6,6 +6,7 @@ const therapistRoutes = require('./route/therapistRoutes');
 const appointmentRoutes = require('./route/appointmentRoutes');
 const therapistauthRoutes = require('./route/therapistauthRoutes');
 const userRoutes = require('./route/userRoutes');
+const resourceRoutes = require('./route/resourceRoutes');
 // const authRoutes = require('./route/auth');
 // const passport = require('./config/passportConfig'); 
 
@@ -30,6 +31,7 @@ app.use('/api', userRoutes);
 app.use('/api/auth', therapistauthRoutes);
 app.use('/api/therapists', therapistRoutes);
 app.use('/api/appointments', appointmentRoutes);
+app.use('/api', resourceRoutes);
 //Not Used this is for the google auth It is workinig but not used in the code because of the appointement functionality, will make this work later
 // app.use(authRoutes); 
 
