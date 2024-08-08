@@ -1,4 +1,3 @@
-// TherapistDetails.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -6,7 +5,6 @@ import { Card, CardContent, Typography, Button, CircularProgress, TextField, Dia
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './therapistdetails.css';
-
 const TherapistDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -16,24 +14,51 @@ const TherapistDetails = () => {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
   const [appointmentDetails, setAppointmentDetails] = useState({
-    name: '',
-    email: '',
+    time: '',
     notes: ''
   });
   const [successMessage, setSuccessMessage] = useState('');
   const [formError, setFormError] = useState('');
+  const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/therapists/${id}`)
-      .then(response => {
-        setTherapist(response.data);
+    const fetchData = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        
+        // Fetch therapist details
+        const therapistResponse = await axios.get(`http://localhost:5000/api/therapists/${id}`);
+        setTherapist(therapistResponse.data);
+
+        // Fetch current user details if token exists
+        if (token) {
+          try {
+            const userResponse = await axios.get('http://localhost:5000/api/users/me', {
+              headers: { Authorization: `Bearer ${token}` }
+            });
+            setCurrentUser(userResponse.data);
+            setAppointmentDetails(prevDetails => ({
+              ...prevDetails,
+              name: userResponse.data.name,
+              email: userResponse.data.email
+            }));
+          } catch (err) {
+            // Redirect to login page if user fetch fails
+            navigate('/user-login', { state: { from: `/therapist/${id}` } });
+          }
+        } else {
+          // Redirect to login page if no token found
+          navigate('/user-login', { state: { from: `/therapist/${id}` } });
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
         setLoading(false);
-      })
-      .catch(err => {
-        setError(err);
-        setLoading(false);
-      });
-  }, [id]);
+      }
+    };
+
+    fetchData();
+  }, [id, navigate]);
 
   const handleOpen = () => {
     setOpen(true);
@@ -43,11 +68,19 @@ const TherapistDetails = () => {
     setOpen(false);
     setSuccessMessage('');
     setFormError('');
-    setAppointmentDetails({
-      name: '',
-      email: '',
-      notes: ''
-    });
+    if (currentUser) {
+      setAppointmentDetails({
+        name: currentUser.name,
+        email: currentUser.email,
+        notes: ''
+      });
+    } else {
+      setAppointmentDetails({
+        name: '',
+        email: '',
+        notes: ''
+      });
+    }
   };
 
   const handleDateChange = date => {
@@ -70,6 +103,11 @@ const TherapistDetails = () => {
 
     try {
       const token = localStorage.getItem('token');
+      if (!token) {
+        navigate('/user-login', { state: { from: `/therapist/${id}` } });
+        return;
+      }
+
       const response = await axios.post(
         `http://localhost:5000/api/appointments`,
         {
@@ -91,45 +129,33 @@ const TherapistDetails = () => {
       handleClose();
       navigate('/services/therapy');
     } catch (err) {
-      console.error(err);
-      setError('Failed to book appointment. Please try again.');
+      console.error('Appointment booking error:', err.response?.data || err.message);
+      if (err.response?.status === 401) {
+        navigate('/user-login', { state: { from: `/therapist/${id}` } });
+      } else {
+        setError('Failed to book appointment. Please try again.');
+      }
     }
   };
   
   if (loading) return <div className="loading-container"><CircularProgress /></div>;
-  if (error) return <p>Error loading data: {error.message}</p>;
+  if (error) return <p>Error loading data: {error}</p>;
 
   return (
     <div className="therapist-details-container">
       <Card className="therapist-details-card">
-        {therapist.profilePicture && (
-          <img
-            src={therapist.profilePicture}
-            alt={therapist.name || 'Therapist'}
-            className="therapist-image"
-          />
-        )}
+        <img
+          src={therapist.profilePicture}
+          alt={therapist.name}
+          className="therapist-image"
+        />
         <CardContent>
-          <Typography variant="h4" component="div" className="therapist-name">
-            {therapist.name || 'Name not available'}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Specialization: {therapist.specialization || 'Not specified'}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Availability: {therapist.availability && therapist.availability.length > 0
-              ? therapist.availability.join(', ')
-              : 'Not specified'}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Location: {therapist.location || 'Not specified'}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Rating: {therapist.rating || 'Not rated'}
-          </Typography>
-          <Typography variant="body1" color="textSecondary">
-            Description: {therapist.description || 'No description available.'}
-          </Typography>
+          <Typography variant="h4" component="div" className="therapist-name">{therapist.name}</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Specialization: {therapist.specialization}</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Availability: {therapist.availability.join(', ')}</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Location: {therapist.location}</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Rating: {therapist.rating}</Typography>
+          <Typography variant="body1" color="textSecondary">Description: {therapist.description || 'No description available.'}</Typography>
           <div className="button-container">
             <Button
               variant="contained"
@@ -160,23 +186,8 @@ const TherapistDetails = () => {
             className="calendar"
           />
           <TextField
-            autoFocus
-            margin="dense"
-            name="name"
-            label="Name"
-            type="text"
-            fullWidth
-            value={appointmentDetails.name}
-            onChange={handleInputChange}
-            className="text-field"
-          />
-          <TextField
-            margin="dense"
-            name="email"
-            label="Email"
-            type="email"
-            fullWidth
-            value={appointmentDetails.email}
+            type="time"
+            value={appointmentDetails.time}
             onChange={handleInputChange}
             className="text-field"
           />
