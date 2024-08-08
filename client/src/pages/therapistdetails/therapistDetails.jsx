@@ -5,7 +5,6 @@ import { Card, CardContent, Typography, Button, CircularProgress, TextField, Dia
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './therapistdetails.css';
-
 const TherapistDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -15,24 +14,51 @@ const TherapistDetails = () => {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
   const [appointmentDetails, setAppointmentDetails] = useState({
-    name: '',
-    email: '',
+    time: '',
     notes: ''
   });
   const [successMessage, setSuccessMessage] = useState('');
   const [formError, setFormError] = useState('');
+  const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/therapists/${id}`)
-      .then(response => {
-        setTherapist(response.data);
+    const fetchData = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        
+        // Fetch therapist details
+        const therapistResponse = await axios.get(`http://localhost:5000/api/therapists/${id}`);
+        setTherapist(therapistResponse.data);
+
+        // Fetch current user details if token exists
+        if (token) {
+          try {
+            const userResponse = await axios.get('http://localhost:5000/api/users/me', {
+              headers: { Authorization: `Bearer ${token}` }
+            });
+            setCurrentUser(userResponse.data);
+            setAppointmentDetails(prevDetails => ({
+              ...prevDetails,
+              name: userResponse.data.name,
+              email: userResponse.data.email
+            }));
+          } catch (err) {
+            // Redirect to login page if user fetch fails
+            navigate('/user-login', { state: { from: `/therapist/${id}` } });
+          }
+        } else {
+          // Redirect to login page if no token found
+          navigate('/user-login', { state: { from: `/therapist/${id}` } });
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
         setLoading(false);
-      })
-      .catch(err => {
-        setError(err);
-        setLoading(false);
-      });
-  }, [id]);
+      }
+    };
+
+    fetchData();
+  }, [id, navigate]);
 
   const handleOpen = () => {
     setOpen(true);
@@ -42,11 +68,19 @@ const TherapistDetails = () => {
     setOpen(false);
     setSuccessMessage('');
     setFormError('');
-    setAppointmentDetails({
-      name: '',
-      email: '',
-      notes: ''
-    });
+    if (currentUser) {
+      setAppointmentDetails({
+        name: currentUser.name,
+        email: currentUser.email,
+        notes: ''
+      });
+    } else {
+      setAppointmentDetails({
+        name: '',
+        email: '',
+        notes: ''
+      });
+    }
   };
 
   const handleDateChange = date => {
@@ -70,7 +104,6 @@ const TherapistDetails = () => {
     try {
       const token = localStorage.getItem('token');
       if (!token) {
-        // If there's no token, redirect to login page
         navigate('/user-login', { state: { from: `/therapist/${id}` } });
         return;
       }
@@ -98,7 +131,6 @@ const TherapistDetails = () => {
     } catch (err) {
       console.error('Appointment booking error:', err.response?.data || err.message);
       if (err.response?.status === 401) {
-        // If unauthorized, redirect to login page
         navigate('/user-login', { state: { from: `/therapist/${id}` } });
       } else {
         setError('Failed to book appointment. Please try again.');
@@ -107,7 +139,7 @@ const TherapistDetails = () => {
   };
   
   if (loading) return <div className="loading-container"><CircularProgress /></div>;
-  if (error) return <p>Error loading data: {error.message}</p>;
+  if (error) return <p>Error loading data: {error}</p>;
 
   return (
     <div className="therapist-details-container">
@@ -154,23 +186,8 @@ const TherapistDetails = () => {
             className="calendar"
           />
           <TextField
-            autoFocus
-            margin="dense"
-            name="name"
-            label="Name"
-            type="text"
-            fullWidth
-            value={appointmentDetails.name}
-            onChange={handleInputChange}
-            className="text-field"
-          />
-          <TextField
-            margin="dense"
-            name="email"
-            label="Email"
-            type="email"
-            fullWidth
-            value={appointmentDetails.email}
+            type="time"
+            value={appointmentDetails.time}
             onChange={handleInputChange}
             className="text-field"
           />
