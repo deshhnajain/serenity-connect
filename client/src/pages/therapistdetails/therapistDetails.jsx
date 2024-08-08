@@ -71,7 +71,7 @@ const TherapistDetails = () => {
       const token = localStorage.getItem('token');
       if (!token) {
         // If there's no token, redirect to login page
-        navigate('/login', { state: { from: `/therapist/${id}` } });
+        navigate('/user-login', { state: { from: `/therapist/${id}` } });
         return;
       }
 
@@ -99,7 +99,7 @@ const TherapistDetails = () => {
       console.error('Appointment booking error:', err.response?.data || err.message);
       if (err.response?.status === 401) {
         // If unauthorized, redirect to login page
-        navigate('/login', { state: { from: `/therapist/${id}` } });
+        navigate('/user-login', { state: { from: `/therapist/${id}` } });
       } else {
         setError('Failed to book appointment. Please try again.');
       }
