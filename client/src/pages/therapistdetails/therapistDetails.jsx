@@ -1,4 +1,3 @@
-// TherapistDetails.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -70,6 +69,12 @@ const TherapistDetails = () => {
 
     try {
       const token = localStorage.getItem('token');
+      if (!token) {
+        // If there's no token, redirect to login page
+        navigate('/login', { state: { from: `/therapist/${id}` } });
+        return;
+      }
+
       const response = await axios.post(
         `http://localhost:5000/api/appointments`,
         {
@@ -91,8 +96,13 @@ const TherapistDetails = () => {
       handleClose();
       navigate('/services/therapy');
     } catch (err) {
-      console.error(err);
-      setError('Failed to book appointment. Please try again.');
+      console.error('Appointment booking error:', err.response?.data || err.message);
+      if (err.response?.status === 401) {
+        // If unauthorized, redirect to login page
+        navigate('/login', { state: { from: `/therapist/${id}` } });
+      } else {
+        setError('Failed to book appointment. Please try again.');
+      }
     }
   };
   
@@ -102,34 +112,18 @@ const TherapistDetails = () => {
   return (
     <div className="therapist-details-container">
       <Card className="therapist-details-card">
-        {therapist.profilePicture && (
-          <img
-            src={therapist.profilePicture}
-            alt={therapist.name || 'Therapist'}
-            className="therapist-image"
-          />
-        )}
+        <img
+          src={therapist.profilePicture}
+          alt={therapist.name}
+          className="therapist-image"
+        />
         <CardContent>
-          <Typography variant="h4" component="div" className="therapist-name">
-            {therapist.name || 'Name not available'}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Specialization: {therapist.specialization || 'Not specified'}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Availability: {therapist.availability && therapist.availability.length > 0
-              ? therapist.availability.join(', ')
-              : 'Not specified'}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Location: {therapist.location || 'Not specified'}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Rating: {therapist.rating || 'Not rated'}
-          </Typography>
-          <Typography variant="body1" color="textSecondary">
-            Description: {therapist.description || 'No description available.'}
-          </Typography>
+          <Typography variant="h4" component="div" className="therapist-name">{therapist.name}</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Specialization: {therapist.specialization}</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Availability: {therapist.availability.join(', ')}</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Location: {therapist.location}</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Rating: {therapist.rating}</Typography>
+          <Typography variant="body1" color="textSecondary">Description: {therapist.description || 'No description available.'}</Typography>
           <div className="button-container">
             <Button
               variant="contained"
