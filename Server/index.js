@@ -7,6 +7,7 @@ const appointmentRoutes = require('./route/appointmentRoutes');
 const therapistauthRoutes = require('./route/therapistauthRoutes');
 const userRoutes = require('./route/userRoutes');
 const resourceRoutes = require('./route/resourceRoutes');
+const paymentRoutes = require('./route/paymentRoutes');
 // const authRoutes = require('./route/auth');
 // const passport = require('./config/passportConfig'); 
 
@@ -18,6 +19,19 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+const users = [{ id: 1, name: 'User One' }, { id: 2, name: 'User Two' }];
+const therapists = [{ id: 1, name: 'Therapist One' }, { id: 2, name: 'Therapist Two' }];
+
+// Admin API routes
+app.get('/api/admin/users', (req, res) => {
+  res.json(users);
+});
+
+app.get('/api/admin/therapists', (req, res) => {
+  res.json(therapists);
+});
+
 // app.use(session({
 //   secret: 'your_secret_key',
 //   resave: false,
@@ -32,6 +46,7 @@ app.use('/api/auth', therapistauthRoutes);
 app.use('/api/therapists', therapistRoutes);
 app.use('/api/appointments', appointmentRoutes);
 app.use('/api', resourceRoutes);
+app.use('/api/payment', paymentRoutes);
 //Not Used this is for the google auth It is workinig but not used in the code because of the appointement functionality, will make this work later
 // app.use(authRoutes); 
 
