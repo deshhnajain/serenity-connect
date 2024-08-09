@@ -3,18 +3,8 @@
 # dependencies
 client/node_modules
 Server/node_modules
-client/public
-client/src/App.css
-client/src/App.test.js
-client/src/index.css 
-client/src/logo.svg
-client/src/App.js
-client/src/index.js
-client/src/reportWebVitals.js
-client/src/setupTests.js
-client/README.md
-client/package.json
 client/package-lock.json
+server/package-lock.json
 /.pnp
 .pnp.js
 
