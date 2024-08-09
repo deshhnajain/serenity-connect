@@ -7,6 +7,7 @@ const appointmentRoutes = require('./route/appointmentRoutes');
 const therapistauthRoutes = require('./route/therapistauthRoutes');
 const userRoutes = require('./route/userRoutes');
 const resourceRoutes = require('./route/resourceRoutes');
+const paymentRoutes = require('./route/paymentRoutes');
 const authRoutes = require('./route/auth');
 const passport = require('./config/passportConfig'); 
 
@@ -26,12 +27,25 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Admin API routes (from deshna branch)
+const users = [{ id: 1, name: 'User One' }, { id: 2, name: 'User Two' }];
+const therapists = [{ id: 1, name: 'Therapist One' }, { id: 2, name: 'Therapist Two' }];
+
+app.get('/api/admin/users', (req, res) => {
+  res.json(users);
+});
+
+app.get('/api/admin/therapists', (req, res) => {
+  res.json(therapists);
+});
+
 // Routes
 app.use('/api', userRoutes);
 app.use('/api/auth', therapistauthRoutes);
 app.use('/api/therapists', therapistRoutes);
 app.use('/api/appointments', appointmentRoutes);
 app.use('/api', resourceRoutes);
+app.use('/api/payment', paymentRoutes);
 app.use(authRoutes); // Google auth routes
 
 // Start server
