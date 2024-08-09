@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Card, CardContent, Typography, Button, CircularProgress, TextField, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
+import { Card, CardContent, Typography, Button, CircularProgress, TextField, Dialog, DialogActions, DialogContent, DialogTitle, Grid } from '@mui/material';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './therapistdetails.css';
+import { Rating } from '@mui/material';
+
 const TherapistDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -43,11 +45,9 @@ const TherapistDetails = () => {
               email: userResponse.data.email
             }));
           } catch (err) {
-            // Redirect to login page if user fetch fails
             navigate('/user-login', { state: { from: `/therapist/${id}` } });
           }
         } else {
-          // Redirect to login page if no token found
           navigate('/user-login', { state: { from: `/therapist/${id}` } });
         }
       } catch (err) {
@@ -68,16 +68,22 @@ const TherapistDetails = () => {
     setOpen(false);
     setSuccessMessage('');
     setFormError('');
+    resetAppointmentDetails();
+  };
+
+  const resetAppointmentDetails = () => {
     if (currentUser) {
       setAppointmentDetails({
         name: currentUser.name,
         email: currentUser.email,
+        time: '',
         notes: ''
       });
     } else {
       setAppointmentDetails({
         name: '',
         email: '',
+        time: '',
         notes: ''
       });
     }
@@ -96,7 +102,7 @@ const TherapistDetails = () => {
   };
 
   const handleAppointmentSubmit = async () => {
-    if (!appointmentDetails.name || !appointmentDetails.email || !appointmentDetails.notes || !date) {
+    if (!appointmentDetails.name || !appointmentDetails.email || !appointmentDetails.time || !appointmentDetails.notes || !date) {
       setFormError('Please fill out all fields before submitting.');
       return;
     }
@@ -113,7 +119,7 @@ const TherapistDetails = () => {
         {
           therapistId: id,
           date: date.toISOString().split('T')[0],
-          time: '',
+          time: appointmentDetails.time,
           notes: appointmentDetails.notes,
           name: appointmentDetails.name,
           email: appointmentDetails.email
@@ -144,37 +150,62 @@ const TherapistDetails = () => {
   return (
     <div className="therapist-details-container">
       <Card className="therapist-details-card">
-        <img
-          src={therapist.profilePicture}
-          alt={therapist.name}
-          className="therapist-image"
-        />
-        <CardContent>
-          <Typography variant="h4" component="div" className="therapist-name">{therapist.name}</Typography>
-          <Typography variant="subtitle1" color="textSecondary">Specialization: {therapist.specialization}</Typography>
-          <Typography variant="subtitle1" color="textSecondary">Availability: {therapist.availability.join(', ')}</Typography>
-          <Typography variant="subtitle1" color="textSecondary">Location: {therapist.location}</Typography>
-          <Typography variant="subtitle1" color="textSecondary">Rating: {therapist.rating}</Typography>
-          <Typography variant="body1" color="textSecondary">Description: {therapist.description || 'No description available.'}</Typography>
-          <div className="button-container">
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => navigate('/services/therapy')}
-              className="back-button"
-            >
-              Back to List
-            </Button>
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={handleOpen}
-              className="book-button"
-            >
-              Book Appointment
-            </Button>
-          </div>
-        </CardContent>
+        <div className="image-container">
+          <img
+            src={therapist.profilePicture}
+            alt={therapist.name}
+            className="therapist-image"
+          />
+        </div>
+        <div className="content-container">
+          <CardContent>
+            <Typography variant="h4" component="div" className="therapist-name">{therapist.name}</Typography>
+            <Typography variant="subtitle1" color="textSecondary" className="therapist-subtitle">
+              Specialization: {therapist.specialization}
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary" className="therapist-subtitle">
+              Availability: {therapist.availability.join(', ')}
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary" className="therapist-subtitle">
+              Location: {therapist.location}
+            </Typography>
+            <div className="rating-container">
+              <Typography variant="subtitle1" color="textSecondary" component="span">
+                Rating:
+              </Typography>
+              <Rating
+                name="read-only"
+                value={therapist.rating}
+                precision={0.5}
+                readOnly
+              />
+              <Typography variant="subtitle1" color="textSecondary" component="span">
+                ({therapist.rating})
+              </Typography>
+            </div>
+            <Typography variant="body1" color="textSecondary" className="therapist-description">
+              {therapist.description || 'No description available.'}
+            </Typography>
+            <div className="button-container">
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => navigate('/services/therapy')}
+                className="back-button"
+              >
+                Back to List
+              </Button>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={handleOpen}
+                className="book-button"
+              >
+                Book Appointment
+              </Button>
+            </div>
+          </CardContent>
+        </div>
       </Card>
 
       <Dialog open={open} onClose={handleClose}>
@@ -186,9 +217,19 @@ const TherapistDetails = () => {
             className="calendar"
           />
           <TextField
+            margin="dense"
+            name="time"
+            label="Time"
             type="time"
+            fullWidth
             value={appointmentDetails.time}
             onChange={handleInputChange}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            inputProps={{
+              step: 300, // 5 min
+            }}
             className="text-field"
           />
           <TextField
