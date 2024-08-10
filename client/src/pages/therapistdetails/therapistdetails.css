@@ -20,7 +20,7 @@
 }
 
 /* Image styles */
-.image-container {
+.therapist-details-container .image-container {
   flex: 0 0 300px;
   padding: 20px;
   display: flex;
