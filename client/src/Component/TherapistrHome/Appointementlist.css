@@ -1,101 +1,80 @@
 .appointments-listcontainer {
   min-height: 100vh;
   padding: 3rem 1rem;
+  background-color: #f8f9fa;
 }
 
-/* Container and card styling */
 .appointments-listcontainer .container {
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .appointments-listcontainer .card {
   border: none;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .appointments-listcontainer .card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .appointments-listcontainer .card-body {
-  padding: 2.5rem;
+  padding: 2rem;
 }
 
-/* Header styling */
 .appointments-listcontainer .card-text.mb-4 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #2c3e50;
-  border-bottom: 3px solid #3498db;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #343a40;
+  border-bottom: 2px solid #007bff;
   padding-bottom: 0.5rem;
-  margin-bottom: 2rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
-/* List group styling */
 .appointments-listcontainer .list-group-item {
-  border: none;
+  border: 1px solid #e9ecef;
   background-color: #ffffff;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
 .appointments-listcontainer .list-group-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
 }
 
-/* Appointment details styling */
 .appointments-listcontainer .list-group-item .card-text {
-  margin: 0.7rem 0;
-  font-size: 1.1rem;
-  color: #34495e;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #495057;
 }
 
 .appointments-listcontainer .list-group-item .card-text strong {
-  color: #2980b9;
+  color: #343a40;
   font-weight: 600;
   margin-right: 0.5rem;
-  min-width: 60px;
+  min-width: 70px;
   display: inline-block;
 }
 
-/* Back button styling */
 .appointments-listcontainer button {
-  background-color: #3498db;
+  background-color: #007bff;
   color: white;
   border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
+  padding: 0.6rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
 .appointments-listcontainer button:hover {
-  background-color: #2980b9;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(52, 152, 219, 0.4);
+  background-color: #0056b3;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .appointments-listcontainer .card-body {
-    padding: 2rem;
-  }
-
-  .appointments-listcontainer .card-text.mb-4 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 576px) {
   .appointments-listcontainer .card-body {
     padding: 1.5rem;
   }
@@ -103,9 +82,19 @@
   .appointments-listcontainer .card-text.mb-4 {
     font-size: 1.5rem;
   }
+}
+
+@media (max-width: 576px) {
+  .appointments-listcontainer .card-body {
+    padding: 1.25rem;
+  }
+
+  .appointments-listcontainer .card-text.mb-4 {
+    font-size: 1.35rem;
+  }
 
   .appointments-listcontainer .list-group-item .card-text {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .appointments-listcontainer button {
@@ -113,21 +102,17 @@
   }
 }
 
-/* Animation for list items */
+.appointments-listcontainer .list-group-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.appointments-listcontainer .list-group-item {
-  animation: fadeInUp 0.5s ease forwards;
-  opacity: 0;
 }
 
 .appointments-listcontainer .list-group-item:nth-child(1) { animation-delay: 0.1s; }
