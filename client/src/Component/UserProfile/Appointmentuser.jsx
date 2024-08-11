@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import {
   MDBContainer,
@@ -10,10 +10,13 @@ import {
 } from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 import { Button, Modal, Form } from 'react-bootstrap';
+import './Appointementlist.css'
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 export default function AppointmentsUser() {
   const [appointments, setAppointments] = useState([]);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [editModal, setEditModal] = useState(false);
   const [currentAppointment, setCurrentAppointment] = useState(null);
   const [updatedAppointment, setUpdatedAppointment] = useState({
@@ -23,35 +26,34 @@ export default function AppointmentsUser() {
   });
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchAppointments = async () => {
-      const token = localStorage.getItem('token');
+  const fetchAppointments = useCallback(async () => {
+    const token = localStorage.getItem('token');
 
-      if (!token) {
-        console.error('Token not found in local storage');
-        setError('Token not found in local storage');
-        return;
-      }
+    if (!token) {
+      setError('Authentication token not found. Please log in again.');
+      setIsLoading(false);
+      return;
+    }
 
-      try {
-        const response = await axios.get('http://localhost:5000/api/appointments/user', {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        });
-        setAppointments(response.data);
-      } catch (error) {
-        console.error('Error fetching appointments:', error);
-        setError('Error fetching appointments');
-      }
-    };
-
-    fetchAppointments();
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${API_BASE_URL}/api/appointments/user`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      setAppointments(response.data);
+    } catch (error) {
+      console.error('Error fetching appointments:', error);
+      setError('Failed to fetch appointments. Please try again later.');
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
-  const handleBackClick = () => {
-    navigate('/home');
-  };
+  useEffect(() => {
+    fetchAppointments();
+  }, [fetchAppointments]);
+
+  const handleBackClick = () => navigate('/home');
 
   const handleEditClick = (appointment) => {
     setCurrentAppointment(appointment);
@@ -67,20 +69,18 @@ export default function AppointmentsUser() {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/appointments/${currentAppointment._id}`, updatedAppointment, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
+      await axios.put(`${API_BASE_URL}/api/appointments/${currentAppointment._id}`, updatedAppointment, {
+        headers: { Authorization: `Bearer ${token}` }
       });
-      setAppointments((prevAppointments) => 
-        prevAppointments.map((appt) => 
-          appt._id === currentAppointment._id ? response.data : appt
+      setAppointments(prevAppointments => 
+        prevAppointments.map(app => 
+          app._id === currentAppointment._id ? { ...app, ...updatedAppointment } : app
         )
       );
       setEditModal(false);
     } catch (error) {
       console.error('Error updating appointment:', error);
-      setError('Error updating appointment');
+      setError('Failed to update appointment. Please try again.');
     }
   };
 
@@ -88,34 +88,30 @@ export default function AppointmentsUser() {
     const token = localStorage.getItem('token');
 
     try {
-      await axios.delete(`http://localhost:5000/api/appointments/${appointmentId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
+      await axios.delete(`${API_BASE_URL}/api/appointments/${appointmentId}`, {
+        headers: { Authorization: `Bearer ${token}` }
       });
-      setAppointments((prevAppointments) => 
-        prevAppointments.filter((appt) => appt._id !== appointmentId)
-      );
+      setAppointments(prevAppointments => prevAppointments.filter(app => app._id !== appointmentId));
     } catch (error) {
       console.error('Error deleting appointment:', error);
-      setError('Error deleting appointment');
+      setError('Failed to delete appointment. Please try again.');
     }
   };
 
-  if (error) {
-    return <div>{error}</div>;
-  }
+  const joinMeeting = (jitsiMeetingUrl) => {
+    window.open(jitsiMeetingUrl, '_blank', 'noopener,noreferrer');
+  };
 
-  if (appointments.length === 0) {
-    return <div>No appointments found</div>;
-  }
+  if (isLoading) return <div>Loading appointments...</div>;
+  if (error) return <div>{error}</div>;
+  if (appointments.length === 0) return <div>No appointments found</div>;
 
   return (
     <div className="appointmentsuser-listcontainer">
       <MDBContainer className="py-5">
-        <button onClick={handleBackClick} className="mb-4">
+        <Button onClick={handleBackClick} className="mb-4" variant="primary">
           Back to Dashboard
-        </button>
+        </Button>
         <MDBCard>
           <MDBCardBody>
             <MDBCardText className="mb-4">
@@ -129,10 +125,12 @@ export default function AppointmentsUser() {
                     <MDBCardText><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</MDBCardText>
                     <MDBCardText><strong>Time:</strong> {appointment.time}</MDBCardText>
                     <MDBCardText><strong>Notes:</strong> {appointment.notes}</MDBCardText>
+                    <MDBCardText><strong>Status:</strong> {appointment.status}</MDBCardText>
                   </div>
                   <div>
-                    <Button size="sm" variant="primary" onClick={() => handleEditClick(appointment)}>Edit</Button>
-                    <Button size="sm" variant="danger" onClick={() => handleDeleteClick(appointment._id)}>Delete</Button>
+                    <Button size="sm" variant="primary" onClick={() => handleEditClick(appointment)} className="me-2">Edit</Button>
+                    <Button size="sm" variant="danger" onClick={() => handleDeleteClick(appointment._id)} className="me-2">Delete</Button>
+                    <Button size="sm" variant="success" onClick={() => joinMeeting(appointment.jitsiMeetingUrl)}>Join Meeting</Button>
                   </div>
                 </MDBListGroupItem>
               ))}
@@ -141,46 +139,44 @@ export default function AppointmentsUser() {
         </MDBCard>
       </MDBContainer>
 
-      {currentAppointment && (
-        <Modal show={editModal} onHide={() => setEditModal(false)}>
-          <Modal.Header closeButton>
-            <Modal.Title>Edit Appointment</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form>
-              <Form.Group controlId="formDate">
-                <Form.Label>Date</Form.Label>
-                <Form.Control 
-                  type="date" 
-                  value={updatedAppointment.date} 
-                  onChange={(e) => setUpdatedAppointment({ ...updatedAppointment, date: e.target.value })} 
-                />
-              </Form.Group>
-              <Form.Group controlId="formTime">
-                <Form.Label>Time</Form.Label>
-                <Form.Control 
-                  type="time" 
-                  value={updatedAppointment.time} 
-                  onChange={(e) => setUpdatedAppointment({ ...updatedAppointment, time: e.target.value })} 
-                />
-              </Form.Group>
-              <Form.Group controlId="formNotes">
-                <Form.Label>Notes</Form.Label>
-                <Form.Control 
-                  as="textarea" 
-                  rows={3} 
-                  value={updatedAppointment.notes} 
-                  onChange={(e) => setUpdatedAppointment({ ...updatedAppointment, notes: e.target.value })} 
-                />
-              </Form.Group>
-            </Form>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={() => setEditModal(false)}>Cancel</Button>
-            <Button variant="primary" onClick={handleEditSave}>Save</Button>
-          </Modal.Footer>
-        </Modal>
-      )}
+      <Modal show={editModal} onHide={() => setEditModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Edit Appointment</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group controlId="formDate" className="mb-3">
+              <Form.Label>Date</Form.Label>
+              <Form.Control 
+                type="date" 
+                value={updatedAppointment.date} 
+                onChange={(e) => setUpdatedAppointment({ ...updatedAppointment, date: e.target.value })} 
+              />
+            </Form.Group>
+            <Form.Group controlId="formTime" className="mb-3">
+              <Form.Label>Time</Form.Label>
+              <Form.Control 
+                type="time" 
+                value={updatedAppointment.time} 
+                onChange={(e) => setUpdatedAppointment({ ...updatedAppointment, time: e.target.value })} 
+              />
+            </Form.Group>
+            <Form.Group controlId="formNotes" className="mb-3">
+              <Form.Label>Notes</Form.Label>
+              <Form.Control 
+                as="textarea" 
+                rows={3} 
+                value={updatedAppointment.notes} 
+                onChange={(e) => setUpdatedAppointment({ ...updatedAppointment, notes: e.target.value })} 
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setEditModal(false)}>Cancel</Button>
+          <Button variant="primary" onClick={handleEditSave}>Save</Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
