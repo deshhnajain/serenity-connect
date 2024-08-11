@@ -1,59 +1,110 @@
 /* Container styling for the appointments page */
+.appointments-listcontainer {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
 .appointments-listcontainer .py-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-    /* margin-left: 250px; */
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Card styling for displaying appointments */
+.appointments-listcontainer .card {
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  border: none;
+}
+
+/* Card body styling */
+.appointments-listcontainer .card-body {
+  padding: 2rem;
+}
+
+/* Text styling for the card header */
+.appointments-listcontainer .card-text {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* List group styling */
+.appointments-listcontainer .list-group {
+  border: none;
+}
+
+/* List group item styling */
+.appointments-listcontainer .list-group-item {
+  border: none;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.appointments-listcontainer .list-group-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text styling within the list group item */
+.appointments-listcontainer .list-group-item .card-text {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.appointments-listcontainer .list-group-item .card-text strong {
+  color: #333;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Back button styling */
+.appointments-listcontainer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.appointments-listcontainer button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .appointments-listcontainer .card {
+    max-width: 90%;
   }
-  
-  /* Card styling for displaying appointments */
-  .appointments-listcontainer  .card {
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 70%;
-  }
-  
-  /* Card body styling */
+
   .appointments-listcontainer .card-body {
     padding: 1.5rem;
   }
-  
-  /* Text styling for the card header */
+
+  .appointments-listcontainer .list-group-item {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
   .appointments-listcontainer .card-text {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
   }
-  
-  /* List group styling */
-  .appointments-listcontainer .list-group {
-    border: none;
-  }
-  
-  /* List group item styling */
-  .appointments-listcontainer .list-group-item {
-    border: none;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-radius: 0.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Text styling within the list group item */
+
   .appointments-listcontainer .list-group-item .card-text {
-    margin: 0.5rem 0;
+    font-size: 0.9rem;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
-    .list-group-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .list-group-item .card-text {
-      margin: 0.25rem 0;
-    }
-  }
-  
+}

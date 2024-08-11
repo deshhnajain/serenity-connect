@@ -1,3 +1,7 @@
+/* <<<<<<< HEAD */
+/* ======= */
+/* navbar.css */
+/* >>>>>>> afe44d27b7d1e95596a1c2fff71586ae5fa6b521 */
 .custom-navbar {
   background: linear-gradient(135deg, #ffffff, #4A00E0);
   padding: 0.75rem 1.5rem;
@@ -24,7 +28,7 @@
 
 .custom-nav .nav-link {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255);
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   margin: 0 0.2rem;
@@ -109,7 +113,7 @@
 
   .custom-nav .nav-link:hover {
     color: #4A00E0;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
   }
 }
 

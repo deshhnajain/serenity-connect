@@ -54,7 +54,7 @@ const MyNavbar = () => {
               <NavDropdown.Item as={Link} to="/services/paidcounseling">Counseling</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/services/support-groups">Support Groups</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/services/more">More Services</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/services/more">More</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
@@ -85,7 +85,7 @@ const MyNavbar = () => {
                 </NavDropdown>
                 <NavDropdown title={<><FontAwesomeIcon icon={faUser} className="nav-icon" /> Signup</>} id="signup-dropdown">
                   <NavDropdown.Item as={Link} to="/user-signup">Signup as User</NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to="/therapist-signup">Signup as Therapist</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/therapist-login">Signup as Therapist</NavDropdown.Item>
                 </NavDropdown>
               </>
             )}

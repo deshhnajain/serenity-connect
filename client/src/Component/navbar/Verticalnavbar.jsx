@@ -1,57 +1,69 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faSignOutAlt, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCalendarAlt, faSignInAlt, faUserPlus, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import styles from './VerticalSidebar.module.css';
 
 const VerticalSidebar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    const loggedInStatus = !!localStorage.getItem('therapistId');
-    setIsLoggedIn(loggedInStatus);
+    const checkLoginStatus = () => {
+      const therapistId = localStorage.getItem('therapistId');
+      setIsLoggedIn(!!therapistId);
+    };
+
+    checkLoginStatus();
+    window.addEventListener('storage', checkLoginStatus);
+
+    return () => {
+      window.removeEventListener('storage', checkLoginStatus);
+    };
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('therapistId');
     setIsLoggedIn(false);
+    navigate('/home');
   };
 
-  const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
-  };
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <div className={`${styles.sidebarWrapper} ${isCollapsed ? styles.collapsed : ''}`}>
-      <button className={styles.toggleButton} onClick={toggleSidebar}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-      <div className={`${styles.sidebar} ${isCollapsed ? styles.collapsedSidebar : ''}`}>
-        <NavLink to="/therapist-dashboard" className={styles.navLink}>
-          <FontAwesomeIcon icon={faHome} /> <span className={styles.linkText}>Home</span>
+    <div className={styles.sidebarWrapper}>
+      <nav className={styles.sidebar}>
+        <NavLink to="/therapist-dashboard" className={`${styles.navLink} ${isActive('/therapist-dashboard') ? styles.active : ''}`}>
+          <FontAwesomeIcon icon={faHome} />
+          <span className={styles.linkText}>Home</span>
         </NavLink>
-        <NavLink to="/appointments" className={styles.navLink}>
-          <FontAwesomeIcon icon={faUser} /> <span className={styles.linkText}>Appointments</span>
-        </NavLink>
-       
-        {isLoggedIn ? (
-          
-          <button className={styles.navLink} onClick={handleLogout}>
-            <NavLink to="/home" className={styles.navLink}>
-            <FontAwesomeIcon icon={faSignOutAlt} /> <span className={styles.linkText}>Logout</span></NavLink>
-          </button>
-        ) : (
+        
+        {isLoggedIn && (
+          <NavLink to="/appointments" className={`${styles.navLink} ${isActive('/appointments') ? styles.active : ''}`}>
+            <FontAwesomeIcon icon={faCalendarAlt} />
+            <span className={styles.linkText}>Appointments</span>
+          </NavLink>
+        )}
+        
+        {!isLoggedIn ? (
           <>
-            <NavLink to="/therapist-login" className={styles.navLink}>
-              <FontAwesomeIcon icon={faUser} /> <span className={styles.linkText}>Login as a therapist</span>
+            <NavLink to="/therapist-login" className={`${styles.navLink} ${isActive('/therapist-login') ? styles.active : ''}`}>
+              <FontAwesomeIcon icon={faSignInAlt} />
+              <span className={styles.linkText}>Login</span>
             </NavLink>
-            <NavLink to="/therapist-signup" className={styles.navLink}>
-              <FontAwesomeIcon icon={faUser} /> <span className={styles.linkText}>Sign Up as a therapist</span>
+            <NavLink to="/therapist-signup" className={`${styles.navLink} ${isActive('/therapist-signup') ? styles.active : ''}`}>
+              <FontAwesomeIcon icon={faUserPlus} />
+              <span className={styles.linkText}>Sign Up</span>
             </NavLink>
           </>
+        ) : (
+          <button className={`${styles.navLink} ${styles.logoutButton}`} onClick={handleLogout}>
+            <FontAwesomeIcon icon={faSignOutAlt} />
+            <span className={styles.linkText}>Logout</span>
+          </button>
         )}
-      </div>
+      </nav>
     </div>
   );
 };

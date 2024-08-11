@@ -17,6 +17,9 @@ import GetHelp from '../../pages/gethelp/GetHelp';
 import UserGroups from '../UserGroup/UserGroups'; // Import the UserGroups component
 import './Navigation.css';
 
+// =======
+import MoreServices from '../../pages/MoreServices/MoreServices';
+// >>>>>>> afe44d27b7d1e95596a1c2fff71586ae5fa6b521
 function MainLayout() {
   const location = useLocation();
   const isDashboardPath = location.pathname.startsWith('/therapist-dashboard') || location.pathname.startsWith('/appointments');
@@ -52,6 +55,14 @@ function MainLayout() {
             <Route path="/therapists/:id" element={<TherapistDetails />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/user-groups" element={<UserGroups />} />
+            <Route path='/home' element={<Home />} />
+            <Route path ='/gethelp' element={<GetHelp/>}/>
+            <Route path="/services/therapy" element={<TherapistsList />} />
+            <Route path="/services/paidcounseling" element={<PaidConsult />} />
+            <Route path="/therapists/:id" element={<TherapistDetails />} />
+            <Route path="/about" element={<AboutUs/>} />
+            <Route path="/services/more" element={<MoreServices />} />  
+
           </Routes>
           <Footer />
         </>
