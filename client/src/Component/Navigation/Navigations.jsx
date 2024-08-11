@@ -56,6 +56,9 @@ function MainLayout() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/user-groups" element={<UserGroups />} />
             <Route path='/home' element={<Home />} />
+            <Route path="/resource" element={<Resources />} />
+            <Route path="/payment" element={<PaymentPage />}/>
+            <Route path="/resources/:resourceId" element={<Tag />} />
             <Route path ='/gethelp' element={<GetHelp/>}/>
             <Route path="/services/therapy" element={<TherapistsList />} />
             <Route path="/services/paidcounseling" element={<PaidConsult />} />

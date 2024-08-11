@@ -1,18 +1,50 @@
 .header-container {
-    justify-content: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #dbf5fc3d;
-    border-radius: 8px;
-    display:flex;
-    text-align: center;
-    width: auto;
-    height: 150px;
-  } 
-.headergrid{
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 30px;
+  background: linear-gradient(135deg, #38c7ff84, #cb53ffc1);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-grid {
   justify-content: center;
 }
 
-.gridcontent{
-    margin: 2%; 
+.input-field {
+  background-color: white;
+  border-radius: 8px;
+}
+
+.search-button {
+  height: 56px;
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+@media (max-width: 960px) {
+  .header-container {
+    padding: 20px;
+  }
+}
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.specialization-chip {
+  margin: 2px;
 }

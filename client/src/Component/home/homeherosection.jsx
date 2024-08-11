@@ -24,14 +24,14 @@ const HeroSection = () => {
         </div>
         <div>
           <img
-            src="path-to-image2.jpg"
+            src="https://static.wixstatic.com/media/1e81fc_39db906744204005b907291c4db2ce87~mv2.gif"
             alt="Slide 2"
             style={styles.carouselImage}
           />
         </div>
         <div>
           <img
-            src="path-to-image3.jpg"
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e583bf71503887.5bc7a3379f8fb.gif"
             alt="Slide 3"
             style={styles.carouselImage}
           />
@@ -58,12 +58,10 @@ const HeroSection = () => {
 const styles = {
   hero: {
     width: "100%",
-    height: "90vh",
     overflow: "hidden",
   },
   slider: {
     width: "100%",
-    height: "100%",
   },
   carouselImage: {
     width: "100%",

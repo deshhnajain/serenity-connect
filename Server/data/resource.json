@@ -1,0 +1,1780 @@
+[ {
+  "_id": "Addiction",
+  "heading": "Addiction",
+  "photoUrls": [ "https://www.talktoangel.com/images/multipleSelect/8ab7f718012c87aad3887a7d136cdf53.svg",
+  "https://www.talktoangel.com/images/multipleSelect/fc9e62695def29ccdb9eb3fed5b4c8c8.svg",
+  "https://www.talktoangel.com/images/multipleSelect/758be1f9f7a7efac938ed8bd97c0e1cb.svg",
+"https://www.talktoangel.com/images/multipleSelect/e515df0d202ae52fcebb14295743063b.svg"],
+  "definition": "Addiction is a chronic disease characterized by drug seeking and use that is compulsive, or difficult to control, despite harmful consequences. It affects brain function and behavior.",
+  "tips": [
+    "Reach out for support from friends and family.",
+    "Engage in regular physical activity.",
+    "Practice mindfulness and meditation.",
+    "Maintain a regular sleep schedule.",
+    "Seek professional help if needed."
+  ],
+  "videos": [ "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/A+Quick+Way+To+Overcome+Addiction.mp4",
+  "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/add1.mp4"
+
+  ],
+    "mythsAndFacts": [
+    {
+      "question": "Is addiction just a lack of willpower?",
+      "answer": "No, addiction is a complex disease that affects brain function and behavior. It requires comprehensive treatment to overcome."
+    },
+    {
+      "question": "Can you quit addiction on your own?",
+      "answer": "While some people manage to quit on their own, many need professional help and support from family and friends."
+    },
+    {
+      "question": "Does addiction only affect certain types of people?",
+      "answer": "No, addiction can affect anyone, regardless of age, gender, or socioeconomic status."
+    },
+    {
+      "question": "Is relapse a sign of failure?",
+      "answer": "No, relapse is a common part of the recovery process. It doesn't mean treatment has failed, but that it needs to be adjusted or reinstated."
+    },
+    {
+      "question": "Is addiction a choice?",
+      "answer": "No, while the initial decision to take drugs or drink may be voluntary, addiction impairs a person's self-control and ability to make sound decisions."
+    }
+  ]
+},
+{
+  "_id": "ADHD",
+  "heading": "ADHD",
+  "photoUrls": [
+      "https://www.talktoangel.com/images/multipleSelect/fdd5b16fc8134339089ef25b3cf0e588.svg",
+      "https://www.talktoangel.com/images/multipleSelect/fc0cc602ce843b5393684a7fc1b566bc.svg",
+      "https://www.talktoangel.com/images/multipleSelect/df9028fcb6b065e000ffe8a4f03eeb38.svg",
+      "https://www.talktoangel.com/images/multipleSelect/a2802cade04644083dcde1c8c483ed9a.svg"
+    ],
+  "definition": "ADHD (Attention-Deficit/Hyperactivity Disorder) is a neurodevelopmental disorder characterized by inattention, hyperactivity, and impulsivity that interfere with functioning or development.",
+  "tips": [
+    "Create a structured routine.",
+    "Break tasks into smaller steps.",
+    "Use reminders and organizational tools.",
+    "Take regular breaks during tasks.",
+    "Seek professional help for treatment options."
+  ],
+  "videos": [
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/adhd.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Let's+talk+about+ADHD.mp4"
+  ],
+  "mythsAndFacts": [
+    {
+      "question": "Is ADHD just an excuse for laziness?",
+      "answer": "No, ADHD is a medically recognized condition that affects a person's ability to focus and control impulses."
+    },
+    {
+      "question": "Do only children have ADHD?",
+      "answer": "No, ADHD can affect people of all ages, including adults."
+    },
+    {
+      "question": "Can you outgrow ADHD?",
+      "answer": "While some symptoms may change over time, ADHD can persist into adulthood."
+    },
+    {
+      "question": "Is medication the only treatment for ADHD?",
+      "answer": "No, there are various treatments including behavioral therapy, lifestyle changes, and medication."
+    },
+    {
+      "question": "Does ADHD mean low intelligence?",
+      "answer": "No, ADHD is not related to intelligence. People with ADHD can have high levels of creativity and problem-solving skills."
+    }
+  ]
+},
+
+  {
+    "_id": "Adjustment Disorder",
+    "heading": "Adjustment Disorder",
+    "photoUrls": ["https://www.talktoangel.com/images/multipleSelect/a775361d1fd47a9823a91aabf2a28a35.svg",
+    "https://www.talktoangel.com/images/multipleSelect/a8a427afafda854020c951467cc2b4b7.svg",
+    "https://www.talktoangel.com/images/multipleSelect/058d6f2fbe951a5a56d96b1f1a6bca1c.svg",
+    "https://www.talktoangel.com/images/multipleSelect/1517c8664be296f0d87d9e5fc54fdd60.svg"
+
+    ],
+    "definition": "Adjustment Disorder is a stress-related condition that occurs when an individual has difficulty coping with or adjusting to a significant life change or stressful event.",
+    "tips": [
+      "Talk about your feelings with friends or a therapist.",
+      "Establish a routine to provide structure.",
+      "Practice relaxation techniques like deep breathing or meditation.",
+      "Stay physically active to boost your mood.",
+      "Set realistic goals and take small steps to achieve them."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/adjustment+dis.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Adjustment+Disorders.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is adjustment disorder just normal stress?",
+        "answer": "No, adjustment disorder involves a more significant level of stress that impairs daily functioning."
+      },
+      {
+        "question": "Do people with adjustment disorder need therapy?",
+        "answer": "While not everyone needs therapy, many benefit from professional support to manage symptoms."
+      },
+      {
+        "question": "Does adjustment disorder last forever?",
+        "answer": "No, it is typically a short-term condition that resolves with time and proper support."
+      },
+      {
+        "question": "Can only major life changes cause adjustment disorder?",
+        "answer": "No, even seemingly minor changes can trigger adjustment disorder in some individuals."
+      },
+      {
+        "question": "Is medication always required for adjustment disorder?",
+        "answer": "Not necessarily; therapy and coping strategies can be effective, though medication may be helpful for some."
+      }
+    ]
+  },
+  {
+    "_id": "Anger",
+    "heading": "Anger",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/f8c84522811ab80c6b11873d9fa38e20.svg",
+      "https://www.talktoangel.com/images/multipleSelect/88c040adb393832c87914347cc2afc3f.svg",
+      "https://www.talktoangel.com/images/multipleSelect/193002e668758ea9762904da1a22337c.svg",
+      "https://www.talktoangel.com/images/multipleSelect/ef70e26a0b5da778eda3f48014d087cd.svg"
+    ],
+    "definition": "Anger is a natural emotion characterized by antagonism toward someone or something you feel has deliberately done you wrong. It can range from mild irritation to intense fury.",
+    "tips": [
+      "Identify triggers to manage your response.",
+      "Practice deep breathing and relaxation techniques.",
+      "Take a timeout to cool off before reacting.",
+      "Engage in physical activity to release built-up tension.",
+      "Seek professional help if anger becomes uncontrollable."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/CGI+3D+Animated+Short_++Anger+Management++-+by+Scott+Wojcik+%2B+Ringling+_+TheCGBros+(1).mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Why+Do+You+Get+Angry+Easily_.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is anger always a bad emotion?",
+        "answer": "No, anger is a natural emotion that can be constructive if managed appropriately."
+      },
+      {
+        "question": "Do people with anger issues just need to calm down?",
+        "answer": "No, managing anger often requires learning coping strategies and addressing underlying issues."
+      },
+      {
+        "question": "Is expressing anger always harmful?",
+        "answer": "Not necessarily; expressing anger in a healthy way can lead to resolution and understanding."
+      },
+      {
+        "question": "Does ignoring anger make it go away?",
+        "answer": "No, ignoring anger can lead to it building up and potentially resulting in an explosive outburst."
+      },
+      {
+        "question": "Is anger a sign of weakness?",
+        "answer": "No, anger is a normal emotion, but how one manages it can reflect personal strength."
+      }
+    ]
+  },
+  {
+    "_id": "Anxiety",
+    "heading": "Anxiety",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/7302e3f5e7c072aea8801faf8a492be0.svg",
+      "https://www.talktoangel.com/images/multipleSelect/03e7ef47cee6fa4ae7567394b99912b7.svg",
+      "https://www.talktoangel.com/images/multipleSelect/f900afc719d7d86bd7d17b9d3be0aafe.svg",
+      "https://www.talktoangel.com/images/multipleSelect/5be278a9e02bed9248a4674ff62fea2c.svg"
+    ],
+    "definition": "Anxiety is a feeling of worry, nervousness, or unease about an imminent event or something with an uncertain outcome. It is a normal response to stress but can become chronic and debilitating.",
+    "tips": [
+      "Practice mindfulness and relaxation techniques.",
+      "Engage in regular physical activity.",
+      "Limit caffeine and alcohol intake.",
+      "Establish a regular sleep schedule.",
+      "Seek professional help if anxiety interferes with daily life."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Let%E2%80%99s+talk+about+anxiety+animation.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/The+Different+Levels+of+Anxiety.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is anxiety just feeling stressed?",
+        "answer": "No, anxiety is more persistent and can be more debilitating than normal stress."
+      },
+      {
+        "question": "Can anxiety be overcome by just relaxing?",
+        "answer": "No, managing anxiety often requires more comprehensive strategies including therapy and lifestyle changes."
+      },
+      {
+        "question": "Is anxiety only a mental issue?",
+        "answer": "No, anxiety can also have physical symptoms such as increased heart rate and sweating."
+      },
+      {
+        "question": "Do people with anxiety just need to avoid stressful situations?",
+        "answer": "Avoidance can actually increase anxiety; learning coping skills is more effective."
+      },
+      {
+        "question": "Is anxiety a sign of weakness?",
+        "answer": "No, anxiety is a common condition that affects people of all strengths."
+      }
+    ]
+  },
+  {
+    "_id": "Bipolar Disorder",
+    "heading": "Bipolar Disorder",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/cbf4d310ea68b3933521ba359d33ed5e.svg",
+      "https://www.talktoangel.com/images/multipleSelect/ce60ff163cab97029cc727e20e0fc3a7.svg",
+      "https://www.talktoangel.com/images/multipleSelect/9a1335ef5ffebb0de9d089c4182e4868.svg",
+      "https://www.talktoangel.com/images/multipleSelect/28dc6b0e1b33769b4b94685e4f4d1e5c.svg"
+    ],
+    "definition": "Bipolar Disorder is a mental health condition characterized by extreme mood swings that include emotional highs (mania or hypomania) and lows (depression).",
+    "tips": [
+      "Maintain a regular schedule and routine.",
+      "Monitor mood changes and triggers.",
+      "Stay physically active and eat a balanced diet.",
+      "Take medications as prescribed by your doctor.",
+      "Seek support from a therapist or support group."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/What+is+bipolar+disorder_.mp4",
+      ""
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is bipolar disorder just mood swings?",
+        "answer": "No, bipolar disorder involves extreme mood changes that are more severe than typical mood swings."
+      },
+      {
+        "question": "Can people with bipolar disorder lead normal lives?",
+        "answer": "Yes, with proper treatment and management, individuals can lead fulfilling lives."
+      },
+      {
+        "question": "Is bipolar disorder caused by a person's upbringing?",
+        "answer": "No, while environment can play a role, bipolar disorder is primarily a biological condition."
+      },
+      {
+        "question": "Do people with bipolar disorder always need medication?",
+        "answer": "Medication is often essential, but therapy and lifestyle changes are also important."
+      },
+      {
+        "question": "Is mania just feeling really happy?",
+        "answer": "No, mania can include feelings of euphoria but also irritability, impulsivity, and poor decision-making."
+      }
+    ]
+  },
+  {
+    "_id": "Body Image",
+    "heading": "Body Image",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/1175defd049d3301e047ce50d93e9c7a.svg",
+      "https://www.talktoangel.com/images/multipleSelect/3e9f0fc9b2f89e043bc6233994dfcf76.svg",
+      "https://www.talktoangel.com/images/multipleSelect/1fdc0ee9d95c71d73df82ac8f0721459.svg",
+      "https://www.talktoangel.com/images/multipleSelect/45ececbb4fa848ad3a87f3ee17919755.svg"
+    ],
+    "definition": "Body Image refers to how a person perceives their physical appearance and how they feel about and within their own body. It can be influenced by personal experiences, media portrayals, and cultural standards.",
+    "tips": [
+      "Focus on what your body can do rather than how it looks.",
+      "Surround yourself with positive influences.",
+      "Challenge negative thoughts about your body.",
+      "Avoid comparing yourself to others.",
+      "Seek professional help if body image issues affect your daily life."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/bipolar.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/If+You+Struggle+With+Body+Image+Issues%2C+Watch+this.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is body image only about weight?",
+        "answer": "No, body image includes perceptions of all aspects of physical appearance."
+      },
+      {
+        "question": "Do only women struggle with body image?",
+        "answer": "No, people of all genders can experience body image issues."
+      },
+      {
+        "question": "Is having a negative body image just a phase?",
+        "answer": "No, negative body image can persist and affect mental health without proper intervention."
+      },
+      {
+        "question": "Is positive body image about always feeling good about your appearance?",
+        "answer": "No, positive body image means accepting and appreciating your body, even if you have some insecurities."
+      },
+      {
+        "question": "Can media influence body image?",
+        "answer": "Yes, media portrayals of beauty standards can significantly impact body image perceptions."
+      }
+    ]
+  },
+  {
+    "_id": "Breakup",
+    "heading": "Breakup",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/dea9ddb25cbf2352cf4dec30222a02a5.svg",
+      "https://www.talktoangel.com/images/multipleSelect/3a0844cee4fcf57de0c71e9ad3035478.svg",
+      "https://www.talktoangel.com/images/multipleSelect/34ffeb359a192eb8174b6854643cc046.svg",
+      "https://www.talktoangel.com/images/multipleSelect/05a70454516ecd9194c293b0e415777f.svg"
+    ],
+    "definition": "A Breakup is the end of a romantic relationship. It can be emotionally challenging and affect one's mental and physical well-being.",
+    "tips": [
+      "Allow yourself to grieve the loss of the relationship.",
+      "Lean on friends and family for support.",
+      "Focus on self-care and self-improvement.",
+      "Avoid contact with your ex-partner to help heal.",
+      "Seek professional help if needed to process your emotions."
+    ],
+    "videos": [
+"https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/5+Ways+to+Deal+With+a+Break+Up.mp4",
+"https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/7+Stages+After+A+Break+Up.mp4" ],
+    "mythsAndFacts": [
+      {
+        "question": "Is it best to stay friends with an ex after a breakup?",
+        "answer": "Not always; sometimes distance is necessary for healing."
+      },
+      {
+        "question": "Do breakups get easier with time?",
+        "answer": "While time can heal, actively working through emotions is also important."
+      },
+      {
+        "question": "Is it weak to feel sad after a breakup?",
+        "answer": "No, feeling sad is a natural response to the end of a relationship."
+      },
+      {
+        "question": "Can a rebound relationship help you move on?",
+        "answer": "Not necessarily; it can sometimes complicate emotions further."
+      },
+      {
+        "question": "Is it bad to talk about your ex after a breakup?",
+        "answer": "Talking about your ex can be part of the healing process, but it should be done constructively."
+      }
+    ]
+  },
+  {
+    "_id": "Bullying",
+    "heading": "Bullying",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/e3844e186e6eb8736e9f53c0c5889527.svg",
+      "https://www.talktoangel.com/images/multipleSelect/f48c04ffab49ff0e5d1176244fdfb65c.svg",
+      "https://www.talktoangel.com/images/multipleSelect/3bf29f38421bc1764e6f1d1545479f93.svg",
+      "https://www.talktoangel.com/images/multipleSelect/8725fb777f25776ffa9076e44fcfd776.svg"
+    ],
+    "definition": "Bullying is the use of force, coercion, hurtful teasing or threats, and abuse to dominate or intimidate. It can be physical, verbal, or emotional.",
+    "tips": [
+      "Speak up and report bullying to a trusted adult or authority.",
+      "Avoid isolated areas where bullying may occur.",
+      "Stay with supportive friends who can help you feel safe.",
+      "Practice self-assertiveness and self-confidence.",
+      "Seek professional help if bullying affects your mental health."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/bully.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/How+to+stop+a+bully+(AVA+fan+animation).mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is bullying just a part of growing up?",
+        "answer": "No, bullying is harmful and should not be accepted as a normal part of childhood."
+      },
+      {
+        "question": "Can bullying only happen in person?",
+        "answer": "No, cyberbullying through digital platforms is also prevalent."
+      },
+      {
+        "question": "Do only children get bullied?",
+        "answer": "No, bullying can occur at any age, including in the workplace."
+      },
+      {
+        "question": "Is ignoring bullying an effective strategy?",
+        "answer": "Ignoring bullying often allows it to continue; intervention is usually needed."
+      },
+      {
+        "question": "Is bullying always physical?",
+        "answer": "No, bullying can also be verbal or emotional, causing significant psychological harm."
+      }
+    ]
+  },
+  {
+    "_id": "Burnout",
+    "heading": "Burnout",
+    "photoUrls":["https://www.talktoangel.com/images/multipleSelect/87ae6fb631f7c8a627e8e28785d9992d.svg",
+  "https://www.talktoangel.com/images/multipleSelect/ec20019911a77ad39d023710be68aaa1.svg",
+"https://www.talktoangel.com/images/multipleSelect/2bce32ed409f5ebcee2a7b417ad9beed.svg",
+"https://www.talktoangel.com/images/multipleSelect/ce016f59ecc2366a43e1c96a4774d167.svg"],
+    "definition": "Burnout is a state of physical, emotional, and mental exhaustion caused by prolonged stress, often related to work or caregiving responsibilities.",
+    "tips": [
+      "Set realistic goals and prioritize tasks.",
+      "Take regular breaks and time off to recharge.",
+      "Engage in activities you enjoy outside of work.",
+      "Practice relaxation techniques like meditation and yoga.",
+      "Seek professional help if burnout becomes overwhelming."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/7+Signs+You're+Dealing+With+Burnout.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Animation+%E2%80%9CBurn+out%E2%80%9D+(2020).mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is burnout just being tired?",
+        "answer": "No, burnout involves deeper exhaustion and often a sense of detachment and lack of accomplishment."
+      },
+      {
+        "question": "Can only work cause burnout?",
+        "answer": "No, any prolonged stress, including caregiving, can lead to burnout."
+      },
+      {
+        "question": "Is burnout a sign of weakness?",
+        "answer": "No, burnout is a reaction to excessive and prolonged stress, not a sign of personal failure."
+      },
+      {
+        "question": "Does taking a vacation cure burnout?",
+        "answer": "While time off can help, addressing the underlying causes of burnout is essential."
+      },
+      {
+        "question": "Can only adults experience burnout?",
+        "answer": "No, students and adolescents can also experience burnout due to academic and social pressures."
+      }
+    ]
+  },
+  {
+    "_id": "Cheating",
+    "heading": "Cheating",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/3ce6d3c8830d27ec2e6a1936ecbaa514.svg",
+      "https://www.talktoangel.com/images/multipleSelect/d4b40e6113d6268363e7a93d4cbe6875.svg",
+      "https://www.talktoangel.com/images/multipleSelect/df83971673de5c8e71ca1e2645718dad.svg",
+      "https://www.talktoangel.com/images/multipleSelect/dc116c922217ede2210c57237bd1c1ee.svg"
+    ],
+    "definition": "Cheating in a relationship involves being unfaithful or breaking the agreed-upon rules of a romantic partnership, leading to a breach of trust.",
+    "tips": [
+      "Communicate openly with your partner about your feelings.",
+      "Seek couples therapy to address underlying issues.",
+      "Set clear boundaries and expectations in your relationship.",
+      "Focus on rebuilding trust and intimacy.",
+      "Take time to heal and process your emotions."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/cheat.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/cheating.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is cheating always about physical infidelity?",
+        "answer": "No, emotional infidelity can also constitute cheating."
+      },
+      {
+        "question": "Can a relationship survive cheating?",
+        "answer": "Yes, with effort from both partners, some relationships can recover."
+      },
+      {
+        "question": "Is it always obvious when someone is cheating?",
+        "answer": "No, some signs of cheating can be subtle and easy to miss."
+      },
+      {
+        "question": "Is cheating a sign of an unhappy relationship?",
+        "answer": "Not necessarily; various factors can lead to cheating, not just relationship dissatisfaction."
+      },
+      {
+        "question": "Is once a cheater always a cheater?",
+        "answer": "No, people can change their behavior and make amends for past mistakes."
+      }
+    ]
+  },
+  {
+    "_id": "Relationship Conflicts",
+    "heading": "Relationship Conflicts",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/e23b16e83342d08d0d3ef4eeed9d3299.svg",
+      "https://www.talktoangel.com/images/multipleSelect/91d0dbfd38d950cb716c4dd26c5da08a.svg",
+      "https://www.talktoangel.com/images/multipleSelect/aecad42329922dfc97eee948606e1f8e.svg",
+      "https://www.talktoangel.com/images/multipleSelect/c4c455df3c54f292ae22f6791fd2553e.svg"
+    ],
+    "definition": "Relationship Conflicts occur when partners have differing views, opinions, or desires, leading to disagreements and potential tension within the relationship.",
+    "tips": [
+      "Communicate openly and honestly with your partner.",
+      "Practice active listening and empathy.",
+      "Seek to understand your partner's perspective.",
+      "Find common ground and compromise when possible.",
+      "Consider couples therapy for persistent conflicts."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Fighting+Fair_+How+Do+You+Resolve+Conflict_.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/How+To+Deal+With+Conflict.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Are conflicts a sign of a bad relationship?",
+        "answer": "No, conflicts are natural in any relationship; how they are managed is what matters."
+      },
+      {
+        "question": "Should you avoid conflicts to keep the peace?",
+        "answer": "No, avoiding conflicts can lead to unresolved issues and resentment."
+      },
+      {
+        "question": "Is one partner always to blame in a conflict?",
+        "answer": "No, conflicts usually involve contributions from both partners."
+      },
+      {
+        "question": "Can conflicts make a relationship stronger?",
+        "answer": "Yes, resolving conflicts can improve understanding and strengthen the bond."
+      },
+      {
+        "question": "Is yelling a necessary part of conflict resolution?",
+        "answer": "No, yelling can escalate conflicts; calm and respectful communication is more effective."
+      }
+    ]
+  },
+  {
+    "_id": "Chronic Pain",
+    "heading": "Chronic Pain",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/4f398cb9d6bc79ae567298335b51ba8a.svg",
+      "https://www.talktoangel.com/images/multipleSelect/536a76f94cf7535158f66cfbd4b113b6.svg",
+      "https://www.talktoangel.com/images/multipleSelect/e250c59336b505ed411d455abaa30b4d.svg",
+      "https://www.talktoangel.com/images/multipleSelect/4ca82b2a861f70cd15d83085b000dbde.svg"
+    ],
+    "definition": "Chronic Pain is a persistent pain that lasts for weeks, months, or even years. It can be continuous or intermittent and can affect any part of the body.",
+    "tips": [
+      "Seek medical advice for proper diagnosis and treatment.",
+      "Engage in regular physical activity as advised by a healthcare provider.",
+      "Practice relaxation techniques to manage pain.",
+      "Maintain a healthy lifestyle with a balanced diet and adequate sleep.",
+      "Seek support from pain management groups or therapy."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/chronic+pain.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/What+is+Chronic+Pain_.mp4" ],
+    "mythsAndFacts": [
+      {
+        "question": "Is chronic pain just in your head?",
+        "answer": "No, chronic pain is a real medical condition with physical and psychological components."
+      },
+      {
+        "question": "Can chronic pain be cured?",
+        "answer": "While it may not be completely curable, it can often be managed effectively."
+      },
+      {
+        "question": "Is rest the best treatment for chronic pain?",
+        "answer": "Not always; some physical activity can help alleviate pain and improve function."
+      },
+      {
+        "question": "Do people with chronic pain just need to tough it out?",
+        "answer": "No, chronic pain requires proper medical management and support."
+      },
+      {
+        "question": "Is medication the only way to manage chronic pain?",
+        "answer": "No, a combination of treatments including physical therapy, lifestyle changes, and relaxation techniques can be effective."
+      }
+    ]
+  },
+  {
+    "_id": "Communication Disorder",
+    "heading": "Communication Disorder",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/86a1fa88adb5c33bd7a68ac2f9f3f96b.svg",
+      "https://www.talktoangel.com/images/multipleSelect/a1a527267c0d33a86382a03c4c721cd2.svg",
+      "https://www.talktoangel.com/images/multipleSelect/b9141aff1412dc76340b3822d9ea6c72.svg",
+      "https://www.talktoangel.com/images/multipleSelect/07470878bde1b126f2cc4b0f9d9b9798.svg"
+    ],
+    "definition": "Communication Disorder is an impairment in the ability to receive, send, process, and comprehend concepts or verbal, nonverbal, and graphic symbol systems.",
+    "tips": [
+      "Seek speech therapy to improve communication skills.",
+      "Practice patience and active listening.",
+      "Use visual aids and gestures to support communication.",
+      "Encourage social interaction in supportive environments.",
+      "Stay informed about new treatments and therapies."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/CLUTTERING+SPEECH+(ANIMATION)_+A+1-MINUTE+EXPLANATION!.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Do communication disorders only affect children?",
+        "answer": "No, communication disorders can affect individuals of all ages."
+      },
+      {
+        "question": "Are communication disorders always obvious?",
+        "answer": "No, some disorders can be subtle and may not be immediately apparent."
+      },
+      {
+        "question": "Is speech therapy only for severe cases?",
+        "answer": "No, speech therapy can help with a range of communication issues, both mild and severe."
+      },
+      {
+        "question": "Do communication disorders mean low intelligence?",
+        "answer": "No, individuals with communication disorders can have normal or above-average intelligence."
+      },
+      {
+        "question": "Can communication disorders be outgrown?",
+        "answer": "Some disorders may improve with age and therapy, but many require ongoing support."
+      }
+    ]
+  },
+  {
+    "_id": "Depression",
+    "heading": "Depression",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/98b17f068d5d9b7668e19fb8ae470841.svg",
+      "https://www.talktoangel.com/images/multipleSelect/5b4a2146246bc3a3a941f32225bbb792.svg",
+      "https://www.talktoangel.com/images/multipleSelect/2d71b2ae158c7c5912cc0bbde2bb9d95.svg",
+      "https://www.talktoangel.com/images/multipleSelect/b4892f808f9efbd561cecbfbec3ad20d.svg"
+    ],
+    "definition": "Depression is a common and serious medical illness that negatively affects how you feel, the way you think, and how you act. Fortunately, it is also treatable. Depression causes feelings of sadness and/or a loss of interest in activities once enjoyed.",
+    "tips": [
+      "Reach out for support from friends and family.",
+      "Engage in regular physical activity.",
+      "Practice mindfulness and meditation.",
+      "Maintain a regular sleep schedule.",
+      "Seek professional help if needed."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/DEPRESSION+(An+animated+story).mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Your+Brain+on+Depression_+Neuroscience%2C+Animated.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is depression just feeling sad?",
+        "answer": "No, depression is much more than feeling sad. It includes a variety of symptoms such as feelings of worthlessness, changes in sleep and appetite, and loss of interest in activities."
+      },
+      {
+        "question": "Can you just 'snap out' of depression?",
+        "answer": "No, depression is a medical condition that often requires treatment such as therapy, medication, or lifestyle changes."
+      },
+      {
+        "question": "Does depression only affect women?",
+        "answer": "No, depression affects people of all genders. However, women are more likely to be diagnosed with depression."
+      },
+      {
+        "question": "Is depression a sign of weakness?",
+        "answer": "No, depression is a medical condition and not a sign of personal weakness. It can affect anyone regardless of their strength or resilience."
+      },
+      {
+        "question": "Does talking about depression make it worse?",
+        "answer": "No, talking about depression can help you manage your symptoms. It is important to seek support and talk to someone you trust or a mental health professional."
+      }
+    ]
+  },
+  
+  {
+    "_id": "Divorce",
+    "heading": "Divorce",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/a775361d1fd47a9823a91aabf2a28a35.svg",
+      "https://www.talktoangel.com/images/multipleSelect/219ece62fae865562d4510ea501cf349.svg",
+      "https://www.talktoangel.com/images/multipleSelect/e1fc9c082df6cfff8cbcfff2b5a722ef.svg",
+      "https://www.talktoangel.com/images/multipleSelect/f7b6bc883be91f56eb248d72de4d2847.svg"
+    ],
+    "definition": "Divorce is the legal dissolution of a marriage by a court or other competent body. It can have significant emotional, financial, and social impacts on those involved.",
+    "tips": [
+      "Seek emotional support from friends, family, or a therapist.",
+      "Focus on self-care and maintaining a routine.",
+      "Communicate openly with your ex-partner about co-parenting if applicable.",
+      "Take time to grieve and process your emotions.",
+      "Seek legal advice to understand your rights and responsibilities."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Divorce+Animation.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/divorce.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is divorce always a mutual decision?",
+        "answer": "No, sometimes one partner initiates the divorce while the other does not agree."
+      },
+      {
+        "question": "Is divorce a sign of personal failure?",
+        "answer": "No, sometimes divorce is the best decision for both partners to find happiness and fulfillment."
+      },
+      {
+        "question": "Do children always suffer in a divorce?",
+        "answer": "While divorce can be challenging for children, with proper support, they can adjust and thrive."
+      },
+      {
+        "question": "Is it better to stay in an unhappy marriage for the children?",
+        "answer": "Not necessarily; children benefit from seeing healthy, happy relationships."
+      },
+      {
+        "question": "Does divorce mean the end of a family?",
+        "answer": "No, families can take different forms and still provide love and support to all members."
+      }
+    ]
+  },
+  {
+    "_id": "Domestic Violence",
+    "heading": "Domestic Violence",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/aea94dc1e6d1dd330cbc2c4a480934d6.svg",
+      "https://www.talktoangel.com/images/multipleSelect/f816dc0acface7498e10496222e9db10.svg",
+      "https://www.talktoangel.com/images/multipleSelect/3bcf6eecb2611212e088d0d91f2ade9c.svg",
+      "https://www.talktoangel.com/images/multipleSelect/843a4d7fb5b1641b0bb8e3c2b2e75231.svg"
+    ],
+    "definition": "Domestic Violence is a pattern of behavior in any relationship that is used to gain or maintain power and control over an intimate partner. It can be physical, sexual, emotional, economic, or psychological actions or threats.",
+    "tips": [
+      "Reach out for help from trusted friends, family, or support services.",
+      "Create a safety plan to protect yourself and your children.",
+      "Document instances of abuse if safe to do so.",
+      "Seek legal advice to understand your options.",
+      "Consider therapy to address emotional and psychological impacts."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Behind+closed+doors+domestic+abuse+animation.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Domestic+Abuse+Awareness_+Animated+Video.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is domestic violence only physical?",
+        "answer": "No, it can also be emotional, psychological, sexual, and financial."
+      },
+      {
+        "question": "Is domestic violence a private matter?",
+        "answer": "No, domestic violence is a serious issue that requires intervention and support."
+      },
+      {
+        "question": "Do abusers only hurt their partners physically?",
+        "answer": "No, abusers can also control and manipulate their partners emotionally and psychologically."
+      },
+      {
+        "question": "Is leaving an abusive relationship easy?",
+        "answer": "No, leaving can be very difficult and dangerous; support and planning are crucial."
+      },
+      {
+        "question": "Is domestic violence only a women's issue?",
+        "answer": "No, individuals of all genders can be victims of domestic violence."
+      }
+    ]
+  },
+  {
+    "_id": "Eating Disorder",
+    "heading": "Eating Disorder",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/83dd3f9f97ef6533766c39d5b2e5e565.svg",
+      "https://www.talktoangel.com/images/multipleSelect/20c1945eae4b9868cbbfd09675f7d76e.svg",
+      "https://www.talktoangel.com/images/multipleSelect/26ddd45b02859e836d13d4b9fde34281.svg",
+      "https://www.talktoangel.com/images/multipleSelect/b4df9f494056d51f86c7f1a89850c467.svg"
+    ],
+    "definition": "Eating Disorder is a range of psychological conditions that cause unhealthy eating habits to develop. These might include obsession with food, body weight, and shape.",
+    "tips": [
+      "Seek professional help from a therapist or dietitian.",
+      "Focus on health rather than weight.",
+      "Avoid dieting and restrictive eating.",
+      "Surround yourself with supportive people.",
+      "Educate yourself about healthy eating and body image."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/eating+disorder.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/The+Eating+Disorder+Voice_+Bodywhys.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Are eating disorders just about food?",
+        "answer": "No, they often involve complex psychological issues and can be about control, self-esteem, and emotions."
+      },
+      {
+        "question": "Do only women have eating disorders?",
+        "answer": "No, people of all genders can develop eating disorders."
+      },
+      {
+        "question": "Is it easy to spot someone with an eating disorder?",
+        "answer": "No, people with eating disorders can be of any weight and may hide their behaviors."
+      },
+      {
+        "question": "Is recovery from an eating disorder possible?",
+        "answer": "Yes, with the right treatment and support, individuals can recover from eating disorders."
+      },
+      {
+        "question": "Are eating disorders a choice?",
+        "answer": "No, they are serious mental health conditions that require professional treatment."
+      }
+    ]
+  },
+  {
+    "_id": "Emotional Abuse",
+    "heading": "Emotional Abuse",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/ccdf3864e2fa9089f9eca4fc7a48ea0a.svg",
+      "https://www.talktoangel.com/images/multipleSelect/8e5d5b79456a8e2bc09e54e9e518a5f1.svg",
+      "https://www.talktoangel.com/images/multipleSelect/cd3109c63bf4323e6b987a5923becb96.svg",
+      "https://www.talktoangel.com/images/multipleSelect/f0bf4a2da952528910047c31b6c2e951.svg"
+    ],
+    "definition": "Emotional Abuse involves manipulating someone's emotions to gain control over them. It can include verbal abuse, rejection, gaslighting, and isolation.",
+    "tips": [
+      "Recognize the signs of emotional abuse.",
+      "Reach out for support from trusted friends or family.",
+      "Set boundaries to protect yourself.",
+      "Document instances of abuse if safe to do so.",
+      "Seek professional help to address the impact of emotional abuse."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/What+is+Emotional+Abuse.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is emotional abuse less harmful than physical abuse?",
+        "answer": "No, emotional abuse can be just as damaging, if not more so, than physical abuse."
+      },
+      {
+        "question": "Is emotional abuse easy to recognize?",
+        "answer": "No, it can be subtle and insidious, often making it hard to identify."
+      },
+      {
+        "question": "Do only women experience emotional abuse?",
+        "answer": "No, people of all genders can experience emotional abuse."
+      },
+      {
+        "question": "Is emotional abuse just being mean?",
+        "answer": "No, it involves a pattern of behavior aimed at undermining someone's sense of self-worth."
+      },
+      {
+        "question": "Can you just ignore emotional abuse?",
+        "answer": "No, emotional abuse can have long-lasting psychological effects and needs to be addressed."
+      }
+    ]
+  },
+  {
+    "_id": "Family Problem",
+    "heading": "Family Problem",
+    "photoUrls":["https://www.talktoangel.com/images/multipleSelect/3f1656d9668dffcf8119e3ecff873558.svg",
+  "https://www.talktoangel.com/images/multipleSelect/2952351097998ac1240cb2ab7333a3d2.svg",
+"https://www.talktoangel.com/images/multipleSelect/0937fb5864ed06ffb59ae5f9b5ed67a9.svg",
+"https://www.talktoangel.com/images/multipleSelect/5e9d17e41f784ae361ada1d0817186f6.svg"],
+    "definition": "Family Problems are conflicts and issues that arise within a family, affecting its harmony and function. These can include communication issues, financial stress, and differing values.",
+    "tips": [
+      "Hold regular family meetings to discuss issues openly.",
+      "Practice active listening and empathy.",
+      "Seek to understand each family member's perspective.",
+      "Set clear boundaries and expectations.",
+      "Consider family therapy to improve communication and resolve conflicts."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/family+problems.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/How+To+Deal+With+a+Toxic+Family.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Are family problems always the parents' fault?",
+        "answer": "No, family problems can result from various factors and everyone plays a role."
+      },
+      {
+        "question": "Can children cause family problems?",
+        "answer": "Yes, children can contribute to family stress, but it's important to address the underlying issues."
+      },
+      {
+        "question": "Is it best to avoid discussing family problems?",
+        "answer": "No, addressing problems openly can lead to solutions and improve family dynamics."
+      },
+      {
+        "question": "Do happy families never have problems?",
+        "answer": "No, every family faces challenges; how they handle them is what matters."
+      },
+      {
+        "question": "Is therapy only for serious family issues?",
+        "answer": "No, therapy can help with a wide range of family problems, from minor conflicts to serious issues."
+      }
+    ]
+  },
+  {
+    "_id": "FOMO",
+    "heading": "FOMO",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/01ce84968c6969bdd5d51c5eeaa3946a.svg",
+      "https://www.talktoangel.com/images/multipleSelect/73741ea570def1d114a9ac9bb6726916.svg",
+      "https://www.talktoangel.com/images/multipleSelect/af0a59d77edf6e178ec25cb090df864b.svg",
+      "https://www.talktoangel.com/images/multipleSelect/f91ceb5afe88b7ab6023892165de4033.svg"
+    ],
+    "definition": "FOMO (Fear of Missing Out) is the anxiety that an exciting or interesting event may currently be happening elsewhere, often aroused by posts seen on social media.",
+    "tips": [
+      "Limit time spent on social media.",
+      "Focus on enjoying the present moment.",
+      "Practice gratitude for what you have.",
+      "Engage in activities that bring you joy.",
+      "Seek professional help if FOMO affects your mental health."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/fomo.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/SAE+Melbourne+_+'Fomo'+_+Animation+%26+Audio.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is FOMO just about social media?",
+        "answer": "No, FOMO can occur in various aspects of life, not just social media."
+      },
+      {
+        "question": "Do only young people experience FOMO?",
+        "answer": "No, people of all ages can experience FOMO."
+      },
+      {
+        "question": "Can FOMO be a serious issue?",
+        "answer": "Yes, it can lead to anxiety, stress, and dissatisfaction with life."
+      },
+      {
+        "question": "Is avoiding social media the only solution to FOMO?",
+        "answer": "No, while limiting social media can help, building a fulfilling offline life is also important."
+      },
+      {
+        "question": "Is FOMO a sign of weakness?",
+        "answer": "No, FOMO is a common experience in the modern world and can be managed with the right strategies."
+      }
+    ]
+  },
+  {
+    "_id": "Fear",
+    "heading": "Fear",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/c23497bd62a8f8a0981fdc9cbd3c30d9.svg",
+      "https://www.talktoangel.com/images/multipleSelect/d93c96e6a23fff65b91b900aaa541998.svg",
+      "https://www.talktoangel.com/images/multipleSelect/c57168a952f5d46724cf35dfc3d48a7f.svg",
+      "https://www.talktoangel.com/images/multipleSelect/68a9750337a418a86fe06c1991a1d64c.svg"
+    ],
+    "definition": "Fear is a natural emotion that arises in response to a perceived threat. It can range from mild unease to intense terror and can affect both mental and physical health.",
+    "tips": [
+      "Identify the source of your fear.",
+      "Practice relaxation techniques like deep breathing.",
+      "Gradually face your fears in a safe environment.",
+      "Seek support from friends, family, or a therapist.",
+      "Challenge negative thoughts and focus on positive outcomes."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/fear.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is fear always a bad thing?",
+        "answer": "No, fear can be protective and alert you to dangers, but excessive fear can be harmful."
+      },
+      {
+        "question": "Can fear be completely eliminated?",
+        "answer": "Not entirely; the goal is to manage fear and not let it control your life."
+      },
+      {
+        "question": "Is avoiding fear the best strategy?",
+        "answer": "No, avoidance can make fear stronger; facing fears gradually can help reduce them."
+      },
+      {
+        "question": "Does everyone experience fear the same way?",
+        "answer": "No, people have different fears and reactions based on their experiences and personality."
+      },
+      {
+        "question": "Is fear a sign of weakness?",
+        "answer": "No, fear is a normal human emotion; managing it effectively is a sign of strength."
+      }
+    ]
+  },
+  {
+    "_id": "Grief and Loss",
+    "heading": "Grief and Loss",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/8c620c2faaafd489b4c45b448acac3a0.svg",
+      "https://www.talktoangel.com/images/multipleSelect/5463b514e21fbd3fec3772fba142a46e.svg",
+      "https://www.talktoangel.com/images/multipleSelect/ef7a3d1d2f039be1cb6a695f856b5ca6.svg",
+      "https://www.talktoangel.com/images/multipleSelect/03cf87174debaccd689c90c34577b82f.svg"
+    ],
+    "definition": "Grief and Loss are emotional responses to significant changes or losses, such as the death of a loved one, the end of a relationship, or other major life changes.",
+    "tips": [
+      "Allow yourself to feel and express your emotions.",
+      "Seek support from friends, family, or a support group.",
+      "Create rituals to remember and honor what you lost.",
+      "Take care of your physical health during the grieving process.",
+      "Consider professional counseling to help navigate your grief."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/How+Grief+Affects+Your+Brain+And+What+To+Do+About+It+_+Better+_+NBC+News.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/The+Grieving+Process_+Coping+with+Death.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is there a right way to grieve?",
+        "answer": "No, everyone grieves differently and there is no right or wrong way."
+      },
+      {
+        "question": "Does grief have a set timeline?",
+        "answer": "No, grief is a personal process and can take varying amounts of time."
+      },
+      {
+        "question": "Should you avoid talking about your loss?",
+        "answer": "No, talking about your loss can help you process your emotions and find support."
+      },
+      {
+        "question": "Does moving on mean forgetting?",
+        "answer": "No, moving on means finding a way to live with your loss, not forgetting it."
+      },
+      {
+        "question": "Is it weak to seek help for grief?",
+        "answer": "No, seeking help shows strength and a willingness to heal."
+      }
+    ]
+  },
+  {
+    "_id": "Healthy Boundaries",
+    "heading": "Healthy Boundaries",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/7ec12aa91918c9b6e577c1ae18a0a34b.svg",
+      "https://www.talktoangel.com/images/multipleSelect/17f5e6db87929fb55cebeb7fd58c1d41.svg",
+      "https://www.talktoangel.com/images/multipleSelect/ef9280fbc5317f17d480e4d4f61b3751.svg",
+      "https://www.talktoangel.com/images/multipleSelect/a9eb812238f753132652ae09963a05e9.svg"
+    ],
+    "definition": "Healthy Boundaries are limits set to protect one's well-being and personal space. They are essential for maintaining healthy relationships and personal integrity.",
+    "tips": [
+      "Communicate your boundaries clearly and assertively.",
+      "Respect the boundaries of others.",
+      "Be consistent in maintaining your boundaries.",
+      "Seek support if someone continually disrespects your boundaries.",
+      "Reflect on and adjust your boundaries as needed."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/How+To+Set+Healthy+Boundaries.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Setting+Boundaries_+Mental+Health+Lessons+_+RT%C3%89+Player+Original.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Are boundaries selfish?",
+        "answer": "No, healthy boundaries are necessary for personal well-being and respectful relationships."
+      },
+      {
+        "question": "Should boundaries be flexible?",
+        "answer": "Yes, boundaries can be adjusted as needed but should always protect your core values and well-being."
+      },
+      {
+        "question": "Do boundaries push people away?",
+        "answer": "No, boundaries help create clear expectations and improve relationship dynamics."
+      },
+      {
+        "question": "Is it weak to have boundaries?",
+        "answer": "No, having boundaries is a sign of self-respect and strength."
+      },
+      {
+        "question": "Are boundaries only needed in romantic relationships?",
+        "answer": "No, boundaries are important in all types of relationships, including friendships and family."
+      }
+    ]
+  },
+  {
+    "_id": "Hypertension",
+    "heading": "Hypertension",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/1fd7b875d3473501d1b771ebe934ca59.svg",
+      "https://www.talktoangel.com/images/multipleSelect/92650b2e92217715fe312e6fa7b90d82.svg",
+      "https://www.talktoangel.com/images/multipleSelect/d8c9d05ec6e86d5bbad7a2f88a1701d0.svg",
+      "https://www.talktoangel.com/images/multipleSelect/f953ad57910572bd6803da3faaa6e92b.svg"
+    ],
+    "definition": "Hypertension, or high blood pressure, is a condition where the force of the blood against the artery walls is too high. It can lead to serious health problems, such as heart disease and stroke.",
+    "tips": [
+      "Monitor your blood pressure regularly.",
+      "Maintain a healthy diet low in salt and saturated fats.",
+      "Engage in regular physical activity.",
+      "Avoid smoking and limit alcohol intake.",
+      "Follow your doctor's advice and take prescribed medications."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/High+Blood+Pressure+Basics.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Hypertension+-+High+Blood+Pressure%2C+Animation.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is hypertension only a problem for older adults?",
+        "answer": "No, hypertension can affect people of all ages, including children and young adults."
+      },
+      {
+        "question": "Can hypertension always be detected by symptoms?",
+        "answer": "No, hypertension is often called the 'silent killer' because it usually has no symptoms."
+      },
+      {
+        "question": "Is stress the only cause of hypertension?",
+        "answer": "No, while stress can contribute, other factors like genetics, diet, and lifestyle also play significant roles."
+      },
+      {
+        "question": "Does medication cure hypertension?",
+        "answer": "Medication helps control hypertension but lifestyle changes are also necessary for management."
+      },
+      {
+        "question": "Can you stop hypertension medication if you feel better?",
+        "answer": "No, you should always follow your doctor's advice and not stop medication without consultation."
+      }
+    ]
+  },
+  {
+    "_id": "Loneliness",
+    "heading": "Loneliness",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/322f62469c5e3c7dc3e58f5a4d1ea399.svg",
+      "https://www.talktoangel.com/images/multipleSelect/e4acb4c86de9d2d9a41364f93951028d.svg",
+      "https://www.talktoangel.com/images/multipleSelect/d339a8932df05de23ae3d9e29df4b25f.svg",
+      "https://www.talktoangel.com/images/multipleSelect/5e1b18c4c6a6d31695acbae3fd70ecc6.svg"
+    ],
+    "definition": "Loneliness is a feeling of sadness or distress about being by yourself or lacking companionship. It can affect one's mental and physical health.",
+    "tips": [
+      "Reach out to friends, family, or support groups.",
+      "Engage in activities that you enjoy and that involve others.",
+      "Volunteer or join community groups to meet new people.",
+      "Practice self-care and self-compassion.",
+      "Seek professional help if feelings of loneliness persist."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/lonely.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/What+It%E2%80%99s+Like+To+Feel+Lonely.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is loneliness just about being alone?",
+        "answer": "No, loneliness is more about the quality of social connections than the quantity."
+      },
+      {
+        "question": "Can only introverts feel lonely?",
+        "answer": "No, people of all personality types can experience loneliness."
+      },
+      {
+        "question": "Is loneliness a sign of personal failure?",
+        "answer": "No, loneliness is a common human experience and not a reflection of personal worth."
+      },
+      {
+        "question": "Do social media connections prevent loneliness?",
+        "answer": "Not necessarily; online connections can help, but real-life interactions are often more fulfilling."
+      },
+      {
+        "question": "Is it weak to admit feeling lonely?",
+        "answer": "No, recognizing and addressing loneliness is a sign of self-awareness and strength."
+      }
+    ]
+  },
+  {
+    "_id": "Low Motivation",
+    "heading": "Low Motivation",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/cd3afef9b8b89558cd56638c3631868a.svg",
+      "https://www.talktoangel.com/images/multipleSelect/0b4078ee99ffc88fb383ffcdcd377d67.svg",
+      "https://www.talktoangel.com/images/multipleSelect/309fee4e541e51de2e41f21bebb342aa.svg",
+      "https://www.talktoangel.com/images/multipleSelect/41f860e3b7f548abc1f8b812059137bf.svg"
+    ],
+    "definition": "Low Motivation is a lack of enthusiasm and drive to accomplish tasks or engage in activities. It can be a symptom of various mental health conditions or a result of burnout.",
+    "tips": [
+      "Set small, achievable goals to build momentum.",
+      "Break tasks into manageable steps.",
+      "Reward yourself for completing tasks.",
+      "Identify and address underlying causes of low motivation.",
+      "Seek support from friends, family, or a therapist."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Trust+yourself+++short+animation+film.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Never+Give+Up+_+Short+Animated+Video+_+Motivational+lesson+_+By+Bilal+Yaseen.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is low motivation a sign of laziness?",
+        "answer": "No, low motivation can have various causes, including mental health issues and burnout."
+      },
+      {
+        "question": "Can motivation be forced?",
+        "answer": "No, motivation often needs to be cultivated through positive habits and addressing underlying issues."
+      },
+      {
+        "question": "Is it normal to feel unmotivated sometimes?",
+        "answer": "Yes, everyone experiences periods of low motivation; it's important to address persistent lack of motivation."
+      },
+      {
+        "question": "Can setting unrealistic goals decrease motivation?",
+        "answer": "Yes, setting unattainable goals can lead to frustration and decreased motivation."
+      },
+      {
+        "question": "Is professional help necessary for low motivation?",
+        "answer": "If low motivation persists and affects daily life, seeking professional help can be beneficial."
+      }
+    ]
+  },
+  {
+    "_id": "Learning Disabilities",
+    "heading": "Learning Disabilities",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/3c1e4bd67169b8153e0047536c9f541e.svg",
+      "https://www.talktoangel.com/images/multipleSelect/48e95c45c8217961bf6cd7696d80d238.svg",
+      "https://www.talktoangel.com/images/multipleSelect/e92d74ccacdc984afa0c517ad0d557a6.svg",
+      "https://www.talktoangel.com/images/multipleSelect/959776b99b006e5785c3a3364949ce47.svg"
+    ],
+    "definition": "Learning Disabilities are neurological disorders that affect the brain's ability to receive, process, store, and respond to information. They can impact reading, writing, math, and other cognitive skills.",
+    "tips": [
+      "Seek a proper diagnosis from a specialist.",
+      "Use individualized learning strategies and tools.",
+      "Practice patience and provide positive reinforcement.",
+      "Encourage self-advocacy and independence.",
+      "Collaborate with teachers and therapists for support."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/What+is+Learning+Disability+_+Whiteboard+Video.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/What+Are+Learning+Disabilities_.mp4"
+  ],
+    "mythsAndFacts": [
+      {
+        "question": "Are learning disabilities a sign of low intelligence?",
+        "answer": "No, individuals with learning disabilities can have average or above-average intelligence."
+      },
+      {
+        "question": "Can learning disabilities be outgrown?",
+        "answer": "No, they are lifelong conditions, but individuals can learn strategies to manage them."
+      },
+      {
+        "question": "Do learning disabilities affect all areas of learning?",
+        "answer": "No, they usually affect specific areas, such as reading or math."
+      },
+      {
+        "question": "Are learning disabilities caused by poor teaching?",
+        "answer": "No, they are neurological conditions, though effective teaching strategies can help."
+      },
+      {
+        "question": "Can people with learning disabilities succeed in life?",
+        "answer": "Yes, with the right support and strategies, individuals can achieve great success."
+      }
+    ]
+  },
+  {
+    "_id": "Managing Toxic Work Culture",
+    "heading": "Managing Toxic Work Culture",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/6917ff2a7b53421ff4066020e2d89eec.svg",
+      "https://www.talktoangel.com/images/multipleSelect/dc36f18a9a0a776671d4879cae69b551.svg",
+      "https://www.talktoangel.com/images/multipleSelect/5a0b8489ce264d4ff8dac4cce46ff8a0.svg",
+      "https://www.talktoangel.com/images/multipleSelect/9a5748a2fbaa6564d05d7f2ae29a9355.svg"
+    ],
+    "definition": "A Toxic Work Culture is an unhealthy work environment where negative behaviors, such as bullying, manipulation, and high stress, are prevalent, affecting employees' well-being and productivity.",
+    "tips": [
+      "Identify and document toxic behaviors.",
+      "Set clear boundaries to protect your well-being.",
+      "Seek support from trusted colleagues or HR.",
+      "Practice self-care and stress management techniques.",
+      "Consider changing jobs if the culture does not improve."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/How+do+you+handle+a+toxic+work+culture_.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Positive+Workplace+Culture.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is toxic work culture just about bad bosses?",
+        "answer": "No, it can involve colleagues, policies, and overall organizational behavior."
+      },
+      {
+        "question": "Can toxic work culture be changed?",
+        "answer": "Yes, but it requires commitment from leadership and employees to create a healthier environment."
+      },
+      {
+        "question": "Is it weak to speak up about a toxic work culture?",
+        "answer": "No, addressing toxic behavior is a sign of courage and a step towards positive change."
+      },
+      {
+        "question": "Do all workplaces have some level of toxicity?",
+        "answer": "While no workplace is perfect, a truly toxic culture is pervasive and harmful to employees."
+      },
+      {
+        "question": "Is leaving a toxic job the only solution?",
+        "answer": "Not necessarily; addressing the issues with HR or leadership can sometimes lead to improvements."
+      }
+    ]
+  },
+  {
+    "_id": "Midlife Crisis",
+    "heading": "Midlife Crisis",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/149ef6419512be56a93169cd5e6fa8fd.svg",
+      "https://www.talktoangel.com/images/multipleSelect/b17446af05919be6e83500be7f5df5c4.svg",
+      "https://www.talktoangel.com/images/multipleSelect/944a5ae3483ed5c1e10bbccb7942a279.svg",
+      "https://www.talktoangel.com/images/multipleSelect/a3ec6dd8d538712a581e5b24726ce062.svg"
+    ],
+    "definition": "A Midlife Crisis is a period of emotional turmoil in middle adulthood characterized by a desire for change or a reassessment of life goals and accomplishments.",
+    "tips": [
+      "Reflect on your life goals and values.",
+      "Talk to a therapist or counselor for guidance.",
+      "Engage in new hobbies and activities.",
+      "Strengthen your social support network.",
+      "Set realistic and achievable goals for the future."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Midlife+Crisis+(1).mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/13+Signs+You+are+Having+a+Midlife+Crisis+-+Matthew+Kelly+(1).mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is a midlife crisis only about buying sports cars?",
+        "answer": "No, it involves deeper emotional and psychological challenges."
+      },
+      {
+        "question": "Do only men experience midlife crises?",
+        "answer": "No, individuals of all genders can experience midlife crises."
+      },
+      {
+        "question": "Is a midlife crisis always a negative experience?",
+        "answer": "No, it can lead to positive changes and personal growth."
+      },
+      {
+        "question": "Does everyone go through a midlife crisis?",
+        "answer": "No, while common, not everyone experiences a midlife crisis."
+      },
+      {
+        "question": "Can a midlife crisis happen at any age?",
+        "answer": "No, it typically occurs in middle adulthood, around ages 40 to 60."
+      }
+    ]
+  },
+  {
+    "_id": "Motherhood",
+    "heading": "Motherhood",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/077fd57e57aab32087b0466fe6ebcca8.svg",
+      "https://www.talktoangel.com/images/multipleSelect/dba31bb5c75992690f20c2d3b370ec7c.svg",
+      "https://www.talktoangel.com/images/multipleSelect/9649dec6196d730c5e024f204477d8d1.svg",
+      "https://www.talktoangel.com/images/multipleSelect/a9fb9e6ef40426e9add520623d521ab8.svg"
+    ],
+    "definition": "Motherhood involves the experience of being a mother, including the physical, emotional, and psychological aspects of raising and nurturing children.",
+    "tips": [
+      "Seek support from family, friends, and parenting groups.",
+      "Prioritize self-care to maintain your well-being.",
+      "Set realistic expectations and be kind to yourself.",
+      "Communicate openly with your partner about parenting responsibilities.",
+      "Seek professional help if you experience postpartum depression or anxiety."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Motherhood+%26+Mental+Health_+The+Importance+of+Alone+Time%2C+3-Minute+Therapy.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Safe+Motherhood+Day_+Meet+a+Mother+Who+Suffered+From+Postpartum+Depression+_+NewsMo.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is motherhood always a joyful experience?",
+        "answer": "No, while it can be fulfilling, motherhood also comes with challenges and stress."
+      },
+      {
+        "question": "Do mothers naturally know how to care for their children?",
+        "answer": "No, parenting is a learning process, and seeking advice and support is normal."
+      },
+      {
+        "question": "Is it selfish for mothers to take time for themselves?",
+        "answer": "No, self-care is essential for being a healthy and effective parent."
+      },
+      {
+        "question": "Do all mothers experience postpartum depression?",
+        "answer": "No, but many do, and it is important to seek help if needed."
+      },
+      {
+        "question": "Is motherhood the same for everyone?",
+        "answer": "No, each mother's experience is unique and influenced by various factors."
+      }
+    ]
+  },
+  {
+    "_id": "OCD",
+    "heading": "OCD",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/f2bff080785c76aa81dbaffce7dea0ad.svg",
+      "https://www.talktoangel.com/images/multipleSelect/f87522788a2be2d171666752f97ddebb.svg",
+      "https://www.talktoangel.com/images/multipleSelect/bcc0d400288793e8bdcd7c19a8ac0c2b.svg",
+      "https://www.talktoangel.com/images/multipleSelect/a0afdf1ac166b8652ffe9dee6eac779e.svg"
+    ],
+    "definition": "OCD (Obsessive-Compulsive Disorder) is a mental health disorder characterized by unwanted, persistent thoughts (obsessions) and repetitive behaviors (compulsions) that the individual feels driven to perform.",
+    "tips": [
+      "Seek professional help for therapy and medication.",
+      "Practice mindfulness and stress management techniques.",
+      "Avoid avoiding situations that trigger OCD symptoms.",
+      "Engage in regular physical activity.",
+      "Educate yourself and loved ones about OCD."
+    ],
+    "videos" : [
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/2-Minute+Neuroscience_+Obsessive-Compulsive+Disorder+(OCD).mp3",
+
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Obsessive+Compulsive+Disorder+Animation.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is OCD just about being neat and organized?",
+        "answer": "No, OCD involves severe anxiety and compulsions that can disrupt daily life."
+      },
+      {
+        "question": "Can people with OCD just stop their compulsions?",
+        "answer": "No, compulsions are driven by intense anxiety and are not easily controlled without treatment."
+      },
+      {
+        "question": "Is OCD a rare condition?",
+        "answer": "No, OCD affects millions of people worldwide."
+      },
+      {
+        "question": "Is OCD caused by a lack of willpower?",
+        "answer": "No, OCD is a neurological disorder and not related to willpower."
+      },
+      {
+        "question": "Can OCD be cured?",
+        "answer": "While OCD may not be curable, it can be effectively managed with treatment."
+      }
+    ]
+  },
+  {
+    "_id": "Panic Disorder",
+    "heading": "Panic Disorder",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/a1d50185e7426cbb0acad1e6ca74b9aa.svg",
+      "https://www.talktoangel.com/images/multipleSelect/d8c9d05ec6e86d5bbad7a2f88a1701d0.svg",
+      "https://www.talktoangel.com/images/multipleSelect/0fe473396242072e84af286632d3f0ff.svg",
+      "https://www.talktoangel.com/images/multipleSelect/ce653013fadbb2ff27530d3de3790f1b.svg"
+    ],
+    "definition": "Panic Disorder is an anxiety disorder characterized by recurrent, unexpected panic attacks and persistent concern about having more attacks or their consequences.",
+    "tips": [
+      "Seek professional help for therapy and medication.",
+      "Learn and practice relaxation techniques.",
+      "Identify and avoid triggers for panic attacks.",
+      "Stay physically active and maintain a healthy lifestyle.",
+      "Educate yourself and loved ones about panic disorder."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/How+to+help+your+friend+during+a+panic+attack+-+BBC.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/What+is+Panic+Disorder_.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is panic disorder just feeling anxious?",
+        "answer": "No, it involves intense, sudden panic attacks that can be debilitating."
+      },
+      {
+        "question": "Can panic attacks cause physical harm?",
+        "answer": "While panic attacks can be very distressing, they are not physically harmful."
+      },
+      {
+        "question": "Do panic attacks always have obvious triggers?",
+        "answer": "No, panic attacks can occur without any apparent cause."
+      },
+      {
+        "question": "Can people with panic disorder just calm down?",
+        "answer": "No, panic attacks are intense and not easily controlled without treatment."
+      },
+      {
+        "question": "Is panic disorder rare?",
+        "answer": "No, it affects many people and is a common anxiety disorder."
+      }
+    ]
+  },
+  {
+    "_id": "Parenting",
+    "heading": "Parenting",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/fd95ec8df5dbeea25aa8e6c808bad583.svg",
+      "https://www.talktoangel.com/images/multipleSelect/9c16f6606460d1543759fc966b9bb797.svg",
+      "https://www.talktoangel.com/images/multipleSelect/ba825ea8a40c385c33407ebe566fa1bc.svg",
+      "https://www.talktoangel.com/images/multipleSelect/cb57cdb7cc459dc6fbbc33f91485b5e2.svg"
+    ],
+    "definition": "Parenting involves the process of raising and nurturing children from infancy to adulthood, encompassing the physical, emotional, social, and intellectual development of the child.",
+    "tips": [
+      "Communicate openly and effectively with your children.",
+      "Set consistent boundaries and expectations.",
+      "Encourage independence and responsibility.",
+      "Model positive behavior and values.",
+      "Seek support and advice from other parents or professionals."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Introducing+Our+Parenting+Videos_++Raising+Caring%2C+Courageous+Kids.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Parenting+Habits+(Short+Animated+Movie)+_+Principles+Of+Good+Parenting.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is there a perfect way to parent?",
+        "answer": "No, each child and family is unique, and parenting approaches vary."
+      },
+      {
+        "question": "Do parents always know what is best for their children?",
+        "answer": "While parents often know their children well, seeking advice and being open to learning is important."
+      },
+      {
+        "question": "Is strict discipline the best way to parent?",
+        "answer": "Not necessarily; a balance of discipline and nurturing is often most effective."
+      },
+      {
+        "question": "Do all parents experience the same challenges?",
+        "answer": "No, parenting challenges can vary widely based on individual circumstances."
+      },
+      {
+        "question": "Is it bad to make mistakes as a parent?",
+        "answer": "No, making mistakes is a normal part of parenting; learning from them is what matters."
+      }
+    ]
+  },
+  {
+    "_id": "Peer Pressure",
+    "heading": "Peer Pressure",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/10fe8dc69a0964edc16fed1a1bd55716.svg",
+      "https://www.talktoangel.com/images/multipleSelect/60c97bef031ec312b512c08565c1868e.svg",
+      "https://www.talktoangel.com/images/multipleSelect/cd3109c63bf4323e6b987a5923becb96.svg",
+      "https://www.talktoangel.com/images/multipleSelect/c44e503833b64e9f27197a484f4257c0.svg"
+    ],
+    "definition": "Peer Pressure is the influence exerted by a peer group to encourage a person to change their attitudes, values, or behaviors to conform to group norms.",
+    "tips": [
+      "Develop strong self-esteem and confidence.",
+      "Choose friends who respect your values and decisions.",
+      "Practice saying no and standing up for yourself.",
+      "Seek support from trusted adults or friends.",
+      "Stay true to your own beliefs and values."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Peer+Pressure%2C+How+to+Handle+It.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/peerpressure.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is peer pressure always negative?",
+        "answer": "No, peer pressure can sometimes encourage positive behaviors."
+      },
+      {
+        "question": "Do only teenagers experience peer pressure?",
+        "answer": "No, people of all ages can be influenced by peer pressure."
+      },
+      {
+        "question": "Is giving in to peer pressure a sign of weakness?",
+        "answer": "No, it can be challenging to resist, but standing up for your beliefs is important."
+      },
+      {
+        "question": "Can peer pressure affect academic performance?",
+        "answer": "Yes, both positively and negatively, depending on the influence."
+      },
+      {
+        "question": "Is it possible to avoid peer pressure completely?",
+        "answer": "Not entirely, but learning to manage it is key."
+      }
+    ]
+  },
+  {
+    "_id": "Sleep Disorder",
+    "heading": "Sleep Disorder",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/7576182d0a84b1ba2207f8f061d48bc9.svg",
+      "https://www.talktoangel.com/images/multipleSelect/71a5c0514ab83382d98154e5a5f9d813.svg",
+      "https://www.talktoangel.com/images/multipleSelect/580f9aa264f1108da3db844806f3952e.svg",
+      "https://www.talktoangel.com/images/multipleSelect/cf2ee7de99895351d72dcc79d067b24b.svg"
+    ],
+    "definition": "Sleep Disorders are conditions that disrupt normal sleep patterns and can affect physical health, mental health, and quality of life.",
+    "tips": [
+      "Maintain a consistent sleep schedule.",
+      "Create a relaxing bedtime routine.",
+      "Limit screen time before bed.",
+      "Avoid caffeine and heavy meals close to bedtime.",
+      "Seek professional help for persistent sleep issues."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/How+Sleep+Affects+Your+Brain.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/insomnia+-+animated+short+film.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is sleeping more on weekends enough to make up for lost sleep?",
+        "answer": "No, consistent sleep schedules are more beneficial for overall health."
+      },
+      {
+        "question": "Do sleep disorders only affect adults?",
+        "answer": "No, people of all ages can experience sleep disorders."
+      },
+      {
+        "question": "Is snoring always harmless?",
+        "answer": "No, snoring can be a sign of sleep apnea, a serious sleep disorder."
+      },
+      {
+        "question": "Can sleep disorders be treated without medication?",
+        "answer": "Yes, lifestyle changes and behavioral therapies can be effective treatments."
+      },
+      {
+        "question": "Is feeling tired all the time normal?",
+        "answer": "No, persistent fatigue can be a sign of a sleep disorder and should be addressed."
+      }
+    ]
+  },
+  {
+    "_id": "Social Anxiety",
+    "heading": "Social Anxiety",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/3eb65004054f5d21fca4087f5658c727.svg",
+      "https://www.talktoangel.com/images/multipleSelect/82674fc29bc0d9895cee346548c2cb5c.svg",
+      "https://www.talktoangel.com/images/multipleSelect/6e0917469214d8fbd8c517dcdc6b8dcf.svg",
+      "https://www.talktoangel.com/images/multipleSelect/0829424ffa0d3a2547b6c9622c77de03.svg"
+    ],
+    "definition": "Social Anxiety is a mental health condition characterized by an intense fear of social situations and being judged or scrutinized by others.",
+    "tips": [
+      "Gradually expose yourself to social situations.",
+      "Practice relaxation techniques to manage anxiety.",
+      "Challenge negative thoughts about social interactions.",
+      "Seek support from friends, family, or a therapist.",
+      "Consider joining a support group for social anxiety."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/6+Tips+To+Overcome+Social+Anxiety+(Affects+Our+Everyday+Life).mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/social+anxiety.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is social anxiety just shyness?",
+        "answer": "No, social anxiety is more severe and can significantly impact daily life."
+      },
+      {
+        "question": "Can people with social anxiety just avoid social situations?",
+        "answer": "Avoidance can actually worsen anxiety; gradual exposure and coping strategies are more effective."
+      },
+      {
+        "question": "Is social anxiety rare?",
+        "answer": "No, it is a common condition that affects many people."
+      },
+      {
+        "question": "Do people with social anxiety dislike others?",
+        "answer": "No, they often want social connections but fear judgment and scrutiny."
+      },
+      {
+        "question": "Is social anxiety a sign of weakness?",
+        "answer": "No, it is a recognized mental health condition and not a reflection of personal strength."
+      }
+    ]
+  },
+  {
+    "_id": "Social Comparisons",
+    "heading": "Social Comparisons",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/350a7f5ee27d22dbe36698b10930ff96.svg",
+      "https://www.talktoangel.com/images/multipleSelect/787afca6b6dd1f06fc22e4b52b0b89bf.svg",
+      "https://www.talktoangel.com/images/multipleSelect/d1942a3ab01eb59220e2b3a46e7ef09d.svg",
+      "https://www.talktoangel.com/images/multipleSelect/eca336bc46296c1aced239fbfb803b5c.svg"
+    ],
+    "definition": "Social Comparisons involve evaluating oneself against others, which can affect self-esteem and mental health, especially when comparisons are unfavorable.",
+    "tips": [
+      "Focus on your own progress and achievements.",
+      "Limit time spent on social media.",
+      "Practice gratitude for what you have.",
+      "Surround yourself with supportive people.",
+      "Seek professional help if social comparisons affect your well-being."
+    ],
+    "videos" : [
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/5+Signs+of+Body+Dysmorphia.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Social+Media+And+Self-Image.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Are social comparisons always negative?",
+        "answer": "No, they can be motivating if used constructively."
+      },
+      {
+        "question": "Do only young people compare themselves to others?",
+        "answer": "No, people of all ages make social comparisons."
+      },
+      {
+        "question": "Can social media cause social comparisons?",
+        "answer": "Yes, social media often portrays idealized versions of life, leading to comparisons."
+      },
+      {
+        "question": "Is it possible to completely avoid social comparisons?",
+        "answer": "Not entirely, but managing them and focusing on personal growth is key."
+      },
+      {
+        "question": "Are social comparisons always accurate?",
+        "answer": "No, they are often based on incomplete information and can be misleading."
+      }
+    ]
+  },
+  {
+    "_id": "Stress",
+    "heading": "Stress",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/07577d9f755d42cec7545e889b7261a3.svg",
+      "https://www.talktoangel.com/images/multipleSelect/1b33d16fc562464579b7199ca3114982.svg",
+      "https://www.talktoangel.com/images/multipleSelect/dd7970532bfa1449085b8f43fc39a7d5.svg",
+      "https://www.talktoangel.com/images/multipleSelect/d82a1853da4df5edcfc6f0e3159c23be.svg"
+    ],
+    "definition": "Stress is the body's reaction to any change that requires an adjustment or response. It can be physical, mental, or emotional and can affect overall health.",
+    "tips": [
+      "Identify and address the sources of your stress.",
+      "Practice relaxation techniques such as deep breathing or meditation.",
+      "Engage in regular physical activity.",
+      "Maintain a healthy diet and get enough sleep.",
+      "Seek support from friends, family, or a therapist."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Managing+Stress+-+Brainsmart+-+BBC.mp4",
+    "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/Stressed_+How+to+Deal.mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is stress always harmful?",
+        "answer": "No, short-term stress can be motivating, but chronic stress is harmful."
+      },
+      {
+        "question": "Can stress be completely eliminated?",
+        "answer": "Not entirely, but it can be managed effectively with the right strategies."
+      },
+      {
+        "question": "Is stress the same for everyone?",
+        "answer": "No, people experience and cope with stress differently."
+      },
+      {
+        "question": "Is avoiding stress the best solution?",
+        "answer": "Not necessarily; managing and addressing stress is often more effective."
+      },
+      {
+        "question": "Is stress a sign of weakness?",
+        "answer": "No, stress is a normal response to life's challenges and not a reflection of personal strength."
+      }
+    ]
+  },
+  {
+    "_id": "Toxic Friendship",
+    "heading": "Toxic Friendship",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/3a246af2678dfad0d536e0a62cf49179.svg",
+      "https://www.talktoangel.com/images/multipleSelect/7d411dca7348327b71e894c52e76eeeb.svg",
+      "https://www.talktoangel.com/images/multipleSelect/b069b3415151fa7217e870017374de7c.svg",
+      "https://www.talktoangel.com/images/multipleSelect/21186d7b1482412ab14f0332b8aee119.svg"
+    ],
+    "definition": "A Toxic Friendship is a relationship where one friend consistently causes emotional harm, manipulation, or stress to the other, negatively impacting their well-being.",
+    "tips": [
+      "Recognize the signs of a toxic friendship.",
+      "Set boundaries to protect yourself.",
+      "Communicate your feelings and concerns.",
+      "Surround yourself with supportive and positive friends.",
+      "Consider ending the friendship if it does not improve."
+    ],
+    "videos":["https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/fake+friend.mp4",
+  "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/MEANING+Of+BFF+(Best+Fake+Friend).mp4"],
+    "mythsAndFacts": [
+      {
+        "question": "Is it normal for friends to fight?",
+        "answer": "Yes, occasional disagreements are normal, but constant negativity is a sign of toxicity."
+      },
+      {
+        "question": "Do toxic friendships only affect teenagers?",
+        "answer": "No, people of all ages can experience toxic friendships."
+      },
+      {
+        "question": "Is it selfish to end a toxic friendship?",
+        "answer": "No, prioritizing your well-being is important."
+      },
+      {
+        "question": "Can toxic friendships be improved?",
+        "answer": "Sometimes, with open communication and effort from both parties."
+      },
+      {
+        "question": "Is it easy to recognize a toxic friendship?",
+        "answer": "Not always; toxicity can be subtle and build over time."
+      }
+    ]
+  },
+  {
+    "_id": "Toxic Relationship",
+    "heading": "Toxic Relationship",
+    "photoUrls":[
+      "https://www.talktoangel.com/images/multipleSelect/ca6ab34959489659f8c3776aaf1f8efd.svg",
+      "https://www.talktoangel.com/images/multipleSelect/6e4243f5511fd6ef0f03e9f386d54403.svg",
+      "https://www.talktoangel.com/images/multipleSelect/a35d11c2f995c60b0341a9c777f1ae03.svg",
+      "https://www.talktoangel.com/images/multipleSelect/5c341d10c5596a0fd920fda9f33bcb06.svg"
+    ],
+    "definition": "A Toxic Relationship is a relationship characterized by behaviors on the part of the toxic partner that are emotionally and, not infrequently, physically damaging to their partner.",
+    "tips": [
+      "Recognize the signs of a toxic relationship.",
+      "Set and enforce clear boundaries.",
+      "Communicate your needs and concerns openly.",
+      "Seek support from trusted friends, family, or a therapist.",
+      "Consider ending the relationship if it does not improve."
+    ],
+    "videos":[
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/toxic+rel.mp4",
+      "https://serenity-connect-resources.s3.ap-south-1.amazonaws.com/toxic+rel+2.mp4"
+    ],
+    "mythsAndFacts": [
+      {
+        "question": "Is conflict the same as toxicity?",
+        "answer": "No, healthy conflict can occur in relationships; toxicity involves consistent harm."
+      },
+      {
+        "question": "Can toxic relationships only be romantic?",
+        "answer": "No, they can occur in friendships, family, and work relationships as well."
+      },
+      {
+        "question": "Is it weak to seek help for a toxic relationship?",
+        "answer": "No, seeking help shows strength and a desire to improve your well-being."
+      },
+      {
+        "question": "Can a toxic relationship be fixed?",
+        "answer": "Sometimes, with effort from both parties and professional support."
+      },
+      {
+        "question": "Is it easy to leave a toxic relationship?",
+        "answer": "Not always; it can be difficult due to emotional attachment and other factors."
+      }
+    ]
+  }
+]

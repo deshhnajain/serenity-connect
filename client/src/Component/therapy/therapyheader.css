@@ -1,38 +1,64 @@
 .therapy-container {
   background-color: #ffffff;
-  border-radius: 8px;
-  padding: 10px; /* Added padding for better spacing */
+  text-align: center;
+  border-radius: 12px;
+  padding: 40px 20px;
 }
 
-.image-col {
-  display: flex;
-  justify-content: right; /* Center the image horizontally */
-}
-
-.text-col {
-  display: flex;
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically */
+.therapy-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .therapy-details {
-  text-align: left; /* Left-align the text */
-  font-size: 27px;
-  color: #000000;
-  line-height: 1.6;
-  margin-left: 1.0vw; /* Add space between the image and text */
+  text-align: left;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
 
 .therapy-image-container {
   position: relative;
-  height: auto; /* Adjusted to auto for proper scaling */
-  width: 100%;
+  width: 80%;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .therapy-image-container img {
   width: 100%;
   height: auto;
+  display: block;
   transition: opacity 0.5s ease-in-out;
+}
+
+.therapy-image-container img.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+
+@media (max-width: 768px) {
+  .therapy-container {
+    padding: 30px 15px;
+  }
+
+  .therapy-heading {
+    font-size: 2rem;
+  }
+
+  .therapy-details {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .therapy-image-container {
+    margin-top: 20px;
+  }
 }

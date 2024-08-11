@@ -129,6 +129,15 @@ const LoginSignup = () => {
               onChange={handleSignupChange}
               className="text-field"
             />
+            <TextField
+              name="address"
+              label="address"
+              fullWidth
+              margin="normal"
+              value={signupData.address}
+              onChange={handleSignupChange}
+              className="text-field"
+            />
             {/* <TextField
               name="availability"
               label="Availability"

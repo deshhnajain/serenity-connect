@@ -5,14 +5,15 @@ import axios from 'axios';
 import { handleError } from '../../utils'; // Ensure this handles error notifications
 import './LoginSignup.css'; // Import the CSS file
 
-function Login() {
-    const [loginInfo, setLoginInfo] = useState({ email: '', password: '' });
-    const navigate = useNavigate();
+    function Login() {
+        const [loginInfo, setLoginInfo] = useState({ email: '', password: '' });
+        const navigate = useNavigate();
+        const location = useLocation();
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setLoginInfo(prevState => ({ ...prevState, [name]: value }));
-    }
+        const handleChange = (e) => {
+            const { name, value } = e.target;
+            setLoginInfo(prevState => ({ ...prevState, [name]: value }));
+        }
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -79,4 +80,4 @@ function Login() {
     );
 }
 
-export default Login;
+    export default Login;

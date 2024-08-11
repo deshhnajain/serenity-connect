@@ -3,7 +3,6 @@
   padding: 60px 20px;
   text-align: center;
   border-radius: 8px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .what-we-do-heading {
@@ -17,17 +16,26 @@
   margin-bottom: 50px;
   animation: fadeInUp 1s ease-in-out;
 }
- .cards-container{
+
+.cards-container {
   justify-content: center;
   flex-wrap: wrap;
   animation: fadeIn 1s ease-in-out;
   margin-left: 5vw;
   padding-top: 3vh;
   padding-inline: auto;
- }
-.cards:hover{
+}
+
+.cards {
   transform: scale(1.1);
-  box-shadow: 0 8px 16px rgb(255, 27, 27);
+  box-shadow: 0 8px 16px rgba(244, 50, 254, 0.222);
+  width: 345px; /* Fixed width for cards */
+  height: 345px; /* Fixed height for cards */
+}
+
+.cards:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(181, 43, 255, 0.651);
 }
 
 @keyframes fadeInDown {

@@ -1,110 +1,122 @@
-/* Container styling for the appointments page */
 .appointments-listcontainer {
-  background-color: #f0f2f5;
   min-height: 100vh;
-  padding: 2rem 0;
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
 }
 
-.appointments-listcontainer .py-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+.appointments-listcontainer .container {
+  max-width: 1000px;
 }
 
-/* Card styling for displaying appointments */
 .appointments-listcontainer .card {
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #ffffff;
   border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Card body styling */
+.appointments-listcontainer .card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .appointments-listcontainer .card-body {
   padding: 2rem;
 }
 
-/* Text styling for the card header */
-.appointments-listcontainer .card-text {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+.appointments-listcontainer .card-text.mb-4 {
+  font-size: 1.75rem;
   font-weight: 600;
+  color: #343a40;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
-/* List group styling */
-.appointments-listcontainer .list-group {
-  border: none;
-}
-
-/* List group item styling */
 .appointments-listcontainer .list-group-item {
-  border: none;
-  margin-bottom: 1rem;
-  padding: 1.5rem;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  background-color: #ffffff;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
 .appointments-listcontainer .list-group-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
 }
 
-/* Text styling within the list group item */
 .appointments-listcontainer .list-group-item .card-text {
   margin: 0.5rem 0;
   font-size: 1rem;
-  color: #555;
+  color: #495057;
 }
 
 .appointments-listcontainer .list-group-item .card-text strong {
-  color: #333;
+  color: #343a40;
   font-weight: 600;
   margin-right: 0.5rem;
+  min-width: 70px;
+  display: inline-block;
 }
 
-/* Back button styling */
 .appointments-listcontainer button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 0.6rem 1.25rem;
+  border-radius: 4px;
   font-weight: 500;
+  font-size: 0.95rem;
   transition: background-color 0.3s ease;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .appointments-listcontainer button:hover {
   background-color: #0056b3;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .appointments-listcontainer .card {
-    max-width: 90%;
-  }
-
   .appointments-listcontainer .card-body {
     padding: 1.5rem;
   }
 
-  .appointments-listcontainer .list-group-item {
-    padding: 1rem;
+  .appointments-listcontainer .card-text.mb-4 {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
-  .appointments-listcontainer .card-text {
-    font-size: 1.2rem;
+  .appointments-listcontainer .card-body {
+    padding: 1.25rem;
+  }
+
+  .appointments-listcontainer .card-text.mb-4 {
+    font-size: 1.35rem;
   }
 
   .appointments-listcontainer .list-group-item .card-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .appointments-listcontainer button {
+    width: 100%;
   }
 }
+
+.appointments-listcontainer .list-group-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appointments-listcontainer .list-group-item:nth-child(1) { animation-delay: 0.1s; }
+.appointments-listcontainer .list-group-item:nth-child(2) { animation-delay: 0.2s; }
+.appointments-listcontainer .list-group-item:nth-child(3) { animation-delay: 0.3s; }
+.appointments-listcontainer .list-group-item:nth-child(4) { animation-delay: 0.4s; }
+.appointments-listcontainer .list-group-item:nth-child(5) { animation-delay: 0.5s; }
