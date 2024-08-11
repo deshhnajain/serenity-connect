@@ -16,10 +16,11 @@ import Home from '../../pages/Home/Home';
 import GetHelp from '../../pages/gethelp/GetHelp';
 import UserGroups from '../UserGroup/UserGroups'; // Import the UserGroups component
 import './Navigation.css';
-
-// =======
+import Resources from '../../Component/resources/resource';
+import PaymentPage from '../../pages/paymentpage'
+import Tag from '../../pages/resources/tag';
 import MoreServices from '../../pages/MoreServices/MoreServices';
-// >>>>>>> afe44d27b7d1e95596a1c2fff71586ae5fa6b521
+import AppointmentsUser from '../../Component/UserProfile/Appointmentuser';
 function MainLayout() {
   const location = useLocation();
   const isDashboardPath = location.pathname.startsWith('/therapist-dashboard') || location.pathname.startsWith('/appointments');
@@ -65,6 +66,7 @@ function MainLayout() {
             <Route path="/therapists/:id" element={<TherapistDetails />} />
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/services/more" element={<MoreServices />} />  
+            <Route path="/appointmentuser" element={<AppointmentsUser />} />
 
           </Routes>
           <Footer />

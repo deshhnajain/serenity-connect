@@ -65,7 +65,7 @@ const MyNavbar = () => {
                 <NavDropdown.Item as={Link} to="/profile">
                   <FontAwesomeIcon icon={faCog} className="nav-icon" /> Profile
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/appointments">
+                <NavDropdown.Item as={Link} to="/appointmentuser">
                   <FontAwesomeIcon icon={faCalendar} className="nav-icon" /> Appointments
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/user-groups">
