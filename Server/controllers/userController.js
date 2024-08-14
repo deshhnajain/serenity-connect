@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
@@ -82,9 +82,18 @@ const getCurrentUser = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find().select('-password'); // Exclude the password field
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
 
 module.exports = {
   signup,
   login,
-  getCurrentUser
+  getCurrentUser,
+  getAllUsers
 };

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import "../App.css";
 
 function loadScript(src) {
@@ -15,7 +16,14 @@ function loadScript(src) {
   });
 }
 
-function App() {
+function PaymentPage() {
+  const location = useLocation();
+  const appointmentDetails = location.state?.appointmentDetails;
+
+  useEffect(() => {
+    showRazorpay();
+  }, []);
+
   async function showRazorpay() {
     const res = await loadScript(
       "https://checkout.razorpay.com/v1/checkout.js"
@@ -37,15 +45,17 @@ function App() {
       currency: data.currency,
       amount: data.amount.toString(),
       order_id: data.id,
-      name: "Course Fee",
-      description: "Thank you for nothing. Please give us some money",
+      name: "Therapy Session",
+      description: `Appointment with ${appointmentDetails.therapistName}`,
       handler: function (response) {
         alert("Transaction successful");
+        // Here you can add logic to handle successful payment
+        // For example, update the appointment status in your database
       },
       prefill: {
-        name: "ainwik",
-        email: "ceo@ainwik.in",
-        phone_number: "9899876758",
+        name: appointmentDetails.name,
+        email: appointmentDetails.email,
+        // phone_number: appointmentDetails.phone // Add this if you have the phone number
       },
     };
     const paymentObject = new window.Razorpay(options);
@@ -55,13 +65,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Razorpay payment portal</p>
-        <button className="btn btn-success App-link" onClick={showRazorpay}>
-          Pay now
-        </button>
+        <p>Redirecting to payment portal...</p>
       </header>
     </div>
   );
 }
 
-export default App;
+export default PaymentPage;

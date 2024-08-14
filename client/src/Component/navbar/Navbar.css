@@ -1,6 +1,7 @@
+/* <<<<<<< HEAD */
+/* ======= */
 /* navbar.css */
-
-/* Styling for the main navbar container */
+/* >>>>>>> afe44d27b7d1e95596a1c2fff71586ae5fa6b521 */
 .custom-navbar {
   background: linear-gradient(135deg, #b9f1f1, #ae21ff);
   padding: 1rem 2rem;
@@ -164,4 +165,20 @@
     color: #4A00E0;
     background-color: #f0f0f0;
   }
+}
+
+/* Vertical alignment styles */
+.navbar-nav {
+  align-items: center;
+}
+
+.nav-item,
+.navbar-nav .dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .dropdown-toggle {
+  display: flex;
+  align-items: center;
 }

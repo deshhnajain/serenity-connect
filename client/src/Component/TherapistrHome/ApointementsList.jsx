@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import {
   MDBContainer,
@@ -8,71 +8,113 @@ import {
   MDBListGroup,
   MDBListGroupItem,
 } from 'mdb-react-ui-kit';
-import './Appointementlist.css'; // Import the CSS file
+import './Appointementlist.css';
 import { useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 export default function AppointmentsPage() {
   const [appointments, setAppointments] = useState([]);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchAppointments = async () => {
-      const therapistId = localStorage.getItem('therapistId');
-      if (!therapistId) {
-        console.error('Therapist ID not found in local storage');
-        setError('Therapist ID not found in local storage');
-        return;
-      }
+  const fetchAppointments = useCallback(async () => {
+    const therapistId = localStorage.getItem('therapistId');
+    const token = localStorage.getItem('token');
 
-      try {
-        const response = await axios.get(`http://localhost:5000/api/appointments?therapistId=${therapistId}`);
-        setAppointments(response.data);
-      } catch (error) {
-        console.error('Error fetching appointments:', error);
-        setError('Error fetching appointments');
-      }
-    };
+    if (!therapistId || !token) {
+      setError('Authentication information not found. Please log in again.');
+      setIsLoading(false);
+      return;
+    }
 
-    fetchAppointments();
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${API_BASE_URL}/api/appointments`, {
+        params: { therapistId },
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      setAppointments(response.data);
+    } catch (error) {
+      setError('Error fetching appointments. Please try again later.');
+      console.error('Error fetching appointments:', error);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
-  const handleBackClick = () => {
-    navigate('/therapist-dashboard');
+  useEffect(() => {
+    fetchAppointments();
+  }, [fetchAppointments]);
+
+  const handleBackClick = () => navigate('/therapist-dashboard');
+
+  const joinMeeting = (jitsiMeetingUrl) => {
+    window.open(jitsiMeetingUrl, '_blank', 'noopener,noreferrer');
   };
 
-  if (error) {
-    return <div>{error}</div>;
-  }
+  const updateAppointmentStatus = async (appointmentId, newStatus) => {
+    const token = localStorage.getItem('token');
 
-  if (appointments.length === 0) {
-    return <div>No appointments found</div>;
-  }
+    try {
+      await axios.put(`${API_BASE_URL}/api/appointments/${appointmentId}`, 
+        { status: newStatus },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      setAppointments(prevAppointments => 
+        prevAppointments.map(app => 
+          app._id === appointmentId ? { ...app, status: newStatus } : app
+        )
+      );
+    } catch (error) {
+      setError('Error updating appointment status. Please try again.');
+      console.error('Error updating appointment status:', error);
+    }
+  };
+
+  if (isLoading) return <div>Loading appointments...</div>;
+  if (error) return <div>{error}</div>;
+  if (appointments.length === 0) return <div>No appointments found</div>;
 
   return (
     <div className="appointments-listcontainer">
-    <MDBContainer className="py-5">
-      <button onClick={handleBackClick} className="mb-4">
-        Back to Dashboard
-      </button>
-      <MDBCard>
-        <MDBCardBody>
-          <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">Appointments</span></MDBCardText>
-          <MDBListGroup>
-            {appointments.map((appointment) => (
-              <MDBListGroupItem key={appointment._id} className="d-flex justify-content-between align-items-center p-3">
-                <div>
-                  <MDBCardText><strong>Name:</strong> {appointment.name}</MDBCardText>
-                  <MDBCardText><strong>Date:</strong> {appointment.date}</MDBCardText>
-                  <MDBCardText><strong>Time:</strong> {appointment.time}</MDBCardText>
-                  <MDBCardText><strong>Notes:</strong> {appointment.notes}</MDBCardText>
-                </div>
-              </MDBListGroupItem>
-            ))}
-          </MDBListGroup>
-        </MDBCardBody>
-      </MDBCard>
-    </MDBContainer>
+      <MDBContainer className="py-5">
+        <Button onClick={handleBackClick} className="mb-4" variant="primary">
+          Back to Dashboard
+        </Button>
+        <MDBCard>
+          <MDBCardBody>
+            <MDBCardText className="mb-4">
+              <span className="text-primary font-italic me-1">Appointments</span>
+            </MDBCardText>
+            <MDBListGroup>
+              {appointments.map((appointment) => (
+                <MDBListGroupItem key={appointment._id} className="d-flex justify-content-between align-items-center p-3">
+                  <div>
+                    <MDBCardText><strong>Name:</strong> {appointment.name}</MDBCardText>
+                    <MDBCardText><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</MDBCardText>
+                    <MDBCardText><strong>Time:</strong> {appointment.time}</MDBCardText>
+                    <MDBCardText><strong>Notes:</strong> {appointment.notes}</MDBCardText>
+                    <MDBCardText><strong>Status:</strong> {appointment.status}</MDBCardText>
+                  </div>
+                  <div>
+                    <Button size="sm" variant="success" onClick={() => joinMeeting(appointment.jitsiMeetingUrl)} className="me-2">
+                      Join Meeting
+                    </Button>
+                    {appointment.status !== 'completed' && (
+                      <Button size="sm" variant="primary" onClick={() => updateAppointmentStatus(appointment._id, 'completed')}>
+                        Mark as Completed
+                      </Button>
+                    )}
+                  </div>
+                </MDBListGroupItem>
+              ))}
+            </MDBListGroup>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBContainer>
     </div>
   );
 }

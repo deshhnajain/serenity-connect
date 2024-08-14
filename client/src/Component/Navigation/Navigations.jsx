@@ -13,19 +13,18 @@ import Footer from '../footer/footer';
 import Login from '../../pages/Userauth/Login';
 import Signup from '../../pages/Userauth/Signup';
 import Home from '../../pages/Home/Home';
-import './Navigation.css';
 import GetHelp from '../../pages/gethelp/GetHelp';
-import MoreServices from '../../pages/MoreServices/MoreServices';
-
-import Resources from '../resources/resource';
+import UserGroups from '../UserGroup/UserGroups'; // Import the UserGroups component
+import './Navigation.css';
+import Resources from '../../Component/resources/resource';
+import PaymentPage from '../../pages/paymentpage'
 import Tag from '../../pages/resources/tag';
-
-import AppointmentsUser from '../UserProfile/Appointmentuser';
-import PaymentPage from '../../pages/paymentpage';
+import MoreServices from '../../pages/MoreServices/MoreServices';
+import AppointmentsUser from '../../Component/UserProfile/Appointmentuser';
 function MainLayout() {
   const location = useLocation();
   const isDashboardPath = location.pathname.startsWith('/therapist-dashboard') || location.pathname.startsWith('/appointments');
-  const isLoginPage = location.pathname === '/therapist-login'|| location.pathname === '/user-login' || location.pathname === '/user-signup';
+  const isLoginPage = location.pathname === '/therapist-login' || location.pathname === '/user-login' || location.pathname === '/user-signup';
 
   return (
     <>
@@ -50,6 +49,13 @@ function MainLayout() {
           <MyNavbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/gethelp" element={<GetHelp />} />
+            <Route path="/services/therapy" element={<TherapistsList />} />
+            <Route path="/services/paidcounseling" element={<PaidConsult />} />
+            <Route path="/therapists/:id" element={<TherapistDetails />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/user-groups" element={<UserGroups />} />
             <Route path='/home' element={<Home />} />
             <Route path="/resource" element={<Resources />} />
             <Route path="/payment" element={<PaymentPage />}/>
@@ -61,6 +67,7 @@ function MainLayout() {
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/services/more" element={<MoreServices />} />  
             <Route path="/appointmentuser" element={<AppointmentsUser />} />
+
           </Routes>
           <Footer />
         </>

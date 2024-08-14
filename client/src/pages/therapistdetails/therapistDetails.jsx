@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Card, CardContent, Typography, Button, CircularProgress, TextField, Dialog, DialogActions, DialogContent, DialogTitle, Grid } from '@mui/material';
+import { Card, CardContent, Typography, Button, CircularProgress, TextField, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './therapistdetails.css';
@@ -22,6 +22,8 @@ const TherapistDetails = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [formError, setFormError] = useState('');
   const [currentUser, setCurrentUser] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -107,6 +109,9 @@ const TherapistDetails = () => {
       return;
     }
 
+    setIsSubmitting(true);
+    setFormError('');
+
     try {
       const token = localStorage.getItem('token');
       if (!token) {
@@ -131,9 +136,8 @@ const TherapistDetails = () => {
         }
       );
       setSuccessMessage('Appointment booked successfully!');
-      setFormError('');
-      handleClose();
-      navigate('/services/therapy');
+      setOpen(false);
+      setShowSuccessDialog(true);
     } catch (err) {
       console.error('Appointment booking error:', err.response?.data || err.message);
       if (err.response?.status === 401) {
@@ -141,8 +145,33 @@ const TherapistDetails = () => {
       } else {
         setError('Failed to book appointment. Please try again.');
       }
+    } finally {
+      setIsSubmitting(false);
     }
   };
+
+  const handleProceedToPay = () => {
+    setShowSuccessDialog(false);
+    navigate('/payment', { state: { appointmentDetails, therapistName: therapist.name } });
+  };
+
+  const SuccessDialog = ({ open, onClose, appointmentDetails, therapistName }) => (
+    <Dialog open={open} onClose={onClose}>
+      <DialogTitle>Appointment Booked Successfully</DialogTitle>
+      <DialogContent>
+        <Typography variant="body1">User Name: {appointmentDetails.name}</Typography>
+        <Typography variant="body1">User Email: {appointmentDetails.email}</Typography>
+        <Typography variant="body1">Date: {date.toDateString()}</Typography>
+        <Typography variant="body1">Time: {appointmentDetails.time}</Typography>
+        <Typography variant="body1">Therapist Name: {therapistName}</Typography>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleProceedToPay} color="primary" variant="contained">
+          Proceed to Pay
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
   
   if (loading) return <div className="loading-container"><CircularProgress /></div>;
   if (error) return <p>Error loading data: {error}</p>;
@@ -244,19 +273,32 @@ const TherapistDetails = () => {
             onChange={handleInputChange}
             className="text-field"
           />
+          {isSubmitting && (
+            <div className="loading-overlay">
+              <CircularProgress />
+              <Typography>Booking your appointment...</Typography>
+            </div>
+          )}
           {formError && <Typography color="error" className="error-message">{formError}</Typography>}
           {successMessage && <Typography color="success" className="success-message">{successMessage}</Typography>}
           {error && <Typography color="error" className="error-message">{error}</Typography>}
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} color="primary" disabled={isSubmitting}>
             Cancel
           </Button>
-          <Button onClick={handleAppointmentSubmit} color="primary">
-            Submit
+          <Button onClick={handleAppointmentSubmit} color="primary" disabled={isSubmitting}>
+            {isSubmitting ? 'Submitting...' : 'Submit'}
           </Button>
         </DialogActions>
       </Dialog>
+
+      <SuccessDialog
+        open={showSuccessDialog}
+        onClose={handleProceedToPay}
+        appointmentDetails={appointmentDetails}
+        therapistName={therapist?.name}
+      />
     </div>
   );
 };
