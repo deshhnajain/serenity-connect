@@ -23,6 +23,7 @@ const TherapistDetails = () => {
   const [formError, setFormError] = useState('');
   const [currentUser, setCurrentUser] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -135,12 +136,8 @@ const TherapistDetails = () => {
         }
       );
       setSuccessMessage('Appointment booked successfully!');
-      
-      // Simulate a delay to show the success message
-      setTimeout(() => {
-        handleClose();
-        navigate('/services/therapy');
-      }, 2000);
+      setOpen(false);
+      setShowSuccessDialog(true);
     } catch (err) {
       console.error('Appointment booking error:', err.response?.data || err.message);
       if (err.response?.status === 401) {
@@ -152,6 +149,29 @@ const TherapistDetails = () => {
       setIsSubmitting(false);
     }
   };
+
+  const handleProceedToPay = () => {
+    setShowSuccessDialog(false);
+    navigate('/payment', { state: { appointmentDetails, therapistName: therapist.name } });
+  };
+
+  const SuccessDialog = ({ open, onClose, appointmentDetails, therapistName }) => (
+    <Dialog open={open} onClose={onClose}>
+      <DialogTitle>Appointment Booked Successfully</DialogTitle>
+      <DialogContent>
+        <Typography variant="body1">User Name: {appointmentDetails.name}</Typography>
+        <Typography variant="body1">User Email: {appointmentDetails.email}</Typography>
+        <Typography variant="body1">Date: {date.toDateString()}</Typography>
+        <Typography variant="body1">Time: {appointmentDetails.time}</Typography>
+        <Typography variant="body1">Therapist Name: {therapistName}</Typography>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleProceedToPay} color="primary" variant="contained">
+          Proceed to Pay
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
   
   if (loading) return <div className="loading-container"><CircularProgress /></div>;
   if (error) return <p>Error loading data: {error}</p>;
@@ -272,6 +292,13 @@ const TherapistDetails = () => {
           </Button>
         </DialogActions>
       </Dialog>
+
+      <SuccessDialog
+        open={showSuccessDialog}
+        onClose={handleProceedToPay}
+        appointmentDetails={appointmentDetails}
+        therapistName={therapist?.name}
+      />
     </div>
   );
 };

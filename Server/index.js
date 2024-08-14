@@ -11,6 +11,8 @@ const resourceRoutes = require('./route/resourceRoutes');
 const paymentRoutes = require('./route/paymentRoutes');
 const authRoutes = require('./route/auth');
 const passport = require('./config/passportConfig'); 
+const bodyParser = require('body-parser');
+
 
 const app = express();
 
@@ -27,6 +29,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(bodyParser.json());
 
 // Admin API routes (from deshna branch)
 const users = [{ id: 1, name: 'User One' }, { id: 2, name: 'User Two' }];
