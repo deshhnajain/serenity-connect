@@ -31,13 +31,13 @@ const TherapistDetails = () => {
         const token = localStorage.getItem('token');
         
         // Fetch therapist details
-        const therapistResponse = await axios.get(`http://localhost:5000/api/therapists/${id}`);
+        const therapistResponse = await axios.get(`https://serenity-connect.onrender.com/api/therapists/${id}`);
         setTherapist(therapistResponse.data);
 
         // Fetch current user details if token exists
         if (token) {
           try {
-            const userResponse = await axios.get('http://localhost:5000/api/users/me', {
+            const userResponse = await axios.get('https://serenity-connect.onrender.com/api/users/me', {
               headers: { Authorization: `Bearer ${token}` }
             });
             setCurrentUser(userResponse.data);
@@ -120,7 +120,7 @@ const TherapistDetails = () => {
       }
 
       const response = await axios.post(
-        `http://localhost:5000/api/appointments`,
+        `https://serenity-connect.onrender.com/api/appointments`,
         {
           therapistId: id,
           date: date.toISOString().split('T')[0],
