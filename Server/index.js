@@ -12,7 +12,7 @@ const paymentRoutes = require('./route/paymentRoutes');
 const authRoutes = require('./route/auth');
 const passport = require('./config/passportConfig'); 
 const bodyParser = require('body-parser');
-
+const messageRoutes = require('./route/messageRoutes');
 
 const app = express();
 
@@ -51,6 +51,8 @@ app.use('/api/appointments', appointmentRoutes);
 app.use('/api', resourceRoutes);
 app.use('/api/payment', paymentRoutes);
 app.use(authRoutes); // Google auth routes
+app.use('/api/messages', messageRoutes);
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
