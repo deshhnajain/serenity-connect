@@ -55,6 +55,7 @@ const MyNavbar = () => {
               <NavDropdown.Item as={Link} to="/services/therapy">Therapy</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/services/paidcounseling">Counseling</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/services/support-groups">Support Groups</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/chat">Anonymous form</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/services/more">More</NavDropdown.Item>
             </NavDropdown>
