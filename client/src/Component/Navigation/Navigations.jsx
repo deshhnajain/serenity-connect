@@ -21,10 +21,12 @@ import PaymentPage from '../../pages/payment/paymentpage'
 import Tag from '../../pages/resources/tag';
 import MoreServices from '../../pages/MoreServices/MoreServices';
 import AppointmentsUser from '../../Component/UserProfile/Appointmentuser';
+import Chat from '../../Component/home/chat';
 function MainLayout() {
   const location = useLocation();
   const isDashboardPath = location.pathname.startsWith('/therapist-dashboard') || location.pathname.startsWith('/appointments');
   const isLoginPage = location.pathname === '/therapist-login' || location.pathname === '/user-login' || location.pathname === '/user-signup';
+  const isChatPage = location.pathname === '/chat';
 
   return (
     <>
@@ -67,9 +69,14 @@ function MainLayout() {
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/services/more" element={<MoreServices />} />  
             <Route path="/appointmentuser" element={<AppointmentsUser />} />
-
+             <Route path="/chat" element={
+              <div className="chat-home-layout">
+                <Home /> {/* Home component on the left */}
+                <Chat /> {/* Chat component on the right */}
+              </div>
+            } />
           </Routes>
-          <Footer />
+          {!isChatPage && <Footer />}
         </>
       )}
     </>
