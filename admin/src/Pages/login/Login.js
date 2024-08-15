@@ -17,7 +17,7 @@ function Login() {
     // Check against hardcoded credentials
     if (email === HARDCODED_EMAIL && password === HARDCODED_PASSWORD) {
       console.log('Login successful');
-      navigate('/dashboard'); // Redirect to dashboard
+      navigate('/home'); 
     } else {
       setError('Invalid email or password');
     }

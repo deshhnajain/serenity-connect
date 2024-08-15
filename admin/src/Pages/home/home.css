@@ -1,0 +1,41 @@
+/* src/Pages/dashboard/AdminHome.css */
+.admin-home {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .admin-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #ecf0f1;
+  }
+  
+  .admin-dashboard h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .count-cards {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .count-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  .count-card h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .count {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3498db;
+  }
+  
