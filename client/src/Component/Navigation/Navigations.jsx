@@ -17,7 +17,7 @@ import GetHelp from '../../pages/gethelp/GetHelp';
 import UserGroups from '../UserGroup/UserGroups'; // Import the UserGroups component
 import './Navigation.css';
 import Resources from '../../Component/resources/resource';
-import PaymentPage from '../../pages/paymentpage'
+import PaymentPage from '../../pages/payment/paymentpage'
 import Tag from '../../pages/resources/tag';
 import MoreServices from '../../pages/MoreServices/MoreServices';
 import AppointmentsUser from '../../Component/UserProfile/Appointmentuser';
