@@ -1,9 +1,7 @@
-// src/Pages/dashboard/Dashboard.js
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import UserList from '../../Components/UserList';
-import TherapistList from '../../Components/TherapistList';
-import AdminNavbar from '../../Components/Navbar/adminNavbar';
+import UserList from '../../Components/user/UserList';
+import TherapistList from '../../Components/Therapist/TherapistList';
 import './home.css';
 
 function AdminHome() {
@@ -12,7 +10,6 @@ function AdminHome() {
 
   return (
     <div className="admin-home">
-      <AdminNavbar />
       <main className="admin-content">
         <Routes>
           <Route path="/" element={
