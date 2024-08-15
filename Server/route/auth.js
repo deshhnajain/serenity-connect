@@ -10,7 +10,7 @@ router.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/user-login' }),
   (req, res) => {
     const { jwtToken } = req.user;
-    res.redirect(`http://localhost:3000/home?token=${jwtToken}`);
+    res.redirect(`https://serenity-connect.netlify.app/home?token=${jwtToken}`);
   }
 );
 
