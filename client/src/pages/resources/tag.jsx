@@ -13,7 +13,7 @@ const Tag = () => {
         console.log('Stored ID:', storedId);
 
         console.log('Fetching from API...');
-        const response = await axios.get(`https://serenity-connect.onrender.com/api/resources/${storedId}`);
+        const response = await axios.get(`http://localhost:5000/api/resources/${storedId}`);
         setResource(response.data);
       } catch (error) {
         console.error('Error fetching resource:', error);

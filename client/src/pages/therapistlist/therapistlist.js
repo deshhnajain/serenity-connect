@@ -20,7 +20,7 @@ const TherapistsList = () => {
 
   const fetchTherapists = useCallback(async () => {
     try {
-      const response = await axios.get('https://serenity-connect.onrender.com/api/therapists');
+      const response = await axios.get('http://localhost:5000/api/therapists');
       setTherapists(response.data);
       setFilteredTherapists(response.data);
     } catch (err) {

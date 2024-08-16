@@ -34,7 +34,7 @@ function PaymentPage() {
       return;
     }
 
-    const data = await fetch("https://serenity-connect.onrender.com/api/payment/razorpay", {
+    const data = await fetch("http://localhost:5000/api/payment/razorpay", {
       method: "POST",
     }).then((t) => t.json());
 

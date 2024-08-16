@@ -12,7 +12,8 @@ const paymentRoutes = require('./route/paymentRoutes');
 const authRoutes = require('./route/auth');
 const passport = require('./config/passportConfig'); 
 const bodyParser = require('body-parser');
-
+const messageRoutes = require('./route/messageRoutes');
+const testimonialRoutes = require('./route/testimonialsRoutes'); // Use a clear variable name
 
 const app = express();
 
@@ -31,10 +32,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(bodyParser.json());
 
-// Admin API routes (from deshna branch)
-const users = [{ id: 1, name: 'User One' }, { id: 2, name: 'User Two' }];
-const therapists = [{ id: 1, name: 'Therapist One' }, { id: 2, name: 'Therapist Two' }];
-
 app.get('/api/admin/users', (req, res) => {
   res.json(users);
 });
@@ -51,6 +48,8 @@ app.use('/api/appointments', appointmentRoutes);
 app.use('/api', resourceRoutes);
 app.use('/api/payment', paymentRoutes);
 app.use(authRoutes); // Google auth routes
+app.use('/api/messages', messageRoutes);
+app.use('/api', testimonialRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;

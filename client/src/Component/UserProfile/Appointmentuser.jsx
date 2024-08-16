@@ -11,7 +11,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { Button, Modal, Form } from 'react-bootstrap';
 import './Appointementlist.css'
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://serenity-connect.onrender.com';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 export default function AppointmentsUser() {
   const [appointments, setAppointments] = useState([]);

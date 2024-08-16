@@ -24,7 +24,7 @@
                 return handleError('Email and password are required');
             }
             try {
-                const response = await axios.post("https://serenity-connect.onrender.com/api/login", loginInfo);
+                const response = await axios.post("http://localhost:5000/api/login", loginInfo);
                 const { success, message, jwtToken, name } = response.data;
                 if (success) {
                     toast.success(message); // Show success message
@@ -73,7 +73,7 @@
                         </span>
                         <span>
                             login using google
-                            <Button variant="outline-primary" href="https://serenity-connect.onrender.com/auth/google">Google</Button>
+                            <Button variant="outline-primary" href="http://localhost:5000/auth/google">Google</Button>
                         </span>
                     </form>
                     <ToastContainer />

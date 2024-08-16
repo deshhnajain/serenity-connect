@@ -37,7 +37,7 @@ const LoginSignup = () => {
       return;
     }
     setLoading(true);
-    axios.post('https://serenity-connect.onrender.com/api/auth/login', loginData)
+    axios.post('http://localhost:5000/api/auth/login', loginData)
       .then(response => {
         // Assuming the response contains `token` and `therapistId`
         const { token, therapistId } = response.data;
@@ -62,7 +62,7 @@ const LoginSignup = () => {
       return;
     }
     setLoading(true);
-    axios.post('https://serenity-connect.onrender.com/api/auth/register', signupData)
+    axios.post('http://localhost:5000/api/auth/register', signupData)
       .then(response => {
         alert('Registration successful');
         setLoading(false);

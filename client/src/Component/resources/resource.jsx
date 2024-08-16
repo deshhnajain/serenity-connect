@@ -17,7 +17,7 @@ const Resources = () => {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const response = await axios.get('https://serenity-connect.onrender.com/api/resources');
+        const response = await axios.get('http://localhost:5000/api/resources');
         setResources(response.data);
         setFilteredResources(response.data);
       } catch (error) {

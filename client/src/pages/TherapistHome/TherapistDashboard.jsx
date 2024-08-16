@@ -42,7 +42,7 @@ export default function TherapistDashboard() {
       }
 
       try {
-        const response = await axios.get(`https://serenity-connect.onrender.com/api/therapists/${therapistId}`);
+        const response = await axios.get(`http://localhost:5000/api/therapists/${therapistId}`);
         setTherapist(response.data);
         setFormData(response.data); // Initialize formData with fetched data
       } catch (error) {
@@ -73,7 +73,7 @@ export default function TherapistDashboard() {
         return;
       }
 
-      const response = await axios.put(`https://serenity-connect.onrender.com/api/therapists/${therapistId}`, formData);
+      const response = await axios.put(`http://localhost:5000/api/therapists/${therapistId}`, formData);
       setIsEditing(false);
       setTherapist(prevData => ({ ...prevData, ...formData })); // Update state with new data
     } catch (error) {
