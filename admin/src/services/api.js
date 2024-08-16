@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set the base URL for the API
-const baseURL = 'https://serenity-connect.onrender.com';
+const baseURL = 'http://localhost:5000';
 
 const instance = axios.create({
   baseURL: `${baseURL}/api`, // Adjust the base path as necessary
