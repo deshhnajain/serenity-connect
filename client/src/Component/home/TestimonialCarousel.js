@@ -1,27 +1,48 @@
-import React from "react";
+//../Component/home/TestimonialCarousel.js
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
 
 const TestimonialCarousel = () => {
-  const testimonials = [
-    {
-      quote:
-        "My classmates used to call me kaalu and because of this, i was having a tough time. thankyou Sernity-Connect for helping me in my tough times",
-      author: "Ankur gupta",
-      position: "Students pursuing BCA",
-      company: "JIMS rohini",
-    },
-    // Add more testimonials here
-    {
-      quote:
-        "koi ladki mujhe bhaoo nhi deti fir bhi mai unke baare mai baat krta rheta tha, thankyou sernity-connect for changing my point of view",
-      author: "Ankur gupta",
-      position: "Students pursuing BCA",
-      company: "JIMS rohini",
-    },
-  ];
+  const [testimonials, setTestimonials] = useState([]);
+  const [showForm, setShowForm] = useState(false);
+  const [newTestimonial, setNewTestimonial] = useState({
+    quote: "",
+    author: "",
+  });
+
+  useEffect(() => {
+    fetchTestimonials();
+  }, []);
+
+  const fetchTestimonials = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/api/testimonials'); // Ensure this matches the route
+      setTestimonials(response.data);
+    } catch (error) {
+      console.error("Error fetching testimonials:", error);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setNewTestimonial({ ...newTestimonial, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/api/testimonials', newTestimonial); // Ensure this matches the route
+      console.log('Submission response:', response.data);
+      setShowForm(false);
+      setNewTestimonial({ quote: "", author: "" });
+      fetchTestimonials();
+    } catch (error) {
+      console.error("Error submitting testimonial:", error.response ? error.response.data : error.message);
+    }
+  };
 
   const settings = {
     dots: true,
@@ -41,11 +62,32 @@ const TestimonialCarousel = () => {
           <Testimonial key={index}>
             <Quote>{testimonial.quote}</Quote>
             <Author>{testimonial.author}</Author>
-            <Position>{testimonial.position}</Position>
-            <Company>{testimonial.company}</Company>
           </Testimonial>
         ))}
       </StyledSlider>
+      {!showForm && (
+        <AddButton onClick={() => setShowForm(true)}>Add Comment</AddButton>
+      )}
+      {showForm && (
+        <Form onSubmit={handleSubmit}>
+          <TextArea
+            name="quote"
+            value={newTestimonial.quote}
+            onChange={handleInputChange}
+            placeholder="Your comment"
+            required
+          />
+          <Input
+            name="author"
+            value={newTestimonial.author}
+            onChange={handleInputChange}
+            placeholder="Your name"
+            required
+          />
+          <SubmitButton type="submit">Submit</SubmitButton>
+          <CancelButton type="button" onClick={() => setShowForm(false)}>Cancel</CancelButton>
+        </Form>
+      )}
     </Container>
   );
 };
@@ -83,14 +125,53 @@ const Author = styled.p`
   font-size: 1rem;
 `;
 
-const Position = styled.p`
-  font-size: 0.9rem;
+const AddButton = styled.button`
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+const Input = styled.input`
+  width: 80%;
+  padding: 10px;
   margin-bottom: 10px;
 `;
 
-const Company = styled.p`
-  font-size: 0.9rem;
-  color: #f39c12;
+const TextArea = styled.textarea`
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+`;
+
+const SubmitButton = styled.button`
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+`;
+
+const CancelButton = styled.button`
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
 `;
 
 export default TestimonialCarousel;

@@ -17,7 +17,7 @@ const HeroSection = () => {
       <Slider {...carouselSettings} style={styles.slider}>
         <div>
           <img
-            src="https://www.slideegg.com/image/catalog/86988-Mental-Health-PowerPoint-Slides.png"
+            src="https://blog-assets.freshworks.com/freshsales-crm/wp-content/uploads/2020/07/20132702/Mental-health-in-sales.gif"
             alt="Slide 1"
             style={styles.carouselImage}
           />
