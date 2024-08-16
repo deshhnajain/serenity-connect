@@ -5,6 +5,7 @@ import Home from '../../admin/src/Pages/home/home';
 import UserList from './Components/user/UserList';
 import TherapistList from './Components/Therapist/TherapistList';
 import AdminNavbar from './Components/Navbar/adminNavbar';
+import Testimonial from './Components/testimonials/testimonials';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function Content() {
         <Route path="/home" element={<Home />} />
         <Route path="/therapistList" element={<TherapistList />} />
         <Route path="/userlist" element={<UserList />} />
+        <Route path="/testimonial" element={<Testimonial/>} />
       </Routes>
     </>
   );

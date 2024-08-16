@@ -11,6 +11,7 @@ function AdminNavbar() {
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/userlist">User List</Link></li>
           <li><Link to="/therapistList">Therapist List</Link></li>
+          <li><Link to="/testimonial">testimonials</Link></li>
         </ul>
       </div>
     </nav>

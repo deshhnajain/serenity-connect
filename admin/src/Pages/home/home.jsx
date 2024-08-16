@@ -7,6 +7,8 @@ import './home.css';
 function AdminHome() {
   const userCount = 150;
   const therapistCount = 75;
+  const appointmentCount = 20;
+  const testimonialCount = 10;
 
   return (
     <div className="admin-home">
@@ -23,6 +25,14 @@ function AdminHome() {
                 <div className="count-card">
                   <h3>Registered Therapists</h3>
                   <p className="count">{therapistCount}</p>
+                </div>
+                <div className="count-card">
+                  <h3>Total Appointments</h3>
+                  <p className="count">{appointmentCount}</p>
+                </div>
+                <div className="count-card">
+                  <h3>Testimonials</h3>
+                  <p className="count">{testimonialCount}</p>
                 </div>
               </div>
             </div>
