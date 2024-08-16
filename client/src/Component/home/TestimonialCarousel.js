@@ -1,27 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
 
 const TestimonialCarousel = () => {
-  const testimonials = [
-    {
-      quote:
-        "My classmates used to call me kaalu and because of this, i was having a tough time. thankyou Sernity-Connect for helping me in my tough times",
-      author: "Ankur gupta",
-      position: "Students pursuing BCA",
-      company: "JIMS rohini",
-    },
-    // Add more testimonials here
-    {
-      quote:
-        "koi ladki mujhe bhaoo nhi deti fir bhi mai unke baare mai baat krta rheta tha, thankyou sernity-connect for changing my point of view",
-      author: "Ankur gupta",
-      position: "Students pursuing BCA",
-      company: "JIMS rohini",
-    },
-  ];
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    fetchTestimonials();
+  }, []);
+
+  const fetchTestimonials = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/api/testimonials');
+      // Filter out testimonials that are not visible
+      const visibleTestimonials = response.data.filter(t => t.isVisible);
+      setTestimonials(visibleTestimonials);
+    } catch (error) {
+      console.error("Error fetching testimonials:", error);
+    }
+  };
 
   const settings = {
     dots: true,
@@ -41,8 +41,6 @@ const TestimonialCarousel = () => {
           <Testimonial key={index}>
             <Quote>{testimonial.quote}</Quote>
             <Author>{testimonial.author}</Author>
-            <Position>{testimonial.position}</Position>
-            <Company>{testimonial.company}</Company>
           </Testimonial>
         ))}
       </StyledSlider>
@@ -81,16 +79,6 @@ const Quote = styled.p`
 const Author = styled.p`
   font-weight: bold;
   font-size: 1rem;
-`;
-
-const Position = styled.p`
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-`;
-
-const Company = styled.p`
-  font-size: 0.9rem;
-  color: #f39c12;
 `;
 
 export default TestimonialCarousel;

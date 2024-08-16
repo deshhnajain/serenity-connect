@@ -1,33 +1,40 @@
 /* src/Components/AdminNavbar.css */
 .admin-nav {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-  }
-  
-  .admin-nav h1 {
-    margin-bottom: 30px;
-    font-size: 24px;
-  }
-  
-  .admin-nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .admin-nav li {
-    margin-bottom: 15px;
-  }
-  
-  .admin-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  .admin-nav a:hover {
-    color: #3498db;
-  }
-  
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+.admin-nav-content {
+  padding: 20px;
+}
+
+.admin-nav h1 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.admin-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-nav li {
+  margin-bottom: 15px;
+}
+
+.admin-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.admin-nav a:hover {
+  color: #3498db;
+}

@@ -1,18 +1,17 @@
-// src/Pages/dashboard/Dashboard.js
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import UserList from '../../Components/UserList';
-import TherapistList from '../../Components/TherapistList';
-import AdminNavbar from '../../Components/Navbar/adminNavbar';
+import UserList from '../../Components/user/UserList';
+import TherapistList from '../../Components/Therapist/TherapistList';
 import './home.css';
 
 function AdminHome() {
   const userCount = 150;
   const therapistCount = 75;
+  const appointmentCount = 20;
+  const testimonialCount = 10;
 
   return (
     <div className="admin-home">
-      <AdminNavbar />
       <main className="admin-content">
         <Routes>
           <Route path="/" element={
@@ -26,6 +25,14 @@ function AdminHome() {
                 <div className="count-card">
                   <h3>Registered Therapists</h3>
                   <p className="count">{therapistCount}</p>
+                </div>
+                <div className="count-card">
+                  <h3>Total Appointments</h3>
+                  <p className="count">{appointmentCount}</p>
+                </div>
+                <div className="count-card">
+                  <h3>Testimonials</h3>
+                  <p className="count">{testimonialCount}</p>
                 </div>
               </div>
             </div>
