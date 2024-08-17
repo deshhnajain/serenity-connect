@@ -10,7 +10,7 @@ const TherapistList = () => {
   useEffect(() => {
     const fetchTherapists = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/therapists');
+        const response = await axios.get('https://serenity-connect.onrender.com/api/therapists');
         setTherapists(response.data);
         setLoading(false);
       } catch (err) {

@@ -14,7 +14,7 @@ const Testimonial = () => {
   const fetchTestimonials = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5000/api/testimonials');
+      const response = await axios.get('https://serenity-connect.onrender.com/api/testimonials');
       setTestimonials(response.data);
       setLoading(false);
     } catch (error) {
@@ -26,7 +26,7 @@ const Testimonial = () => {
 
   const toggleVisibility = async (id, currentVisibility) => {
     try {
-      await axios.put(`http://localhost:5000/api/testimonials/${id}`, {
+      await axios.put(`https://serenity-connect.onrender.com/api/testimonials/${id}`, {
         isVisible: !currentVisibility
       });
       // Update local state

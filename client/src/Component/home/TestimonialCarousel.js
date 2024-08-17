@@ -20,7 +20,7 @@ const TestimonialCarousel = () => {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/testimonials'); // Ensure this matches the route
+      const response = await axios.get('https://serenity-connect.onrender.com/api/testimonials'); // Ensure this matches the route
       setTestimonials(response.data);
     } catch (error) {
       console.error("Error fetching testimonials:", error);
@@ -34,7 +34,7 @@ const TestimonialCarousel = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/testimonials', newTestimonial); // Ensure this matches the route
+      const response = await axios.post('https://serenity-connect.onrender.com/api/testimonials', newTestimonial); // Ensure this matches the route
       console.log('Submission response:', response.data);
       setShowForm(false);
       setNewTestimonial({ quote: "", author: "" });

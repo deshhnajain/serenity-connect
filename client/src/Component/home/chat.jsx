@@ -11,7 +11,7 @@ const Chat = () => {
     // Function to fetch messages from the server
     const fetchMessages = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/messages');
+        const response = await axios.get('https://serenity-connect.onrender.com/api/messages');
         setMessages(response.data);
       } catch (error) {
         console.error('Error fetching messages:', error);
@@ -33,7 +33,7 @@ const Chat = () => {
     if (!newMessage.trim()) return;
 
     try {
-      const response = await axios.post('http://localhost:5000/api/messages', {
+      const response = await axios.post('https://serenity-connect.onrender.com/api/messages', {
         content: newMessage,
       });
       setMessages([response.data, ...messages]);

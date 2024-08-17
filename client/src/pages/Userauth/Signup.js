@@ -27,7 +27,7 @@ function Signup() {
             return toast.error('Name, email, and password are required');
         }
         try {
-            const response = await axios.post("http://localhost:5000/api/signup", signupInfo);
+            const response = await axios.post("https://serenity-connect.onrender.com/api/signup", signupInfo);
             const { success, message } = response.data;
             if (success) {
                 toast.success(message);
