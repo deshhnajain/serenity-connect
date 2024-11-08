@@ -7,7 +7,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.slideegg.com/image/catalog/86988-Mental-Health-PowerPoint-Slides.png"
+          src="https://cdn.prod.website-files.com/62ab7d5ccc9f587bce83c183/62e0e1fc719db8d3506ff643_get-help-banner.jpg"
           alt="First slide" height={347}
         />
         <Carousel.Caption>
@@ -18,7 +18,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.slideegg.com/image/catalog/100263-Clinical-Case-Of-Mental-Health.png"
+          src="https://cdn.prod.website-files.com/62ab7d5ccc9f587bce83c183/62e0e1fc719db8d3506ff643_get-help-banner.jpg"
           alt="Second slide" width={1388}height={347}
         />
         <Carousel.Caption>
